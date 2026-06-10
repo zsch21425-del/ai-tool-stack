@@ -3,616 +3,1778 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Tool Stack — Build Your Own AI Workshop (2026)</title>
-<meta name="description" content="Free guides to build AI tools that run your business. $3 AI assistant, AI video clones, image generators, writing engines. Zero coding required. Updated 2026.">
-<meta name="keywords" content="AI tools, AI assistant, AI video generator, HeyGen, Leonardo AI, build AI agent, AI for business, no-code AI">
-<meta property="og:title" content="AI Tool Stack — Build Your Own AI Workshop">
-<meta property="og:description" content="Free step-by-step guides to build AI tools that run your business. $3/month assistant, AI clones, image studio, writing engine.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://zsch21425-del.github.io/ai-tool-stack/">
-<meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&auto=format">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI Tool Stack — Build Your Own AI Workshop">
-<meta name="twitter:description" content="Free guides to build AI tools that run your business. $3/month assistant, AI clones, and more.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://zsch21425-del.github.io/ai-tool-stack/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "AI Tool Stack",
-  "url": "https://zsch21425-del.github.io/ai-tool-stack/",
-  "description": "Free guides to build AI tools that run your business.",
-  "author": {"@type": "Person", "name": "Zach S"},
-  "about": {"@type": "Thing", "name": "AI Tools & Automation"}
-}
-</script>
+<title>Build Your AI Stack — Zach's Tools</title>
 <style>
 :root {
-  --bg: #050510;
-  --surface: rgba(255,255,255,0.03);
-  --border: rgba(255,255,255,0.06);
-  --text: #a0a0b8;
-  --heading: #f0f0f8;
-  --accent1: #6366f1;
-  --accent2: #06b6d4;
-  --accent3: #a855f7;
-  --green: #10b981;
-  --amber: #f59e0b;
-  --radius: 16px;
+  --bg: #08080f;
+  --surface: #12121f;
+  --surface2: #1a1a2e;
+  --border: #1e1e35;
+  --text: #c8c8d4;
+  --heading: #f0f0f5;
+  --accent: #4FC3F7;
+  --accent2: #66BB6A;
+  --accent3: #FFB74D;
+  --radius: 14px;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   min-height: 100vh;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(99,102,241,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(6,182,212,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(168,85,247,0.03) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
 }
 
-.hero { position:relative; z-index:1; text-align:center; padding:72px 20px 48px; max-width:720px; margin:0 auto; }
-.hero .badge { display:inline-block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; color:var(--accent1); border:1px solid rgba(99,102,241,0.25); padding:6px 16px; border-radius:100px; margin-bottom:20px; }
-.hero h1 { font-size:48px; color:var(--heading); margin-bottom:12px; letter-spacing:-1px; line-height:1.15; }
-.hero h1 span { background:linear-gradient(135deg, var(--accent1), var(--accent2), var(--accent3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.hero .subtitle { font-size:17px; color:#6b6b80; margin-bottom:10px; }
-.hero .channel-link { font-size:13px; color:#555; }
-.hero .channel-link a { color:var(--accent2); text-decoration:none; font-weight:600; }
-.hero .channel-link a:hover { text-decoration:underline; }
-
-.social-proof { position:relative; z-index:1; display:flex; justify-content:center; gap:40px; padding:0 20px 20px; flex-wrap:wrap; }
-.social-proof .stat { text-align:center; }
-.social-proof .stat .num { font-size:28px; font-weight:800; background:linear-gradient(135deg, var(--accent1), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.social-proof .stat .label { font-size:12px; color:#555; text-transform:uppercase; letter-spacing:0.8px; margin-top:2px; }
-
-.dashboard { position:relative; z-index:1; max-width:1024px; margin:0 auto; padding:0 24px 80px; display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
-.build-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:all 0.25s ease; backdrop-filter:blur(10px); }
-.build-card:hover { transform:translateY(-4px); border-color:rgba(99,102,241,0.35); box-shadow:0 12px 40px rgba(99,102,241,0.1), 0 0 0 1px rgba(99,102,241,0.1); }
-.build-card .card-img { width:100%; height:170px; object-fit:cover; background:linear-gradient(135deg, #0f0f23 0%, #1a1a35 100%); }
-.build-card .card-body { padding:22px; }
-.build-card .card-body .price { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; background:linear-gradient(135deg, var(--accent1), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:8px; }
-.build-card .card-body h3 { font-size:20px; color:var(--heading); margin-bottom:10px; }
-.build-card .card-body p { font-size:14px; color:#888; line-height:1.55; }
-.build-card .card-body .tools { margin-top:14px; display:flex; flex-wrap:wrap; gap:6px; }
-.tool-tag { font-size:11px; background:rgba(99,102,241,0.08); color:#8b8bc0; padding:4px 10px; border-radius:20px; border:1px solid rgba(99,102,241,0.12); }
-
-/* Locked card */
-.build-card.locked { opacity:0.7; position:relative; }
-.build-card.locked:hover { opacity:0.9; border-color:rgba(245,158,11,0.4); box-shadow:0 12px 40px rgba(245,158,11,0.08); }
-.build-card.locked .lock-badge { position:absolute; top:12px; right:12px; background:linear-gradient(135deg, #f59e0b, #d97706); color:#000; font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; padding:5px 12px; border-radius:100px; z-index:2; }
-.build-card.locked .card-img { filter:brightness(0.5) blur(2px); }
-.build-card.locked .subs-countdown { font-size:12px; color:#f59e0b; margin-top:8px; font-weight:600; }
-
-/* Tutorial views */
-.tutorial-view { position:relative; z-index:1; display:none; max-width:760px; margin:0 auto; padding:0 24px 100px; }
-.tutorial-view.active { display:block; }
-.back-link { display:inline-flex; align-items:center; gap:6px; color:#6b6b80; font-size:14px; margin-bottom:28px; cursor:pointer; text-decoration:none; transition:color 0.15s; }
-.back-link:hover { color:var(--accent2); }
-.tutorial-view .hero-img { width:100%; max-height:350px; object-fit:cover; border-radius:var(--radius); margin-bottom:28px; border:1px solid var(--border); }
-.tutorial-view h2 { font-size:34px; color:var(--heading); margin-bottom:6px; letter-spacing:-0.5px; }
-.tut-subtitle { font-size:15px; background:linear-gradient(135deg, var(--accent2), var(--accent3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:20px; font-weight:600; }
-
-.overview-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px; margin-bottom:32px; backdrop-filter:blur(10px); }
-.overview-box p { color:#bbb; font-size:15px; line-height:1.7; }
-
-.cta-section { margin-bottom:36px; }
-.cta-section h3 { font-size:13px; text-transform:uppercase; letter-spacing:1.2px; color:#555; margin-bottom:14px; }
-.cta-buttons { display:flex; flex-wrap:wrap; gap:12px; }
-.cta-btn { display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:12px; font-weight:700; font-size:15px; text-decoration:none; transition:all 0.2s ease; }
-.cta-btn.primary { background:linear-gradient(135deg, var(--accent1), #7c3aed); color:#fff; box-shadow:0 4px 20px rgba(99,102,241,0.3); }
-.cta-btn.primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(99,102,241,0.45); }
-.cta-btn.secondary { background:rgba(255,255,255,0.04); color:#ccc; border:1px solid rgba(255,255,255,0.1); }
-.cta-btn.secondary:hover { background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); transform:translateY(-2px); }
-.cta-btn .emoji { font-size:20px; }
-
-.steps-section { margin-bottom:36px; }
-.steps-section h3 { font-size:18px; color:var(--heading); margin-bottom:18px; }
-.step { display:flex; gap:18px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--border); }
-.step:last-child { border-bottom:none; }
-.step .step-num { background:linear-gradient(135deg, var(--accent1), var(--accent3)); color:#fff; font-weight:800; font-size:14px; min-width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.step .step-content h4 { font-size:16px; color:var(--heading); margin-bottom:4px; }
-.step .step-content p { font-size:14px; color:#999; line-height:1.6; }
-.step .step-content a { color:var(--accent2); text-decoration:none; }
-.step .step-content a:hover { text-decoration:underline; }
-
-.pro-tip { background:linear-gradient(135deg, rgba(245,158,11,0.06) 0%, rgba(245,158,11,0.02) 100%); border-left:3px solid var(--amber); padding:18px 22px; border-radius:0 var(--radius) var(--radius) 0; margin-bottom:28px; }
-.pro-tip strong { color:var(--amber); font-size:14px; }
-.pro-tip p { font-size:14px; color:#bbb; margin-top:6px; line-height:1.6; }
-
-.after-install { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; margin-top:12px; backdrop-filter:blur(10px); }
-.after-install h3 { font-size:16px; color:var(--heading); margin-bottom:10px; margin-top:20px; }
-.after-install h3:first-child { margin-top:0; }
-.after-install p { font-size:14px; color:#aaa; line-height:1.7; margin-bottom:14px; }
-.after-install strong { color:#ddd; }
-.after-install code { background:rgba(99,102,241,0.12); color:#a5b4fc; padding:2px 8px; border-radius:4px; font-size:13px; }
-.after-install a { color:var(--accent2); text-decoration:none; }
-.after-install a:hover { text-decoration:underline; }
-
-.cost-breakdown { width:100%; border-collapse:collapse; margin-bottom:36px; font-size:14px; }
-.cost-breakdown th { text-align:left; color:#666; font-weight:600; padding:10px 18px; border-bottom:1px solid var(--border); font-size:11px; text-transform:uppercase; letter-spacing:0.8px; }
-.cost-breakdown td { padding:13px 18px; border-bottom:1px solid rgba(255,255,255,0.04); color:var(--text); }
-.cost-breakdown .total-row td { border-bottom:none; font-weight:700; font-size:16px; padding-top:18px; }
-.cost-breakdown .total-row td:last-child { background:linear-gradient(135deg, var(--accent1), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-
-/* Newsletter section */
-.newsletter { position:relative; z-index:1; max-width:600px; margin:0 auto 60px; padding:32px 24px; text-align:center; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); backdrop-filter:blur(10px); }
-.newsletter h3 { font-size:22px; color:var(--heading); margin-bottom:8px; }
-.newsletter p { font-size:14px; color:#888; margin-bottom:20px; }
-.newsletter .sub-cta { display:inline-flex; align-items:center; gap:10px; padding:14px 32px; background:#ff0000; color:#fff; font-weight:700; font-size:16px; text-decoration:none; border-radius:12px; transition:all 0.2s; }
-.newsletter .sub-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,0,0,0.3); }
-
-/* Locked tutorial */
-.locked-hero { text-align:center; padding:40px 24px; }
-.locked-hero .lock-icon { font-size:64px; margin-bottom:16px; }
-.locked-hero h2 { font-size:30px; margin-bottom:10px; }
-.locked-hero .unlock-msg { font-size:16px; color:#bbb; line-height:1.7; max-width:500px; margin:0 auto 24px; }
-.locked-hero .milestone { display:inline-block; background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.25); padding:14px 28px; border-radius:12px; font-size:22px; font-weight:800; color:#f59e0b; margin-bottom:20px; }
-.sub-cta { display:inline-flex; align-items:center; gap:10px; padding:16px 36px; background:#ff0000; color:#fff; font-weight:800; font-size:17px; text-decoration:none; border-radius:14px; transition:all 0.2s; }
-.sub-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,0,0,0.3); }
-.early-bird { margin-top:20px; font-size:13px; color:#10b981; font-weight:600; }
-
-/* Affiliate disclosure */
-.disclosure { position:relative; z-index:1; max-width:600px; margin:0 auto 0; padding:0 24px 40px; text-align:center; font-size:11px; color:#444; }
-.disclosure a { color:#555; }
-
-footer { position:relative; z-index:1; text-align:center; padding:40px 20px 60px; color:#444; font-size:13px; border-top:1px solid var(--border); }
-footer a { color:var(--accent2); text-decoration:none; }
-.hidden { display:none !important; }
-
-@media (max-width:680px) {
-  .hero h1 { font-size:30px; }
-  .dashboard { grid-template-columns:1fr; padding:0 16px 60px; }
-  .tutorial-view h2 { font-size:24px; }
-  .cta-btn { width:100%; justify-content:center; }
-  .social-proof { gap:20px; }
-  .social-proof .stat .num { font-size:22px; }
+/* ── HEADER ── */
+header {
+  text-align: center;
+  padding: 48px 20px 32px;
 }
+header h1 { font-size: 36px; color: var(--heading); margin-bottom: 6px; letter-spacing: -0.5px; }
+header .tagline { color: #777; font-size: 15px; }
+header .tagline a { color: var(--accent); text-decoration: none; }
+
+/* ── DASHBOARD GRID ── */
+.dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+.build-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .15s, border-color .15s, box-shadow .15s;
+}
+.build-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(79,195,247,0.08);
+}
+.build-card .card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: var(--surface2);
+}
+.build-card .card-body { padding: 20px; }
+.build-card .card-body .price { 
+  font-size: 12px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 0.8px;
+  color: var(--accent2);
+  margin-bottom: 6px;
+}
+.build-card .card-body h3 { font-size: 20px; color: var(--heading); margin-bottom: 8px; }
+.build-card .card-body p { font-size: 14px; color: #999; line-height: 1.5; }
+.build-card .card-body .tools { 
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.build-card .card-body .tool-tag {
+  font-size: 11px;
+  background: var(--surface2);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+/* ── TUTORIAL VIEW ── */
+.tutorial-view {
+  display: none;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+.tutorial-view.active { display: block; }
+.tutorial-view .back-btn {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 8px 0;
+}
+.tutorial-view .back-btn:hover { color: #81D4FA; }
+.tutorial-view .hero-img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  background: var(--surface2);
+}
+.tutorial-view h2 { font-size: 32px; color: var(--heading); margin-bottom: 8px; }
+.tutorial-view .subtitle { color: var(--accent2); font-size: 15px; margin-bottom: 16px; }
+.tutorial-view .overview { 
+  color: #bbb; 
+  font-size: 16px; 
+  line-height: 1.7; 
+  margin-bottom: 28px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+/* ── AFFILIATE BUTTONS ── */
+.affiliate-section { margin-bottom: 32px; }
+.affiliate-section h3 { font-size: 18px; color: var(--accent3); margin-bottom: 14px; }
+.affiliate-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.affiliate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform .12s, box-shadow .12s;
+}
+.affiliate-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+.affiliate-btn.primary { background: var(--accent); color: #08080f; }
+.affiliate-btn.secondary { background: var(--surface2); color: var(--accent); border: 1px solid var(--border); }
+.affiliate-btn .btn-icon { font-size: 20px; }
+
+/* ── STEP-BY-STEP ── */
+.steps { margin-bottom: 32px; }
+.steps h3 { font-size: 18px; color: var(--heading); margin-bottom: 16px; }
+.step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.step .step-num {
+  background: var(--accent);
+  color: #08080f;
+  font-weight: 800;
+  font-size: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.step .step-content h4 { font-size: 16px; color: var(--heading); margin-bottom: 4px; }
+.step .step-content p { font-size: 14px; color: #999; line-height: 1.6; }
+.step .step-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+}
+
+/* ── PRO TIP ── */
+.pro-tip {
+  background: linear-gradient(135deg, #1a1a2e 0%, #14142a 100%);
+  border-left: 3px solid var(--accent3);
+  padding: 18px 22px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 24px;
+}
+.pro-tip strong { color: var(--accent3); }
+.pro-tip p { font-size: 14px; color: #bbb; margin-top: 4px; }
+
+/* ── COST BREAKDOWN TABLE ── */
+.cost-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+.cost-table th { 
+  text-align: left; 
+  color: #888; 
+  font-weight: 600; 
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.cost-table td { 
+  padding: 12px 16px; 
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.cost-table .total td { 
+  border-bottom: none;
+  font-weight: 700;
+  color: var(--accent2);
+  font-size: 16px;
+  padding-top: 16px;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 30px 20px 50px;
+  color: #555;
+  font-size: 13px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  header h1 { font-size: 26px; }
+  .dashboard { grid-template-columns: 1fr; }
+  .tutorial-view h2 { font-size: 24px; }
+  .affiliate-btn { width: 100%; justify-content: center; }
+}
+
+/* ── LOCKED CARD ── */
+.build-card.locked {
+  position: relative;
+  cursor: default;
+  overflow: hidden;
+}
+.build-card.locked:hover {
+  transform: none;
+  border-color: var(--border);
+  box-shadow: none;
+}
+.card-lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,8,15,0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--radius);
+}
+.card-lock-overlay .lock-icon {
+  font-size: 36px;
+  filter: drop-shadow(0 0 12px rgba(255,183,77,0.4));
+}
+.card-lock-overlay .lock-text {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent3);
+  text-align: center;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+/* ── PROGRESS BAR (inside lock overlay) ── */
+.lock-progress-wrap {
+  width: 70%;
+  max-width: 200px;
+}
+.lock-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+.lock-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent3), var(--accent));
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+.lock-progress-label {
+  font-size: 10px;
+  color: #888;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* ── FREE BADGE ── */
+.free-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(102,187,106,0.3);
+}
+
+/* ── DASHBOARD HIDDEN STATE ── */
+.dashboard.hidden { display: none; }
+header.hidden { display: none; }
 </style>
-
-<!-- Google Analytics (placeholder — replace with your GA4 ID) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
 </head>
 <body>
 
-<!-- HERO -->
-<div class="hero" id="hero">
-  <div class="badge">📦 Ready-to-Deploy AI Stacks</div>
-  <h1>Build Your <span>AI Workshop</span></h1>
-  <p class="subtitle">Pick a toolkit. Follow the guide. Get it running today. No coding required.</p>
-  <p class="channel-link">📺 Watch the builds on YouTube: <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener">@ZachS-o3e4j</a></p>
-</div>
+<!-- ═══════════ HEADER ═══════════ -->
+<header id="main-header">
+  <h1>🛠️ Build Your AI Stack</h1>
+  <p class="tagline">Pick a path. Every tool I use, with setup guides. <a href="https://youtube.com/@ZachS-o3e4j" target="_blank">@ZachS-o3e4j</a></p>
+</header>
 
-<!-- SOCIAL PROOF -->
-<div class="social-proof">
-  <div class="stat"><div class="num">7</div><div class="label">AI Tool Guides</div></div>
-  <div class="stat"><div class="num">$3</div><div class="label">Cheapest Stack</div></div>
-  <div class="stat"><div class="num">10</div><div class="label">Build Videos</div></div>
-  <div class="stat"><div class="num">0</div><div class="label">Coding Needed</div></div>
-</div>
-
-<!-- DASHBOARD -->
+<!-- ═══════════ DASHBOARD ═══════════ -->
 <div class="dashboard" id="dashboard">
 
-  <!-- Card 1: AI Assistant -->
-  <div class="build-card" onclick="showTutorial('assistant')">
-    <img class="card-img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=340&fit=crop&auto=format" alt="AI Assistant" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0f0f2e,#1a1050)'">
+  <!-- Card 1 -->
+  <div class="build-card" data-card="assistant" onclick="showTutorial('assistant')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=320&fit=crop&auto=format" alt="AI Assistant" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=320&fit=crop&auto=format'">
     <div class="card-body">
-      <div class="price">$3/month</div>
+      <div class="price">From $3/month</div>
       <h3>🤖 The $3 AI Assistant</h3>
-      <p>Your own AI agent that runs your business from Telegram. Email, research, content, scheduling — all automated.</p>
-      <div class="tools"><span class="tool-tag">Hermes Agent</span><span class="tool-tag">DeepSeek V4</span><span class="tool-tag">Telegram</span></div>
+      <p>A full AI agent in your pocket — emails, research, content, scheduling. Runs your business from Telegram.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">DeepSeek V4</span>
+        <span class="tool-tag">Telegram</span>
+      </div>
     </div>
   </div>
 
-  <!-- Card 2: AI Clone -->
-  <div class="build-card" onclick="showTutorial('clone')">
-    <img class="card-img" src="https://images.unsplash.com/photo-1531746790095-e08c2c08a4b0?w=600&h=340&fit=crop&auto=format" alt="AI Clone" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a1030,#0f0f2e)'">
+  <!-- Card 2 -->
+  <div class="build-card" data-card="clone" onclick="showTutorial('clone')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1531746790095-e08c2c08a4b0?w=600&h=320&fit=crop&auto=format" alt="AI Clone" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=320&fit=crop&auto=format'">
     <div class="card-body">
       <div class="price">From $5</div>
-      <h3>🎬 AI Clone Studio</h3>
-      <p>Record yourself once. Your AI avatar delivers scripts on video forever. No camera, no crew, no reshoots.</p>
-      <div class="tools"><span class="tool-tag">HeyGen</span><span class="tool-tag">ElevenLabs</span><span class="tool-tag">ffmpeg</span></div>
+      <h3>🎬 AI Clone Factory</h3>
+      <p>Record once, generate forever. Your AI avatar delivers scripts on video — no camera, no crew, no reshoots.</p>
+      <div class="tools">
+        <span class="tool-tag">HeyGen</span>
+        <span class="tool-tag">ElevenLabs</span>
+        <span class="tool-tag">ffmpeg</span>
+      </div>
     </div>
   </div>
 
-  <!-- Card 3: AI Images -->
-  <div class="build-card" onclick="showTutorial('images')">
-    <img class="card-img" src="https://images.unsplash.com/photo-1547954575-855750c57bd3?w=600&h=340&fit=crop&auto=format" alt="Images" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#102a1a,#0f1a2e)'">
+  <!-- Card 3 -->
+  <div class="build-card" data-card="images" onclick="showTutorial('images')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1547954575-855750c57bd3?w=600&h=320&fit=crop&auto=format" alt="AI Images" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=600&h=320&fit=crop&auto=format'">
     <div class="card-body">
-      <div class="price">Free</div>
+      <div class="price">Free / From $10/month</div>
       <h3>🖼️ AI Image Studio</h3>
-      <p>Generate, edit, and enhance images with AI. Background removal, upscaling, creation — all free, all browser-based.</p>
-      <div class="tools"><span class="tool-tag">Leonardo AI</span><span class="tool-tag">Photopea</span><span class="tool-tag">Canva</span></div>
+      <p>Generate, edit, and enhance images with AI. Remove backgrounds, upscale, create from scratch — all for free.</p>
+      <div class="tools">
+        <span class="tool-tag">Leonardo AI</span>
+        <span class="tool-tag">Photopea</span>
+        <span class="tool-tag">Canva</span>
+      </div>
     </div>
   </div>
 
-  <!-- Card 4: AI Video -->
-  <div class="build-card" onclick="showTutorial('video')">
-    <img class="card-img" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=340&fit=crop&auto=format" alt="Video" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a0f2e,#2e0f1a)'">
+  <!-- Card 4 -->
+  <div class="build-card" data-card="video" onclick="showTutorial('video')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=320&fit=crop&auto=format" alt="Video Editing" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=320&fit=crop&auto=format'">
     <div class="card-body">
-      <div class="price">Free tier</div>
+      <div class="price">Free tier available</div>
       <h3>🎥 AI Video Engine</h3>
-      <p>Raw footage in, finished video out. Auto captions, smart cuts, color grading. Hours of editing in minutes.</p>
-      <div class="tools"><span class="tool-tag">CapCut</span><span class="tool-tag">Descript</span><span class="tool-tag">HyperFrames</span></div>
+      <p>Raw footage in, finished video out. Auto captions, smart cuts, color grading — hours of work in minutes.</p>
+      <div class="tools">
+        <span class="tool-tag">CapCut</span>
+        <span class="tool-tag">Descript</span>
+        <span class="tool-tag">HyperFrames</span>
+      </div>
     </div>
   </div>
 
-  <!-- Card 5: AI Writing -->
-  <div class="build-card" onclick="showTutorial('writing')">
-    <img class="card-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=340&fit=crop&auto=format" alt="Writing" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a1030,#100f2e)'">
+  <!-- Card 5 -->
+  <div class="build-card" data-card="writing" onclick="showTutorial('writing')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=320&fit=crop&auto=format" alt="AI Writing" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=320&fit=crop&auto=format'">
     <div class="card-body">
-      <div class="price">Free / $39/mo</div>
-      <h3>✍️ AI Writing Engine</h3>
-      <p>Upload your writing samples. The AI learns your voice and writes emails, scripts, tweets that sound like you.</p>
-      <div class="tools"><span class="tool-tag">Claude</span><span class="tool-tag">Jasper</span><span class="tool-tag">ChatGPT</span></div>
+      <div class="price">Free / From $39/month</div>
+      <h3>✍️ AI Writing System</h3>
+      <p>Emails, scripts, tweets, captions — written in your voice. Upload samples, it learns your style in seconds.</p>
+      <div class="tools">
+        <span class="tool-tag">Claude</span>
+        <span class="tool-tag">Jasper</span>
+        <span class="tool-tag">ChatGPT</span>
+      </div>
     </div>
   </div>
 
-  <!-- Card 6: Passive Income -->
-  <div class="build-card" onclick="showTutorial('passive')">
-    <img class="card-img" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=340&fit=crop&auto=format" alt="Passive" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2e1a0f,#1a2e0f)'">
+  <!-- Card 6 -->
+  <div class="build-card" data-card="passive" onclick="showTutorial('passive')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=320&fit=crop&auto=format" alt="Passive Income" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1553729459-afe8f2e2ed61?w=600&h=320&fit=crop&auto=format'">
     <div class="card-body">
-      <div class="price">Free — Earns $30–80/mo</div>
+      <div class="price">Free — Earns $30–80/month</div>
       <h3>💰 Passive Income Stack</h3>
-      <p>Apps that pay you for your unused bandwidth. Install once, cash out monthly. Truly set-and-forget.</p>
-      <div class="tools"><span class="tool-tag">Honeygain</span><span class="tool-tag">EarnApp</span><span class="tool-tag">Pawns.app</span></div>
+      <p>Apps that pay you for doing nothing. Share unused bandwidth, complete 30-second tasks, cash out to PayPal.</p>
+      <div class="tools">
+        <span class="tool-tag">Honeygain</span>
+        <span class="tool-tag">EarnApp</span>
+        <span class="tool-tag">Pawns.app</span>
+      </div>
     </div>
   </div>
 
-  <!-- Card 7: GUI Bot (LOCKED) -->
-  <div class="build-card locked" onclick="showTutorial('gui-bot')">
-    <span class="lock-badge">🔒 Coming Soon</span>
-    <img class="card-img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=340&fit=crop&auto=format" alt="GUI Bot" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a0f00,#2e1a00)'">
+  <!-- Card 7: AI Stock Market Briefing -->
+  <div class="build-card" data-card="stocks" onclick="showTutorial('stocks')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=320&fit=crop&auto=format" alt="Stock Briefing" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1590283603385-17ffb3a7f193?w=600&h=320&fit=crop&auto=format'">
     <div class="card-body">
-      <div class="price">Free at 5K subs</div>
-      <h3>🖱️ GUI Automation Bot</h3>
-      <p>An AI that controls your computer — clicks, types, scrolls. Automate anything without APIs. First 4,000 subscribers get it free.</p>
-      <div class="tools"><span class="tool-tag">Python</span><span class="tool-tag">Gemini Vision</span><span class="tool-tag">pyautogui</span></div>
-      <p class="subs-countdown">🔓 Unlocks at 5,000 subscribers</p>
+      <div class="price">$2-5/month</div>
+      <h3>📈 AI Stock Market Briefing Agent</h3>
+      <p>Daily market briefs — top movers, sector analysis, stock news. Delivered to your email or Telegram every morning before the bell.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">DeepSeek V4</span>
+        <span class="tool-tag">Gmail API</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 8: AI Video Quality Auditor -->
+  <div class="build-card" data-card="auditor" onclick="showTutorial('auditor')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600&h=320&fit=crop&auto=format" alt="Video Auditor" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-2/month</div>
+      <h3>🎬 AI Video Quality Auditor</h3>
+      <p>Drop any video — AI watches it and gives a scored quality report. Catches glitches, audio issues, and visual problems before you publish.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">Gemini Flash</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 9: AI Budget & Finance Dashboard -->
+  <div class="build-card" data-card="budget" onclick="showTutorial('budget')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=320&fit=crop&auto=format" alt="Budget Dashboard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-3/month</div>
+      <h3>💰 AI Budget & Finance Dashboard</h3>
+      <p>Text your expenses to Telegram. AI categorizes everything, builds a live budget dashboard you can check anytime. Weekly spend reports included.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">Builder Agent</span>
+        <span class="tool-tag">Google Sheets</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 10: AI Email Manager & Inbox Cleaner -->
+  <div class="build-card" data-card="email" onclick="showTutorial('email')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1596526131083-e8c633c94859?w=600&h=320&fit=crop&auto=format" alt="Email Manager" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-3/month</div>
+      <h3>📧 AI Email Manager & Inbox Cleaner</h3>
+      <p>Auto-sorts incoming mail, flags what matters, trashes the junk. Daily digest shows you what you actually need to see.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">Gmail API</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 11: AI SEO & GEO Dominance Engine -->
+  <div class="build-card" data-card="geo" onclick="showTutorial('geo')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=320&fit=crop&auto=format" alt="SEO GEO Engine" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">LOCKED — Free for first 500 subscribers ($500/mo value)</div>
+      <h3>🔍 AI SEO & GEO Dominance Engine</h3>
+      <p>🔒 Get found in ChatGPT, Perplexity, AND Google. Full GEO audit + fix guide. Free for early subscribers — agencies charge $500/month for this.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">DeepSeek V4</span>
+        <span class="tool-tag">SEO Tools</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 12: AI Automotive Technician -->
+  <div class="build-card" data-card="automotive" onclick="showTutorial('automotive')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&h=320&fit=crop&auto=format" alt="Automotive Tech" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-3/month</div>
+      <h3>🚗 AI Automotive Technician</h3>
+      <p>Describe any car problem. AI searches TSBs, common repair issues, and technical databases. Gives you likely causes, repair difficulty, and estimated cost.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">DeepSeek V4</span>
+        <span class="tool-tag">NHTSA API</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 13: AI Social Media Content Factory -->
+  <div class="build-card" data-card="social" onclick="showTutorial('social')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=320&fit=crop&auto=format" alt="Content Factory" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-5/month</div>
+      <h3>📱 AI Social Media Content Factory</h3>
+      <p>Auto-generate posts, detect trends, write scripts. Schedule to X and Telegram. Daily content without the daily grind.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">DeepSeek V4</span>
+        <span class="tool-tag">X API</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 14: AI Smart Home Controller -->
+  <div class="build-card" data-card="smarthome" onclick="showTutorial('smarthome')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1558002038-1055e2e28ed1?w=600&h=320&fit=crop&auto=format" alt="Smart Home" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558002038-b0230e8e6b0a?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-3/month</div>
+      <h3>🏠 AI Smart Home Controller</h3>
+      <p>Control your Philips Hue lights from Telegram. Dim the living room, set movie mode, schedule sunrise wake-ups — all by text.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">Philips Hue Bridge</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 15: AI Research & Competitor Monitor -->
+  <div class="build-card" data-card="research" onclick="showTutorial('research')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=600&h=320&fit=crop&auto=format" alt="Research Monitor" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-5/month</div>
+      <h3>🔬 AI Research & Competitor Monitor</h3>
+      <p>Track competitors, monitor academic papers, watch prediction markets. Weekly briefing of everything that changed in your world.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">DeepSeek V4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 16: AI Dashboard Builder -->
+  <div class="build-card" data-card="dashbuilder" onclick="showTutorial('dashbuilder')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=320&fit=crop&auto=format" alt="Dashboard Builder" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">$0-3/month</div>
+      <h3>🖥️ AI Dashboard Builder</h3>
+      <p>Tell the Builder agent what dashboard you want. It builds it — budget tracker, inventory manager, habit tracker, whatever you need. Live in your browser in minutes.</p>
+      <div class="tools">
+        <span class="tool-tag">Hermes Agent</span>
+        <span class="tool-tag">Builder Agent</span>
+      </div>
     </div>
   </div>
 
 </div>
 
-<!-- NEWSLETTER CTA -->
-<div class="newsletter">
-  <h3>📬 New tools. No spam.</h3>
-  <p>I build and test new AI tools every week. Get the next one before anyone else.</p>
-  <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener" class="sub-cta">▶️ Subscribe on YouTube</a>
-</div>
+<!-- ═══════════ TUTORIAL VIEWS ═══════════ -->
 
-<!-- AFFILIATE DISCLOSURE -->
-<div class="disclosure">
-  <p>Some links on this page are affiliate links. If you click and make a purchase, I may earn a commission at no extra cost to you. I only recommend tools I use myself. See my <a href="#">full disclosure</a>.</p>
-</div>
-
-<!-- ═══ TUTORIAL: AI Assistant ═══ -->
+<!-- TUTORIAL 1: AI Assistant -->
 <div class="tutorial-view" id="tutorial-assistant">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1500&h=500&fit=crop&auto=format" alt="AI Assistant" onerror="this.style.background='linear-gradient(135deg,#0f0f2e,#1a1050)'">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&h=600&fit=crop&auto=format" alt="AI Assistant" onerror="this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&h=600&fit=crop&auto=format'">
   <h2>🤖 The $3 AI Assistant</h2>
-  <p class="tut-subtitle">$3/month total · 10-minute setup · Runs from your phone</p>
-  <div class="overview-box"><p>This is the exact stack I use every day. It handles email, research, content creation, and scheduling — all from Telegram. You talk to it like a person. It costs less than a coffee.</p></div>
-  <div class="cta-section">
-    <h3>🔗 Get the tools</h3>
-    <div class="cta-buttons">
-      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🚀</span> Install Hermes Agent →</a>
-      <a href="https://platform.deepseek.com" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🧠</span> Get DeepSeek API →</a>
-      <a href="https://telegram.org" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">📱</span> Telegram (Free)</a>
+  <p class="subtitle">$3/month total · 10-minute setup · Runs your business from your phone</p>
+
+  <div class="overview">
+    <p>This is the exact stack I use every day. It handles email, research, content creation, scheduling, and more — all from Telegram. You talk to it like a person. It costs less than a coffee.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 Get the Tools</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent — Free</a>
+      <a href="https://platform.deepseek.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🧠 DeepSeek API — Free Credits</a>
+      <a href="https://telegram.org" target="_blank" rel="sponsored" class="affiliate-btn secondary">📱 Telegram — Free</a>
     </div>
   </div>
-  <div class="steps-section">
-    <h3>📋 Step-by-Step Guide</h3>
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Install Hermes Agent</h4><p>Open your terminal and run the one-line installer from <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="noopener">hermes-agent.nousresearch.com</a>. Takes ~90 seconds. Works on Mac, Linux, and Windows WSL.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Get a DeepSeek API key</h4><p>Sign up at <a href="https://platform.deepseek.com" target="_blank" rel="noopener">platform.deepseek.com</a> — free credits included. Create an API key. V4 Pro is $0.28/M tokens. Most spend $2–5/month total.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Create a Telegram bot</h4><p>Message <a href="https://t.me/BotFather" target="_blank" rel="noopener">@BotFather</a> on Telegram. Type <code>/newbot</code>, pick a name, save the token. Takes 2 minutes.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Wire it up & start chatting</h4><p>Run <code>hermes setup</code>, paste your tokens, then <code>hermes gateway start</code>. Open Telegram, find your bot, say "Hey." Your AI is live.</p></div></div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Setup</h3>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>Open your terminal (Mac/Linux/Windows WSL) and run the one-line installer from <a href="https://hermes-agent.nousresearch.com" target="_blank" style="color:var(--accent)">hermes-agent.nousresearch.com</a>. Takes about 90 seconds.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Get a DeepSeek API Key</h4>
+        <p>Sign up at <a href="https://platform.deepseek.com" target="_blank" style="color:var(--accent)">platform.deepseek.com</a>. They give you free credits to start. Create an API key from the dashboard. The V4 Pro model costs $0.28 per million tokens — most people spend $2–5/month.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Connect to Telegram</h4>
+        <p>Create a Telegram bot with <a href="https://t.me/BotFather" target="_blank" style="color:var(--accent)">@BotFather</a> (free, 2 minutes). Paste the bot token into Hermes config. Run <code style="background:var(--surface2);padding:2px 8px;border-radius:4px;">hermes setup</code> and follow the prompts.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Start the Gateway & Chat</h4>
+        <p>Run <code style="background:var(--surface2);padding:2px 8px;border-radius:4px;">hermes gateway start</code>. Open Telegram, find your bot, and say hello. Your AI assistant is live. Try: "Search the web for the latest AI news and give me a summary."</p>
+      </div>
+    </div>
   </div>
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>Use DeepSeek V4 Pro (not the free Chat model). It handles multi-step tasks reliably. My entire month costs ~$3.</p></div>
-  <table class="cost-breakdown">
-    <tr><th>Tool</th><th>Plan</th><th>Monthly</th></tr>
-    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--green)">Free</td></tr>
-    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td style="color:var(--green)">~$2–5</td></tr>
-    <tr><td>Telegram Bot</td><td>Free</td><td style="color:var(--green)">Free</td></tr>
-    <tr class="total-row"><td colspan="2">Total</td><td>$2–5/month</td></tr>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Use DeepSeek V4 Pro (not the free Chat model). It's $0.28/M tokens and handles complex multi-step tasks. My entire month costs ~$3. If you're on a tight budget, DeepSeek Chat is free and still solid for basic tasks.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>Tool</th><th>Plan</th><th>Cost</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go (V4 Pro)</td><td style="color:var(--accent2)">~$2–5/mo</td></tr>
+    <tr><td>Telegram Bot</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total Monthly</td><td>$2–5</td></tr>
   </table>
-  <div class="after-install">
-    <h3>🎯 You Now Have</h3>
-    <p>A full AI assistant that lives in your phone. Ask it anything — summarize emails, research competitors, draft social posts, schedule reminders. It works exactly like texting a smart friend.</p>
-    <h3>⚠️ Quick Fixes</h3>
-    <p><strong>Bot not responding?</strong> Run <code>hermes gateway restart</code> in terminal.<br>
-    <strong>Slow replies?</strong> Switch to DeepSeek V4 Pro in your config — the free Chat model is much slower.<br>
-    <strong>Want it to read emails?</strong> Connect Gmail in <code>hermes setup</code> → Integrations.</p>
-    <h3>📌 Bookmark This</h3>
-    <p>Come back when you want to add <a href="#" onclick="showTutorial('clone');return false">AI video clones</a> or <a href="#" onclick="showTutorial('writing');return false">writing automation</a> to your assistant. This page updates as I test new tools.</p>
-  </div>
 </div>
 
-<!-- ═══ TUTORIAL: AI Clone ═══ -->
+<!-- TUTORIAL 2: AI Clone Factory -->
 <div class="tutorial-view" id="tutorial-clone">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1531746790095-e08c2c08a4b0?w=1500&h=500&fit=crop&auto=format" alt="Clone" onerror="this.style.background='linear-gradient(135deg,#1a1030,#0f0f2e)'">
-  <h2>🎬 AI Clone Studio</h2>
-  <p class="tut-subtitle">From $5 · Record once, generate forever · 1080p output</p>
-  <div class="overview-box"><p>Record a 2–3 minute video of yourself. HeyGen creates a digital clone. Type any script — your clone delivers it on video. No camera, lighting, or reshoots. I use this for YouTube Shorts — 10 videos in an afternoon.</p></div>
-  <div class="cta-section">
-    <h3>🔗 Get the tools</h3>
-    <div class="cta-buttons">
-      <a href="https://app.heygen.com/guest/template-all?trigger=signup&utm_source=aitoolstack&utm_medium=referral&utm_campaign=clone_guide" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🎭</span> Try HeyGen Free →</a>
-      <a href="https://elevenlabs.io/?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">🎙️</span> ElevenLabs Voice Cloning</a>
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1531746790095-e08c2c08a4b0?w=1400&h=600&fit=crop&auto=format" alt="AI Clone" onerror="this.src='https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🎬 AI Clone Factory</h2>
+  <p class="subtitle">From $5 · Record once, generate forever · 1080p video output</p>
+
+  <div class="overview">
+    <p>Record a 2–3 minute video of yourself talking. HeyGen creates a digital clone that looks and moves like you. After that, type any script and your clone delivers it on video. No camera, lighting, or reshoots. I use this for YouTube Shorts — 10 videos in an afternoon.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 Get the Tools</h3>
+    <div class="affiliate-buttons">
+      <a href="https://app.heygen.com/guest/template-all?trigger=signup" target="_blank" rel="sponsored" class="affiliate-btn primary">🎭 HeyGen — Free Trial</a>
+      <a href="https://elevenlabs.io" target="_blank" rel="sponsored" class="affiliate-btn secondary">🎙️ ElevenLabs — Voice Cloning</a>
     </div>
   </div>
-  <div class="steps-section">
-    <h3>📋 Step-by-Step Guide</h3>
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Create your HeyGen account</h4><p>Sign up at <a href="https://app.heygen.com/guest/template-all?trigger=signup&utm_source=aitoolstack&utm_medium=referral&utm_campaign=clone_guide" target="_blank" rel="noopener">HeyGen.com</a>. Start with Creator plan ($29/month) or use the free trial.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Record your avatar video</h4><p>Film 2–3 minutes: good lighting, neutral background, look at camera, speak naturally. Upload under "Instant Avatar." ~2 hours to process.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Generate videos from text</h4><p>Type any script — your clone delivers it. Export 1080p MP4. Each generation ~60 seconds. Create a week of content in one sitting.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Optional: Clone your voice</h4><p>Use <a href="https://elevenlabs.io/?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">ElevenLabs</a> voice cloning ($5/month). Record 3 minutes of audio for an indistinguishable AI voice.</p></div></div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Setup</h3>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Create Your HeyGen Account</h4>
+        <p>Go to <a href="https://app.heygen.com/guest/template-all?trigger=signup" target="_blank" style="color:var(--accent)">HeyGen.com</a> and sign up. Start with the Creator plan ($29/month) or use the free trial. This gives you access to Instant Avatar.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Record Your Avatar Video</h4>
+        <p>Film a 2-minute video of yourself in good lighting, looking at the camera, speaking naturally. Follow HeyGen's recording guide — neutral background, clear voice, natural gestures. Upload it under "Instant Avatar."</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Generate Videos From Text</h4>
+        <p>Once your avatar is ready (takes ~2 hours to process), type any script into HeyGen. Your clone delivers it. Export as 1080p MP4. Each generation takes about 60 seconds.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Optional: Clone Your Voice Too</h4>
+        <p>For the full clone stack, use <a href="https://elevenlabs.io" target="_blank" style="color:var(--accent)">ElevenLabs</a> voice cloning. Record 3 minutes of audio, it creates an AI voice that sounds exactly like you. Use this for voiceovers without recording.</p>
+      </div>
+    </div>
   </div>
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>Record in 4K with front lighting. Busy backgrounds and rapid head movements reduce quality. A 3-minute recording with varied expressions produces the most realistic clone.</p></div>
-  <table class="cost-breakdown">
-    <tr><th>Tool</th><th>Plan</th><th>Monthly</th></tr>
-    <tr><td>HeyGen Creator</td><td>Monthly</td><td>$29</td></tr>
-    <tr><td>ElevenLabs Starter</td><td>Optional</td><td>$5</td></tr>
-    <tr class="total-row"><td colspan="2">Total</td><td>$29–34/month</td></tr>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Record your avatar video in 4K with good front lighting. The better the source video, the more realistic your clone. Avoid busy backgrounds and rapid head movements. A 3-minute recording with varied expressions produces the best results.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>Tool</th><th>Plan</th><th>Cost</th></tr>
+    <tr><td>HeyGen Creator</td><td>Monthly</td><td>$29/mo</td></tr>
+    <tr><td>ElevenLabs Starter</td><td>Monthly (optional)</td><td>$5/mo</td></tr>
+    <tr class="total"><td colspan="2">Total Monthly</td><td>$29–34</td></tr>
   </table>
-  <div class="after-install">
-    <h3>🎯 You Now Have</h3>
-    <p>A digital clone that delivers any script on video. Make YouTube Shorts without filming, create training videos, send personalized video messages. One recording = unlimited content.</p>
-    <h3>⚠️ Quick Fixes</h3>
-    <p><strong>Clone looks stiff?</strong> Re-record with more hand gestures and head movement. Static poses create robotic clones.<br>
-    <strong>Audio out of sync?</strong> Export at 1080p, not 4K. Lower resolution syncs more reliably.<br>
-    <strong>Voice sounds off?</strong> Add ElevenLabs voice cloning — it's more natural than HeyGen's built-in TTS.</p>
-    <h3>📌 Bookmark This</h3>
-    <p>Pair your clone with the <a href="#" onclick="showTutorial('video');return false">AI Video Engine</a> for automated editing. Check back — I add new tools as I test them.</p>
-  </div>
 </div>
 
-<!-- ═══ TUTORIAL: AI Images ═══ -->
+<!-- TUTORIAL 3: AI Image Studio -->
 <div class="tutorial-view" id="tutorial-images">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1547954575-855750c57bd3?w=1500&h=500&fit=crop&auto=format" alt="Images" onerror="this.style.background='linear-gradient(135deg,#102a1a,#0f1a2e)'">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1547954575-855750c57bd3?w=1400&h=600&fit=crop&auto=format" alt="AI Images" onerror="this.src='https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=1400&h=600&fit=crop&auto=format'">
   <h2>🖼️ AI Image Studio</h2>
-  <p class="tut-subtitle">Free · Generate, edit, enhance · No design skills needed</p>
-  <div class="overview-box"><p>Create professional images from text. Remove backgrounds in one click, upscale to 4K, generate logos and thumbnails — all free, all in your browser.</p></div>
-  <div class="cta-section">
-    <h3>🔗 Get the tools</h3>
-    <div class="cta-buttons">
-      <a href="https://app.leonardo.ai/?via=zach&utm_source=aitoolstack&utm_medium=referral&utm_campaign=image_guide" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🎨</span> Leonardo AI — 150 Free/Day →</a>
-      <a href="https://photopea.com" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">🖌️</span> Photopea (Free)</a>
-      <a href="https://canva.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">📐</span> Canva (Free / Pro)</a>
+  <p class="subtitle">Free / From $10/month · Generate, edit, enhance · No Photoshop needed</p>
+
+  <div class="overview">
+    <p>Create professional images from text descriptions. Remove backgrounds in one click, upscale to 4K, generate logos, thumbnails, and social media graphics — all in your browser. Zero design skills required.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 Get the Tools</h3>
+    <div class="affiliate-buttons">
+      <a href="https://app.leonardo.ai/?via=zach" target="_blank" rel="sponsored" class="affiliate-btn primary">🎨 Leonardo AI — 150 Free Images/Day</a>
+      <a href="https://photopea.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🖌️ Photopea — Free</a>
+      <a href="https://canva.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">📐 Canva — Free / Pro $13/mo</a>
     </div>
   </div>
-  <div class="steps-section">
-    <h3>📋 Step-by-Step Guide</h3>
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Start with Leonardo AI</h4><p>Sign up at <a href="https://app.leonardo.ai/?via=zach&utm_source=aitoolstack&utm_medium=referral&utm_campaign=image_guide" target="_blank" rel="noopener">Leonardo.ai</a>. Free tier: 150 images/day. Choose a model, type your prompt, generate. Download up to 4K.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Edit like Photoshop (free)</h4><p><a href="https://photopea.com" target="_blank" rel="noopener">Photopea.com</a> is a full Photoshop clone in your browser — layers, filters, background removal. Pair with Leonardo for the ultimate free creative suite.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Design social graphics with Canva</h4><p><a href="https://canva.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">Canva</a> has templates for every platform. Free tier is solid. Pro unlocks background remover and brand kits.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Free stock photos when needed</h4><p>Use <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>, <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>, and <a href="https://pixabay.com" target="_blank" rel="noopener">Pixabay</a>. All free, no attribution, high-res.</p></div></div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Setup</h3>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Start With Leonardo AI</h4>
+        <p>Sign up at <a href="https://app.leonardo.ai/?via=zach" target="_blank" style="color:var(--accent)">Leonardo.ai</a>. Free tier gives you 150 image generations per day. Choose a model (Leonardo Lightning for speed, Phoenix for quality), type your prompt, and generate. Download in up to 4K.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Edit Like Photoshop (Free)</h4>
+        <p>Open <a href="https://photopea.com" target="_blank" style="color:var(--accent)">Photopea.com</a> in your browser. It's a full Photoshop clone — layers, filters, background removal, text tools. Works with PSD files. No install, no account needed. Pair with Leonardo for the ultimate free creative suite.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Design Social Graphics With Canva</h4>
+        <p><a href="https://canva.com" target="_blank" style="color:var(--accent)">Canva</a> has templates for every platform — YouTube thumbnails, Instagram posts, TikTok covers. Free tier is solid. Pro ($13/month) unlocks background remover, brand kits, and premium templates.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Free Stock Photos When You Need Real Images</h4>
+        <p>For photos AI can't generate (yet), use <a href="https://pexels.com" target="_blank" style="color:var(--accent)">Pexels</a>, <a href="https://unsplash.com" target="_blank" style="color:var(--accent)">Unsplash</a>, and <a href="https://pixabay.com" target="_blank" style="color:var(--accent)">Pixabay</a>. All free, no attribution required, high-resolution.</p>
+      </div>
+    </div>
   </div>
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>Leonardo + Photopea + Pexels covers 95% of image needs. Most creators never pay for images again.</p></div>
-  <table class="cost-breakdown">
-    <tr><th>Tool</th><th>Plan</th><th>Monthly</th></tr>
-    <tr><td>Leonardo AI</td><td>Free (150/day)</td><td style="color:var(--green)">Free</td></tr>
-    <tr><td>Photopea</td><td>Free</td><td style="color:var(--green)">Free</td></tr>
-    <tr><td>Canva Pro</td><td>Optional</td><td>$13</td></tr>
-    <tr class="total-row"><td colspan="2">Total</td><td>$0–13/month</td></tr>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>The free combo (Leonardo + Photopea + Pexels) covers 95% of image needs. Only upgrade when you hit generation limits or need Canva Pro's brand kit. Most creators never need to pay for images again.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>Tool</th><th>Plan</th><th>Cost</th></tr>
+    <tr><td>Leonardo AI</td><td>Free (150 images/day)</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Photopea</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Canva Pro</td><td>Monthly (optional)</td><td>$13/mo</td></tr>
+    <tr><td>Pexels / Unsplash</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total Monthly</td><td>$0–13</td></tr>
   </table>
-  <div class="after-install">
-    <h3>🎯 You Now Have</h3>
-    <p>A complete image studio in your browser. Generate AI art, edit like Photoshop, design social graphics — all without installing anything. 150 free AI images every single day.</p>
-    <h3>⚠️ Quick Fixes</h3>
-    <p><strong>Images look weird?</strong> Add "photorealistic, 8K, detailed" to your prompt. Leonardo's default style is artistic.<br>
-    <strong>Need transparent background?</strong> Generate in Leonardo, then open in Photopea → Select → Remove BG.<br>
-    <strong>Canva template stuck?</strong> Right-click any element → "Detach from template" to freely edit.</p>
-    <h3>📌 Bookmark This</h3>
-    <p>Combine with the <a href="#" onclick="showTutorial('video');return false">AI Video Engine</a> for thumbnails that actually get clicks. I update tools as I find better ones.</p>
-  </div>
 </div>
 
-<!-- ═══ TUTORIAL: AI Video ═══ -->
+<!-- TUTORIAL 4: AI Video Engine -->
 <div class="tutorial-view" id="tutorial-video">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1500&h=500&fit=crop&auto=format" alt="Video" onerror="this.style.background='linear-gradient(135deg,#1a0f2e,#2e0f1a)'">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1400&h=600&fit=crop&auto=format" alt="Video Editing" onerror="this.src='https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1400&h=600&fit=crop&auto=format'">
   <h2>🎥 AI Video Engine</h2>
-  <p class="tut-subtitle">Free · Auto captions, smart cuts, color grade · 10x faster</p>
-  <div class="overview-box"><p>What used to take 3 hours now takes 3 minutes. AI handles captions, cuts dead space, color-grades, and adds effects. You focus on ideas.</p></div>
-  <div class="cta-section">
-    <h3>🔗 Get the tools</h3>
-    <div class="cta-buttons">
-      <a href="https://capcut.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">✂️</span> Download CapCut Free →</a>
-      <a href="https://descript.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">📝</span> Descript (Free Tier)</a>
+  <p class="subtitle">Free tier available · Auto captions, smart cuts, color grade · 10x faster</p>
+
+  <div class="overview">
+    <p>What used to take 3 hours now takes 3 minutes. AI handles captions, cuts dead space, color-grades, and adds effects. You focus on ideas — the engine handles editing.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 Get the Tools</h3>
+    <div class="affiliate-buttons">
+      <a href="https://capcut.com" target="_blank" rel="sponsored" class="affiliate-btn primary">✂️ CapCut — Free</a>
+      <a href="https://descript.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">📝 Descript — Free Tier</a>
     </div>
   </div>
-  <div class="steps-section">
-    <h3>📋 Step-by-Step Guide</h3>
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Download CapCut Desktop</h4><p><a href="https://capcut.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">CapCut</a> is free. Includes auto-captions (95%+ accurate), background removal, AI color grading, and one-click platform templates.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Import & auto-caption</h4><p>Drop footage in. Click "Text" → "Auto captions." Captions boost watch time 40%+.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Smart cuts & pacing</h4><p>Use "Remove silence" to cut dead air. For Shorts, keep clips under 3 seconds. CapCut templates handle transitions and motion graphics.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>For talking-head: try Descript</h4><p><a href="https://descript.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">Descript</a> edits video like a document — delete words from the transcript, they vanish from the video. Free tier: 1 hour transcription/month.</p></div></div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Setup</h3>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Download CapCut (Desktop)</h4>
+        <p><a href="https://capcut.com" target="_blank" style="color:var(--accent)">CapCut</a> is free on Mac, Windows, iOS, and Android. The desktop version is best for editing. It includes: auto-captions (95%+ accurate), background removal, AI color grading, and one-click templates for every platform.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Import & Auto-Caption</h4>
+        <p>Drop your raw footage in. Click "Text" → "Auto captions." CapCut transcribes and syncs captions automatically. Choose a caption style (I use the clean white-on-dark style for Shorts). Captions increase watch time 40%+.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Smart Cuts & Pacing</h4>
+        <p>Use "Remove silence" to cut dead air automatically. For Shorts/TikToks, keep clips under 3 seconds each — fast cuts hold attention. CapCut's templates handle transitions, zooms, and motion graphics.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>For Talking-Head Videos: Try Descript</h4>
+        <p><a href="https://descript.com" target="_blank" style="color:var(--accent)">Descript</a> edits video like a document — delete words from the transcript and they disappear from the video. Perfect for tutorials, podcasts, and long-form content. Free tier includes 1 hour of transcription/month.</p>
+      </div>
+    </div>
   </div>
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>Sweet spot for Shorts: 15–30 seconds. Hook in first 1.5 seconds. Pattern interrupts every 2–3 seconds. CapCut templates handle this automatically.</p></div>
-  <table class="cost-breakdown">
-    <tr><th>Tool</th><th>Plan</th><th>Monthly</th></tr>
-    <tr><td>CapCut Desktop</td><td>Free</td><td style="color:var(--green)">Free</td></tr>
-    <tr><td>CapCut Pro</td><td>Optional</td><td>$10</td></tr>
-    <tr><td>Descript Free</td><td>1 hr transcription</td><td style="color:var(--green)">Free</td></tr>
-    <tr class="total-row"><td colspan="2">Total</td><td>$0–34/month</td></tr>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>For YouTube Shorts, the sweet spot is 15–30 seconds. Hook viewers in the first 1.5 seconds with a bold statement or visual. Add pattern interrupts every 2–3 seconds (zoom, text pop, transition). CapCut templates do this automatically.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>Tool</th><th>Plan</th><th>Cost</th></tr>
+    <tr><td>CapCut Desktop</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>CapCut Pro</td><td>Monthly (optional)</td><td>$10/mo</td></tr>
+    <tr><td>Descript Free</td><td>1 hr transcription/mo</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Descript Pro</td><td>Monthly (optional)</td><td>$24/mo</td></tr>
+    <tr class="total"><td colspan="2">Total Monthly</td><td>$0–34</td></tr>
   </table>
-  <div class="after-install">
-    <h3>🎯 You Now Have</h3>
-    <p>A video editing workflow that's 10x faster. Drop raw footage, get auto-captioned, color-graded, ready-to-post content. Perfect for YouTube Shorts, TikToks, and Reels.</p>
-    <h3>⚠️ Quick Fixes</h3>
-    <p><strong>Captions wrong?</strong> Click the caption text to edit manually. CapCut's AI captions are ~95% accurate.<br>
-    <strong>Export looks blurry?</strong> Check export settings — use 1080p, 30fps, high bitrate. Don't use "fast export."<br>
-    <strong>Audio levels inconsistent?</strong> Select all clips → Audio → Normalize Loudness. One click fixes everything.</p>
-    <h3>📌 Bookmark This</h3>
-    <p>Pair with the <a href="#" onclick="showTutorial('clone');return false">AI Clone Studio</a> to generate content without filming. New tools added as I discover them.</p>
-  </div>
 </div>
 
-<!-- ═══ TUTORIAL: AI Writing ═══ -->
+<!-- TUTORIAL 5: AI Writing System -->
 <div class="tutorial-view" id="tutorial-writing">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1500&h=500&fit=crop&auto=format" alt="Writing" onerror="this.style.background='linear-gradient(135deg,#1a1030,#100f2e)'">
-  <h2>✍️ AI Writing Engine</h2>
-  <p class="tut-subtitle">Free / $39/month · Learns your voice · Emails, scripts, tweets</p>
-  <div class="overview-box"><p>Upload examples of your writing. The AI learns your style, tone, and vocabulary. Then it writes everything in your voice — not generic AI text.</p></div>
-  <div class="cta-section">
-    <h3>🔗 Get the tools</h3>
-    <div class="cta-buttons">
-      <a href="https://claude.ai" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🧠</span> Try Claude Free →</a>
-      <a href="https://jasper.ai?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">✍️</span> Jasper (7-Day Trial)</a>
-      <a href="https://chat.openai.com" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">🤖</span> ChatGPT (Free)</a>
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1400&h=600&fit=crop&auto=format" alt="AI Writing" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1400&h=600&fit=crop&auto=format'">
+  <h2>✍️ AI Writing System</h2>
+  <p class="subtitle">Free / From $39/month · Learns your voice · Emails, scripts, tweets, captions</p>
+
+  <div class="overview">
+    <p>Upload examples of your writing. The AI learns your style, tone, and vocabulary. Then it writes emails, YouTube scripts, tweets, and blog posts that sound exactly like you — not like AI. I use this for scripts, replies, and content in bulk.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 Get the Tools</h3>
+    <div class="affiliate-buttons">
+      <a href="https://claude.ai" target="_blank" rel="sponsored" class="affiliate-btn primary">🧠 Claude — Free Tier</a>
+      <a href="https://jasper.ai" target="_blank" rel="sponsored" class="affiliate-btn secondary">✍️ Jasper — 7-Day Free Trial</a>
+      <a href="https://chat.openai.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🤖 ChatGPT — Free</a>
     </div>
   </div>
-  <div class="steps-section">
-    <h3>📋 Step-by-Step Guide</h3>
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Start with Claude (free)</h4><p>Go to <a href="https://claude.ai" target="_blank" rel="noopener">Claude.ai</a>. Paste 3–5 examples of your writing. Tell it: "Analyze my writing style — tone, vocabulary, sentence structure."</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Generate in your voice</h4><p>Give Claude a task using your style profile. The output sounds like you — not generic AI. Refine: "Shorter sentences, more casual."</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Scale with Jasper</h4><p><a href="https://jasper.ai?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">Jasper</a> is purpose-built for marketing copy — ads, emails, landing pages. 7-day free trial, then $39/month.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Automate with your AI assistant</h4><p>If you built the $3 AI Assistant (Build #1), connect it to Claude. Your assistant drafts everything from Telegram, in your voice.</p></div></div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Setup</h3>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Start With Claude (Free)</h4>
+        <p>Go to <a href="https://claude.ai" target="_blank" style="color:var(--accent)">Claude.ai</a>. Paste 3–5 examples of your writing (emails, tweets, anything). Tell Claude: "Analyze my writing style — tone, vocabulary, sentence structure, common phrases." It will give you a style profile.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Generate in Your Voice</h4>
+        <p>Now give Claude a task: "Write a Twitter thread about [topic] in my voice, using the style profile above." The output will sound like you — not generic AI text. Refine by giving feedback: "Shorter sentences, more sarcasm, fewer emojis."</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Scale With Jasper (For Marketing)</h4>
+        <p><a href="https://jasper.ai" target="_blank" style="color:var(--accent)">Jasper</a> is purpose-built for marketing copy. It has templates for ads, emails, landing pages, and social posts. Upload your brand voice and it applies it across everything. 7-day free trial, then $39/month. Worth it if you produce content regularly.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Automate With Your AI Assistant</h4>
+        <p>If you built the $3 AI Assistant (build option #1), connect it to Claude or ChatGPT. Your assistant can draft emails, generate scripts, and write replies — all from Telegram, in your voice, on demand.</p>
+      </div>
+    </div>
   </div>
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>The magic is in the examples. Curate your BEST writing — not random texts. More samples = more accurate voice. Update your style profile monthly.</p></div>
-  <table class="cost-breakdown">
-    <tr><th>Tool</th><th>Plan</th><th>Monthly</th></tr>
-    <tr><td>Claude Free</td><td>Limited messages</td><td style="color:var(--green)">Free</td></tr>
-    <tr><td>Claude Pro</td><td>5x usage</td><td>$20</td></tr>
-    <tr><td>Jasper Creator</td><td>Monthly</td><td>$39</td></tr>
-    <tr class="total-row"><td colspan="2">Recommended</td><td>$0–59/month</td></tr>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>The magic is in the examples. Give the AI at least 3 samples of your best writing — not random texts. Curate your best tweets, best emails, best posts. More samples = more accurate voice. Update your style profile monthly as your voice evolves.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>Tool</th><th>Plan</th><th>Cost</th></tr>
+    <tr><td>Claude Free</td><td>Limited messages/day</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Claude Pro</td><td>5x more usage</td><td>$20/mo</td></tr>
+    <tr><td>Jasper Creator</td><td>Monthly</td><td>$39/mo</td></tr>
+    <tr><td>ChatGPT Free</td><td>GPT-4o mini</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Recommended Total</td><td>$0–59/mo</td></tr>
   </table>
-  <div class="after-install">
-    <h3>🎯 You Now Have</h3>
-    <p>An AI that writes in YOUR voice. Emails, social posts, scripts — it sounds like you, not a robot. Upload more samples over time and it gets better.</p>
-    <h3>⚠️ Quick Fixes</h3>
-    <p><strong>Sounds too generic?</strong> Feed it 5+ samples of your best writing. The more variety, the better the clone.<br>
-    <strong>Claude hit its limit?</strong> Free tier resets every 8 hours. Pro ($20) gives 5x more messages.<br>
-    <strong>Jasper vs Claude?</strong> Claude for natural voice. Jasper for marketing copy that converts.</p>
-    <h3>📌 Bookmark This</h3>
-    <p>Connect this to your <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a> and it writes from Telegram automatically. I update tools as I test new ones.</p>
-  </div>
 </div>
 
-<!-- ═══ TUTORIAL: Passive Income ═══ -->
+<!-- TUTORIAL 6: Passive Income Stack -->
 <div class="tutorial-view" id="tutorial-passive">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1500&h=500&fit=crop&auto=format" alt="Passive" onerror="this.style.background='linear-gradient(135deg,#2e1a0f,#1a2e0f)'">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1400&h=600&fit=crop&auto=format" alt="Passive Income" onerror="this.src='https://images.unsplash.com/photo-1553729459-afe8f2e2ed61?w=1400&h=600&fit=crop&auto=format'">
   <h2>💰 Passive Income Stack</h2>
-  <p class="tut-subtitle">Free · Earn $30–80/month · Set it and forget it</p>
-  <div class="overview-box"><p>These apps pay you for resources you're not using — bandwidth and processing power. Install once, cash out monthly. I stacked 3 and make $47–75/month doing nothing.</p></div>
-  <div class="cta-section">
-    <h3>🔗 Get the tools</h3>
-    <div class="cta-buttons">
-      <a href="https://honeygain.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🍯</span> Join Honeygain →</a>
-      <a href="https://earnapp.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">📡</span> EarnApp</a>
-      <a href="https://pawns.app?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="sponsored noopener" class="cta-btn secondary"><span class="emoji">♟️</span> Pawns.app</a>
+  <p class="subtitle">Free · Earns $30–80/month · Set it and forget it</p>
+
+  <div class="overview">
+    <p>These apps pay you for resources you're not using — bandwidth, processing power, and opinion data. Install once, cash out monthly. I stacked 4 of these and make $47–75/month doing absolutely nothing.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 Get the Tools</h3>
+    <div class="affiliate-buttons">
+      <a href="https://honeygain.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🍯 Honeygain — $5 Bonus</a>
+      <a href="https://earnapp.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">📡 EarnApp</a>
+      <a href="https://pawns.app" target="_blank" rel="sponsored" class="affiliate-btn secondary">♟️ Pawns.app</a>
     </div>
   </div>
-  <div class="steps-section">
-    <h3>📋 Step-by-Step Guide</h3>
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Install Honeygain ($20–35/mo)</h4><p>Sign up at <a href="https://honeygain.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">Honeygain.com</a>. Download the desktop app. Shares unused bandwidth. Cash out at $20 via PayPal.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Add EarnApp ($10–20/mo)</h4><p><a href="https://earnapp.com?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">EarnApp</a> works the same way. Compatible with Honeygain. Stack both for $30–55/month combined.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Add Pawns.app ($5–15/mo)</h4><p><a href="https://pawns.app?utm_source=aitoolstack&utm_medium=referral" target="_blank" rel="noopener">Pawns.app</a> shares bandwidth + optional surveys. Run all three simultaneously — they don't conflict.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Stack them all</h4><p>Run all three 24/7 on an old laptop or Raspberry Pi. US/EU IPs earn the most. Cash out to the same PayPal. Don't use a VPN.</p></div></div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Setup</h3>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Honeygain ($20–35/month)</h4>
+        <p>Sign up at <a href="https://honeygain.com" target="_blank" style="color:var(--accent)">Honeygain.com</a>. Download the desktop app (Windows/Mac/Linux). It runs in the background and shares unused bandwidth with trusted partners. Pays ~$1–2/day. Cash out at $20 via PayPal. This is the biggest earner in the stack.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Add EarnApp ($10–20/month)</h4>
+        <p><a href="https://earnapp.com" target="_blank" style="color:var(--accent)">EarnApp</a> works the same way — shares bandwidth, pays you. Install on the same machine. It's compatible with Honeygain (they use different networks). Stack both for $30–55/month combined.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Add Pawns.app ($5–15/month)</h4>
+        <p><a href="https://pawns.app" target="_blank" style="color:var(--accent)">Pawns.app</a> shares bandwidth AND lets you complete surveys for extra cash. The surveys are optional — the bandwidth sharing is fully passive. Use referral code for bonus on signup.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Stack Them All</h4>
+        <p>Run all three simultaneously. They don't conflict. Combined earnings: $30–80/month depending on your location and uptime. Leave your computer on overnight for maximum earnings. Cash out all three to the same PayPal account.</p>
+      </div>
+    </div>
   </div>
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>This won't make you rich, but it's truly passive. The money shows up whether you check it or not. Stack with the other builds for real income.</p></div>
-  <table class="cost-breakdown">
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>These apps earn more with more devices and better locations. If you have an old laptop or Raspberry Pi, install all three and leave it running 24/7. US/EU IPs earn the most. Don't use a VPN — it'll get you banned. This won't make you rich, but it's truly passive — the money shows up whether you check it or not.</p>
+  </div>
+
+  <table class="cost-table">
     <tr><th>App</th><th>Est. Monthly</th><th>Payout</th></tr>
     <tr><td>Honeygain</td><td>$20–35</td><td>PayPal / Crypto</td></tr>
     <tr><td>EarnApp</td><td>$10–20</td><td>PayPal / Gift Cards</td></tr>
     <tr><td>Pawns.app</td><td>$5–15</td><td>PayPal / Bitcoin</td></tr>
-    <tr class="total-row"><td colspan="2">Stacked Total</td><td>$35–70/month</td></tr>
+    <tr class="total"><td colspan="2">Stacked Total</td><td>$35–70/mo</td></tr>
   </table>
-  <div class="after-install">
-    <h3>🎯 You Now Have</h3>
-    <p>Three apps running silently in the background, generating $35-70/month on autopilot. Cash out to PayPal or crypto whenever you want. Truly set-and-forget income.</p>
-    <h3>⚠️ Quick Fixes</h3>
-    <p><strong>Earnings low?</strong> US/EU IPs earn the most. Make sure your PC stays on (sleep mode pauses earnings).<br>
-    <strong>Can I run all three?</strong> Yes — they don't conflict. Stack all three for maximum return.<br>
-    <strong>Is this legit?</strong> Yes. These companies pay for residential IPs to test geo-restricted content and verify ads.</p>
-    <h3>📌 Bookmark This</h3>
-    <p>Pair with the <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a> — it handles everything while these apps stack cash. More passive plays coming.</p>
-  </div>
 </div>
 
-<!-- ═══ TUTORIAL: GUI Bot (LOCKED) ═══ -->
-<div class="tutorial-view" id="tutorial-gui-bot">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <div class="locked-hero">
-    <div class="lock-icon">🔒</div>
-    <h2>GUI Automation Bot</h2>
-    <p class="tut-subtitle">Coming soon — free for early subscribers</p>
-    <div class="overview-box" style="text-align:left; margin-top:24px;">
-      <p>This is the bot I use to automate <strong>anything</strong> on my computer — even sites that block traditional bots. It sees the screen like a human, moves the mouse, clicks buttons, and types. No APIs needed. No coding required.</p>
-      <p style="margin-top:12px;"><strong>What it can do:</strong> Sign up for accounts, fill forms, scrape data, post content, navigate complex sites — all while bypassing anti-bot detection.</p>
-    </div>
-    <div class="milestone">🎯 5,000 Subscribers to Unlock</div>
-    <p class="unlock-msg">I'm releasing this tool to my subscribers. The <strong>first 4,000 people</strong> get it completely free — forever. After that, it goes behind a paywall.</p>
-    <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener" class="sub-cta">▶️ Subscribe Now — Claim Your Free Copy</a>
-    <p class="early-bird">🏆 You're early. First 4K get it free for life.</p>
-    <div style="margin-top:48px; padding:24px; background:var(--surface); border-radius:var(--radius); border:1px solid var(--border); text-align:left;">
-      <h3 style="color:var(--heading);margin-bottom:12px;">📋 What's Inside</h3>
-      <p style="color:#999;font-size:14px;line-height:2;">✅ Full Python source code<br>✅ One-click Windows installer<br>✅ Pre-built automation templates<br>✅ Gemini Vision integration<br>✅ Undetectable mouse movement<br>✅ Works on ANY website or app</p>
+<!-- TUTORIAL 7: AI Stock Market Briefing -->
+<div class="tutorial-view" id="tutorial-stocks">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f193?w=1400&h=600&fit=crop&auto=format" alt="Stock Briefing" onerror="this.src='https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&h=600&fit=crop&auto=format'">
+  <h2>📈 AI Stock Market Briefing Agent</h2>
+  <p class="subtitle">$2-5/month · 10-minute setup · Daily briefings delivered before the bell</p>
+
+  <div class="overview">
+    <p>Get a professional daily stock briefing delivered to your inbox every weekday morning at 8 AM. Covers pre-market futures, top movers, sector performance, key headlines, and market sentiment. No more scrolling through 10 sites at 7 AM — one email, everything you need.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://platform.deepseek.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🧠 DeepSeek V4</a>
     </div>
   </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command in your terminal. 90 seconds. Works on Mac, Linux, Windows WSL. Visit <a href="https://hermes-agent.nousresearch.com" target="_blank" style="color:var(--accent)">hermes-agent.nousresearch.com</a> for the one-line installer.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Get a DeepSeek API key</h4>
+        <p>Sign up at <a href="https://platform.deepseek.com" target="_blank" style="color:var(--accent)">platform.deepseek.com</a>. Free credits included. V4 Pro costs ~$0.28/M tokens.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Load the pre-made Market Brief skill</h4>
+        <p>We include a ready-to-deploy skill with all the formatting, data sources, and email templates. No building from scratch.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Set the schedule</h4>
+        <p>Configure what time you want briefings delivered. The cron job handles everything automatically.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Use DeepSeek V4 Pro (not the free Chat model). It handles multi-source data synthesis reliably. My monthly API bill for both morning and afternoon briefs: ~$3. The skill even supports multiple recipients — send it to your team or clients.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$2-5</td></tr>
+    <tr><td>Gmail API</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>$2-5/mo</td></tr>
+  </table>
 </div>
 
-<!-- FOOTER -->
+<!-- TUTORIAL 8: AI Video Quality Auditor -->
+<div class="tutorial-view" id="tutorial-auditor">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1400&h=600&fit=crop&auto=format" alt="Video Auditor" onerror="this.src='https://images.unsplash.com/photo-1536240478700-b869070f9279?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🎬 AI Video Quality Auditor</h2>
+  <p class="subtitle">$0-2/month · Drop video, get scored report · Catches issues before you publish</p>
+
+  <div class="overview">
+    <p>Most AI agents can't see. Hermes + this skill can watch your videos and tell you what's wrong — distorted audio, visual glitches, bad pacing, mismatched scenes. Scores every video out of 10 and tells you exactly what to fix. Used by creators publishing 3-5 videos a week who can't afford a human QC pass on every render.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://aistudio.google.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🧠 Gemini Flash</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Get a Gemini API key</h4>
+        <p>Free tier at <a href="https://aistudio.google.com" target="_blank" style="color:var(--accent)">aistudio.google.com</a>. Flash model is nearly free for video auditing.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Load the Video Auditor skill</h4>
+        <p>Pre-made skill with the exact Gemini prompt that scores videos on audio, visuals, timing, and tone.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Run your first audit</h4>
+        <p>Drop any MP4. In ~20 seconds you'll have a scored report with critical issues, minor issues, and a READY/NEEDS FIX/REDO verdict.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Set up a watch folder. Every time you render a new Short, drop it in and the auditor runs automatically. I catch 2-3 issues per week that would've gone live broken. Gemini Flash costs ~$0.0004 per audit — essentially free.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Gemini Flash</td><td>Pay-as-you-go</td><td>~$0-2</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>$0-2/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 9: AI Budget & Finance Dashboard -->
+<div class="tutorial-view" id="tutorial-budget">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1400&h=600&fit=crop&auto=format" alt="Budget Dashboard" onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1400&h=600&fit=crop&auto=format'">
+  <h2>💰 AI Budget & Finance Dashboard</h2>
+  <p class="subtitle">$0-3/month · Text expenses, AI tracks everything · Live dashboard + weekly reports</p>
+
+  <div class="overview">
+    <p>Stop using 3 different apps to track your money. Text "spent $42 on groceries" to your AI. It logs it, categorizes it, and updates your budget dashboard in real time. End of week: a full report with category breakdowns, budget vs actual, and spending trends. The Builder agent even builds you a personalized budget dashboard you can open in your browser.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://sheets.google.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">📊 Google Sheets</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Create a Google Sheet</h4>
+        <p>This is your budget database. The AI reads and writes to it via the Google Sheets API. Free with any Google account.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Load the Budget Tracker skill</h4>
+        <p>Pre-made skill that handles expense logging, categorization, and report generation.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Generate your dashboard</h4>
+        <p>Tell the Builder agent "build me a budget dashboard." It creates a live HTML dashboard from your actual spending data.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Start tracking</h4>
+        <p>Text expenses as they happen. "Spent $23.50 on lunch." AI does the rest.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Set up recurring bill reminders. Tell it your rent, subscriptions, and car payment due dates. It warns you 3 days before anything hits. I caught a forgotten $14.99 subscription in week one — the stack paid for itself for 6 months.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$2-3</td></tr>
+    <tr><td>Google Sheets</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Builder Agent</td><td>Included</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>$2-3/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 10: AI Email Manager & Inbox Cleaner -->
+<div class="tutorial-view" id="tutorial-email">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=1400&h=600&fit=crop&auto=format" alt="Email Manager" onerror="this.src='https://images.unsplash.com/photo-1596526131083-e8c633c94859?w=1400&h=600&fit=crop&auto=format'">
+  <h2>📧 AI Email Manager & Inbox Cleaner</h2>
+  <p class="subtitle">$0-3/month · Auto-sorts inbox daily · Morning digest of what matters</p>
+
+  <div class="overview">
+    <p>Your inbox cleans itself every morning at 6 AM. Known senders stay. Newsletters get archived. Junk gets trashed. You get a morning digest: "3 important emails, 12 archived, 47 trashed." Two minutes to scan, zero minutes to sort. Works with any Gmail account.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://mail.google.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">📬 Gmail</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Connect your Gmail</h4>
+        <p>OAuth setup takes 2 minutes. The AI gets read/manage access to your inbox.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Load the Email Manager skill</h4>
+        <p>Pre-made with smart categorization rules, safe-sender whitelist, and digest templates.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Set your preferences</h4>
+        <p>Tell it which senders to always keep, which to always trash, and what time you want your daily digest.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>The skill includes a safe-sender whitelist. It learns from your behavior — if you always open emails from a certain sender, it stops archiving them. After 2 weeks it's 95% accurate. Manual cleanup takes me 20 minutes a day — this cuts it to 2.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$2-3</td></tr>
+    <tr><td>Gmail API</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>$2-3/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 11: AI SEO & GEO Dominance Engine (LOCKED) -->
+<div class="tutorial-view" id="tutorial-geo">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1400&h=600&fit=crop&auto=format" alt="SEO GEO Engine" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🔍 AI SEO & GEO Dominance Engine</h2>
+  <p class="subtitle">LOCKED — Free for first 500 subscribers · $500/mo value · Full GEO audit + fix guide</p>
+
+  <div class="overview">
+    <p>🔒 This build is currently locked — free for the first 500 subscribers to <a href="https://youtube.com/@ZachS-o3e4j" target="_blank" style="color:var(--accent)">@ZachS-o3e4j</a>. Get found in ChatGPT, Perplexity, AND Google with a full Generative Engine Optimization audit. Includes keyword dominance mapping, GEO content templates, and a fix guide that agencies charge $500/month for. Early subscribers get the full engine free.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://platform.deepseek.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🧠 DeepSeek V4</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Load the GEO skills</h4>
+        <p>Pre-made: generative-engine-optimization + local-seo-dominance skills. Handles keyword mapping, GEO content optimization, and AI-search ranking analysis.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Run your GEO audit</h4>
+        <p>The engine scans your site against AI search indexes (ChatGPT, Perplexity, Gemini) and identifies exactly what's missing — entity mentions, structured data gaps, content clusters.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Follow the fix guide</h4>
+        <p>Prioritized action list: what to fix first, what content to create, which entities to mention. Each fix includes the exact prompt or template to use.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>GEO is the new SEO. ChatGPT and Perplexity now answer 40%+ of search queries directly — if your brand isn't mentioned in those answers, you don't exist. Agencies charge $500+/month for GEO optimization. Early subscribers to @ZachS-o3e4j get the full engine for free. Subscribe now before the 500 spots fill.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$2-3</td></tr>
+    <tr><td>GEO Skills</td><td>LOCKED — Free for 1st 500</td><td style="color:var(--accent3)">Locked</td></tr>
+    <tr class="total"><td colspan="2">Total (subscriber price)</td><td>$2-3/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 12: AI Automotive Technician -->
+<div class="tutorial-view" id="tutorial-automotive">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=1400&h=600&fit=crop&auto=format" alt="Automotive Tech" onerror="this.src='https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🚗 AI Automotive Technician</h2>
+  <p class="subtitle">$0-3/month · TSB lookups + repair databases · Diagnose car problems by describing them</p>
+
+  <div class="overview">
+    <p>No more googling "weird noise when turning left" at 11 PM. Tell your AI what the car is doing — it searches TSBs (Technical Service Bulletins), common failure patterns, and repair databases. Returns: likely causes ranked by probability, estimated repair cost, whether it's DIY-able, and what happens if you ignore it. Built by an actual shop foreman who knows what questions to ask.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://platform.deepseek.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🧠 DeepSeek V4</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Load the Automotive Technician skill</h4>
+        <p>Pre-built by a Subaru shop foreman. Knows the right diagnostic questions to ask.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Describe your issue</h4>
+        <p>"Check engine light on, car shakes at idle, 2018 Honda Civic." AI asks follow-up questions, then searches TSBs and repair databases.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Get your diagnostic report</h4>
+        <p>Likely causes ranked by probability, estimated repair cost range, DIY difficulty score, and "what happens if you ignore it."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>This isn't a chatbot saying "take it to a mechanic." It does real TSB lookups and pulls from NHTSA complaint data. For common issues (like Honda A/C failures or Subaru head gasket patterns), it knows the exact TSB numbers and typical repair costs. Built by someone who writes repair orders every day.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$2-3</td></tr>
+    <tr><td>NHTSA API</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>$2-3/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 13: AI Social Media Content Factory -->
+<div class="tutorial-view" id="tutorial-social">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1400&h=600&fit=crop&auto=format" alt="Content Factory" onerror="this.src='https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1400&h=600&fit=crop&auto=format'">
+  <h2>📱 AI Social Media Content Factory</h2>
+  <p class="subtitle">$0-5/month · Auto-generate posts, detect trends · Schedule to X and Telegram</p>
+
+  <div class="overview">
+    <p>Writer's block is a scheduling problem. This stack auto-generates content ideas based on trends in your niche, writes the posts in your voice, and schedules them. You approve before anything goes live. Supports X (Twitter) and Telegram. Add your brand voice once, get daily content suggestions forever.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://platform.deepseek.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🧠 DeepSeek V4</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Connect your X account</h4>
+        <p>OAuth setup for posting. The AI drafts, you approve.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Load the Content Factory skill</h4>
+        <p>Trend detection + script generation + scheduling. Pre-made templates for threads, Shorts scripts, and posts.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Set your brand voice</h4>
+        <p>Give it 3 examples of your best posts. It learns your tone and generates in your style.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Set topic clusters (e.g., "AI tools, automation, no-code"). The skill scans trending conversations and suggests posts that fit your topics AND what's hot right now. Best of both worlds — relevant and timely.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$2-5</td></tr>
+    <tr><td>X API</td><td>Free tier</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>$2-5/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 14: AI Smart Home Controller -->
+<div class="tutorial-view" id="tutorial-smarthome">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1558002038-b0230e8e6b0a?w=1400&h=600&fit=crop&auto=format" alt="Smart Home" onerror="this.src='https://images.unsplash.com/photo-1558002038-1055e2e28ed1?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🏠 AI Smart Home Controller</h2>
+  <p class="subtitle">$0-3/month · Control Hue lights from Telegram · Custom scenes, schedules, automations</p>
+
+  <div class="overview">
+    <p>Forget opening 3 apps to control your lights. "Dim the living room to 30%" "Set bedroom to warm white" "Goodnight mode" — all from Telegram. Pre-built scenes for movie night, dinner, morning routine, and party mode. The AI remembers your preferences and learns your patterns.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://www.philips-hue.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">💡 Philips Hue</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Set up Philips Hue Bridge</h4>
+        <p>Connect it to your router. Press the button on the bridge to pair.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Load the Smart Home skill</h4>
+        <p>Pre-made with OpenHue integration. Auto-discovers all your lights and rooms.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Start controlling</h4>
+        <p>Text commands like "dim bedroom to 20% warm" or "set whole house to energize." Create custom scenes: "date night" = living room 15% warm + kitchen off + bedroom 30% soft.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Set up automated routines. "If it's after sunset and I say 'goodnight', turn off everything except the bedroom at 10%." The skill handles scheduling too — wake-up light sequences, vacation mode to simulate occupancy, and sunset-activated evening scenes.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$1-2</td></tr>
+    <tr><td>Hue Bridge</td><td>One-time</td><td>~$60</td></tr>
+    <tr class="total"><td colspan="2">Total (after bridge)</td><td>$1-2/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 15: AI Research & Competitor Monitor -->
+<div class="tutorial-view" id="tutorial-research">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1400&h=600&fit=crop&auto=format" alt="Research Monitor" onerror="this.src='https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🔬 AI Research & Competitor Monitor</h2>
+  <p class="subtitle">$0-5/month · Track competitors, papers, markets · Weekly briefing of everything that changed</p>
+
+  <div class="overview">
+    <p>Set it and forget it. Tell the AI which competitors to track, which research topics matter to you, and which markets to watch. Every Monday morning you get a briefing: competitor website changes, new papers in your field, prediction market shifts, and blog posts from sources you care about. No more checking 8 tabs every morning.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://platform.deepseek.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">🧠 DeepSeek V4</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Load the Research Monitor skills</h4>
+        <p>Pre-made: arxiv watcher, blog monitor, competitor tracker, and Polymarket integration.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Configure your watchlist</h4>
+        <p>Add competitor URLs, research keywords, blog feeds, and prediction markets to track.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Get your first briefing</h4>
+        <p>Weekly digest delivered to your email or Telegram. Flagged: what changed, what's new, what's worth your attention.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Set priority levels. "High priority: notify me immediately. Medium: include in weekly digest. Low: track but only surface if significant change." The AI learns what you actually read and adjusts. After a month, your briefing is perfectly tuned to your interests.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>DeepSeek API</td><td>Pay-as-you-go</td><td>~$2-5</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>$2-5/mo</td></tr>
+  </table>
+</div>
+
+<!-- TUTORIAL 16: AI Dashboard Builder -->
+<div class="tutorial-view" id="tutorial-dashbuilder">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=600&fit=crop&auto=format" alt="Dashboard Builder" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🖥️ AI Dashboard Builder</h2>
+  <p class="subtitle">$0-3/month · Tell it what you need, it builds it · Live dashboards in minutes</p>
+
+  <div class="overview">
+    <p>You shouldn't need to learn React to track your inventory. Tell the Builder agent what you need — "a dashboard that tracks my eBay inventory with cost, listing price, and profit per item" — and it builds you a live dashboard in minutes. Budget trackers, habit trackers, inventory managers, client portals. If it fits in a dashboard, the Builder can build it.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 GET THE TOOLS</h3>
+    <div class="affiliate-buttons">
+      <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="sponsored" class="affiliate-btn primary">🚀 Hermes Agent →</a>
+      <a href="https://vercel.com" target="_blank" rel="sponsored" class="affiliate-btn secondary">▲ Vercel Hosting</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Guide</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Install Hermes Agent</h4>
+        <p>One command. 90 seconds. Works on Mac, Linux, Windows WSL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Describe your dashboard</h4>
+        <p>"I need a dashboard for my car detailing business — upcoming appointments, supplies inventory, customer history, monthly revenue."</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Builder builds it</h4>
+        <p>The Builder agent creates the HTML/CSS/JS, deploys to Vercel, and gives you a live URL.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Iterate</h4>
+        <p>"Add a search bar for customer history." "Make the revenue chart show last 6 months." Builder updates in real time.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Start with one clear use case. Don't say "build me a business dashboard" — say "build me a dashboard with 3 tabs: today's appointments, this month's revenue, and supply inventory." The more specific you are, the better the Builder performs. You can always add more later.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>TOOL</th><th>PLAN</th><th>MONTHLY</th></tr>
+    <tr><td>Hermes Agent</td><td>Open Source</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Builder Agent</td><td>Included</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Vercel</td><td>Free tier</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total</td><td>Free-$3/mo</td></tr>
+  </table>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer>
-  <p>New builds added weekly. Subscribe: <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener">@ZachS-o3e4j</a></p>
-  <p style="margin-top:8px;font-size:12px;color:#444;">© 2026 AI Tool Stack · <a href="#">Privacy</a> · <a href="#">Affiliate Disclosure</a></p>
+  <p>More builds added as I discover them. Subscribe: <a href="https://youtube.com/@ZachS-o3e4j" target="_blank">@ZachS-o3e4j</a></p>
+  <p style="margin-top:6px;font-size:12px;">Some links may earn a commission at no extra cost to you.</p>
 </footer>
 
 <script>
 function showTutorial(id) {
-  document.getElementById('hero').classList.add('hidden');
-  document.querySelector('.social-proof').classList.add('hidden');
-  document.querySelector('.newsletter').classList.add('hidden');
+  document.getElementById('main-header').classList.add('hidden');
   document.getElementById('dashboard').classList.add('hidden');
-  document.querySelectorAll('.tutorial-view').forEach(el => el.classList.remove('active'));
   document.getElementById('tutorial-' + id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'instant' });
-  window.location.hash = id;
-  // Track tutorial view
-  if (typeof gtag === 'function') gtag('event', 'tutorial_view', { tutorial: id });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showDashboard() {
   document.querySelectorAll('.tutorial-view').forEach(el => el.classList.remove('active'));
-  document.getElementById('hero').classList.remove('hidden');
-  document.querySelector('.social-proof').classList.remove('hidden');
-  document.querySelector('.newsletter').classList.remove('hidden');
+  document.getElementById('main-header').classList.remove('hidden');
   document.getElementById('dashboard').classList.remove('hidden');
-  window.scrollTo({ top: 0, behavior: 'instant' });
-  window.location.hash = '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-function checkHash() {
+// Handle back button in browser history
+window.addEventListener('hashchange', function() {
   var hash = window.location.hash.replace('#','');
-  if (hash && document.getElementById('tutorial-' + hash)) showTutorial(hash);
-}
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', checkHash);
-} else {
-  checkHash();
-}
-window.addEventListener('hashchange', checkHash);
+  if (hash && document.getElementById('tutorial-' + hash)) {
+    showTutorial(hash);
+  } else {
+    showDashboard();
+  }
+});
 </script>
+
+<script>
+// ── SUBSCRIBER UNLOCK SYSTEM ──
+(function() {
+  // ── Milestone Config ──
+  var MILESTONES = {
+    assistant: 0, clone: 0, images: 0, video: 0, writing: 0, passive: 0, social: 0, email: 0,
+    budget: 100, smarthome: 100, research: 100,
+    stocks: 250, automotive: 250, dashbuilder: 250,
+    auditor: 500, geo: 500,
+    gui: 5000
+  };
+  var FREE_CARDS = ['assistant','clone','images','video','writing','passive','social','email'];
+
+  // ── Fetch Subscriber Count ──
+  fetch('/subscribers.json?' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var count = data.count;
+      var updated = data.updated || 'unknown';
+      initUnlocks(count);
+      console.log('Subscriber count: ' + count + ' (updated ' + updated + ')');
+    })
+    .catch(function(err) {
+      console.warn('Could not load subscribers.json, defaulting to 12', err);
+      initUnlocks(12);
+    });
+
+  function initUnlocks(count) {
+    var cards = document.querySelectorAll('.build-card[data-card]');
+    cards.forEach(function(card) {
+      var cardId = card.getAttribute('data-card');
+      var milestone = MILESTONES[cardId];
+      if (milestone === undefined) return; // unknown card, skip
+
+      if (milestone === 0 || count >= milestone) {
+        // ── UNLOCKED ──
+        if (FREE_CARDS.indexOf(cardId) !== -1) {
+          // Add FREE badge
+          var badge = document.createElement('div');
+          badge.className = 'free-badge';
+          badge.textContent = 'FREE';
+          card.appendChild(badge);
+        }
+        // Ensure clickable (restore onclick if needed)
+        card.style.cursor = '';
+      } else {
+        // ── LOCKED ──
+        card.classList.add('locked');
+        // Remove onclick — card is not interactive
+        card.setAttribute('data-onclick-backup', card.getAttribute('onclick') || '');
+        card.removeAttribute('onclick');
+        card.style.cursor = 'default';
+
+        // Create lock overlay with progress bar
+        var overlay = document.createElement('div');
+        overlay.className = 'card-lock-overlay';
+
+        var lockIcon = document.createElement('div');
+        lockIcon.className = 'lock-icon';
+        lockIcon.textContent = '🔒';
+
+        var lockText = document.createElement('div');
+        lockText.className = 'lock-text';
+        var pct = Math.round((count / milestone) * 100);
+        lockText.innerHTML = count + '/' + milestone + ' subscribers to unlock';
+
+        // Progress bar
+        var progWrap = document.createElement('div');
+        progWrap.className = 'lock-progress-wrap';
+        var progBar = document.createElement('div');
+        progBar.className = 'lock-progress-bar';
+        var progFill = document.createElement('div');
+        progFill.className = 'lock-progress-fill';
+        progFill.style.width = Math.min(pct, 100) + '%';
+        progBar.appendChild(progFill);
+        var progLabel = document.createElement('div');
+        progLabel.className = 'lock-progress-label';
+        progLabel.textContent = pct + '%';
+        progWrap.appendChild(progBar);
+        progWrap.appendChild(progLabel);
+
+        overlay.appendChild(lockIcon);
+        overlay.appendChild(lockText);
+        overlay.appendChild(progWrap);
+        card.appendChild(overlay);
+      }
+    });
+  }
+})();
+</script>
+
 </body>
 </html>
