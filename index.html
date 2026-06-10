@@ -131,6 +131,15 @@ body::before {
 .pro-tip strong { color:var(--amber); font-size:14px; }
 .pro-tip p { font-size:14px; color:#bbb; margin-top:6px; line-height:1.6; }
 
+.after-install { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; margin-top:12px; backdrop-filter:blur(10px); }
+.after-install h3 { font-size:16px; color:var(--heading); margin-bottom:10px; margin-top:20px; }
+.after-install h3:first-child { margin-top:0; }
+.after-install p { font-size:14px; color:#aaa; line-height:1.7; margin-bottom:14px; }
+.after-install strong { color:#ddd; }
+.after-install code { background:rgba(99,102,241,0.12); color:#a5b4fc; padding:2px 8px; border-radius:4px; font-size:13px; }
+.after-install a { color:var(--accent2); text-decoration:none; }
+.after-install a:hover { text-decoration:underline; }
+
 .cost-breakdown { width:100%; border-collapse:collapse; margin-bottom:36px; font-size:14px; }
 .cost-breakdown th { text-align:left; color:#666; font-weight:600; padding:10px 18px; border-bottom:1px solid var(--border); font-size:11px; text-transform:uppercase; letter-spacing:0.8px; }
 .cost-breakdown td { padding:13px 18px; border-bottom:1px solid rgba(255,255,255,0.04); color:var(--text); }
@@ -325,6 +334,16 @@ gtag('config', 'G-XXXXXXXXXX');
     <tr><td>Telegram Bot</td><td>Free</td><td style="color:var(--green)">Free</td></tr>
     <tr class="total-row"><td colspan="2">Total</td><td>$2–5/month</td></tr>
   </table>
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>A full AI assistant that lives in your phone. Ask it anything — summarize emails, research competitors, draft social posts, schedule reminders. It works exactly like texting a smart friend.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Bot not responding?</strong> Run <code>hermes gateway restart</code> in terminal.<br>
+    <strong>Slow replies?</strong> Switch to DeepSeek V4 Pro in your config — the free Chat model is much slower.<br>
+    <strong>Want it to read emails?</strong> Connect Gmail in <code>hermes setup</code> → Integrations.</p>
+    <h3>📌 Bookmark This</h3>
+    <p>Come back when you want to add <a href="#" onclick="showTutorial('clone');return false">AI video clones</a> or <a href="#" onclick="showTutorial('writing');return false">writing automation</a> to your assistant. This page updates as I test new tools.</p>
+  </div>
 </div>
 
 <!-- ═══ TUTORIAL: AI Clone ═══ -->
@@ -355,6 +374,16 @@ gtag('config', 'G-XXXXXXXXXX');
     <tr><td>ElevenLabs Starter</td><td>Optional</td><td>$5</td></tr>
     <tr class="total-row"><td colspan="2">Total</td><td>$29–34/month</td></tr>
   </table>
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>A digital clone that delivers any script on video. Make YouTube Shorts without filming, create training videos, send personalized video messages. One recording = unlimited content.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Clone looks stiff?</strong> Re-record with more hand gestures and head movement. Static poses create robotic clones.<br>
+    <strong>Audio out of sync?</strong> Export at 1080p, not 4K. Lower resolution syncs more reliably.<br>
+    <strong>Voice sounds off?</strong> Add ElevenLabs voice cloning — it's more natural than HeyGen's built-in TTS.</p>
+    <h3>📌 Bookmark This</h3>
+    <p>Pair your clone with the <a href="#" onclick="showTutorial('video');return false">AI Video Engine</a> for automated editing. Check back — I add new tools as I test them.</p>
+  </div>
 </div>
 
 <!-- ═══ TUTORIAL: AI Images ═══ -->
@@ -387,6 +416,16 @@ gtag('config', 'G-XXXXXXXXXX');
     <tr><td>Canva Pro</td><td>Optional</td><td>$13</td></tr>
     <tr class="total-row"><td colspan="2">Total</td><td>$0–13/month</td></tr>
   </table>
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>A complete image studio in your browser. Generate AI art, edit like Photoshop, design social graphics — all without installing anything. 150 free AI images every single day.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Images look weird?</strong> Add "photorealistic, 8K, detailed" to your prompt. Leonardo's default style is artistic.<br>
+    <strong>Need transparent background?</strong> Generate in Leonardo, then open in Photopea → Select → Remove BG.<br>
+    <strong>Canva template stuck?</strong> Right-click any element → "Detach from template" to freely edit.</p>
+    <h3>📌 Bookmark This</h3>
+    <p>Combine with the <a href="#" onclick="showTutorial('video');return false">AI Video Engine</a> for thumbnails that actually get clicks. I update tools as I find better ones.</p>
+  </div>
 </div>
 
 <!-- ═══ TUTORIAL: AI Video ═══ -->
@@ -418,6 +457,16 @@ gtag('config', 'G-XXXXXXXXXX');
     <tr><td>Descript Free</td><td>1 hr transcription</td><td style="color:var(--green)">Free</td></tr>
     <tr class="total-row"><td colspan="2">Total</td><td>$0–34/month</td></tr>
   </table>
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>A video editing workflow that's 10x faster. Drop raw footage, get auto-captioned, color-graded, ready-to-post content. Perfect for YouTube Shorts, TikToks, and Reels.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Captions wrong?</strong> Click the caption text to edit manually. CapCut's AI captions are ~95% accurate.<br>
+    <strong>Export looks blurry?</strong> Check export settings — use 1080p, 30fps, high bitrate. Don't use "fast export."<br>
+    <strong>Audio levels inconsistent?</strong> Select all clips → Audio → Normalize Loudness. One click fixes everything.</p>
+    <h3>📌 Bookmark This</h3>
+    <p>Pair with the <a href="#" onclick="showTutorial('clone');return false">AI Clone Studio</a> to generate content without filming. New tools added as I discover them.</p>
+  </div>
 </div>
 
 <!-- ═══ TUTORIAL: AI Writing ═══ -->
@@ -450,6 +499,16 @@ gtag('config', 'G-XXXXXXXXXX');
     <tr><td>Jasper Creator</td><td>Monthly</td><td>$39</td></tr>
     <tr class="total-row"><td colspan="2">Recommended</td><td>$0–59/month</td></tr>
   </table>
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>An AI that writes in YOUR voice. Emails, social posts, scripts — it sounds like you, not a robot. Upload more samples over time and it gets better.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Sounds too generic?</strong> Feed it 5+ samples of your best writing. The more variety, the better the clone.<br>
+    <strong>Claude hit its limit?</strong> Free tier resets every 8 hours. Pro ($20) gives 5x more messages.<br>
+    <strong>Jasper vs Claude?</strong> Claude for natural voice. Jasper for marketing copy that converts.</p>
+    <h3>📌 Bookmark This</h3>
+    <p>Connect this to your <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a> and it writes from Telegram automatically. I update tools as I test new ones.</p>
+  </div>
 </div>
 
 <!-- ═══ TUTORIAL: Passive Income ═══ -->
@@ -482,6 +541,16 @@ gtag('config', 'G-XXXXXXXXXX');
     <tr><td>Pawns.app</td><td>$5–15</td><td>PayPal / Bitcoin</td></tr>
     <tr class="total-row"><td colspan="2">Stacked Total</td><td>$35–70/month</td></tr>
   </table>
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>Three apps running silently in the background, generating $35-70/month on autopilot. Cash out to PayPal or crypto whenever you want. Truly set-and-forget income.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Earnings low?</strong> US/EU IPs earn the most. Make sure your PC stays on (sleep mode pauses earnings).<br>
+    <strong>Can I run all three?</strong> Yes — they don't conflict. Stack all three for maximum return.<br>
+    <strong>Is this legit?</strong> Yes. These companies pay for residential IPs to test geo-restricted content and verify ads.</p>
+    <h3>📌 Bookmark This</h3>
+    <p>Pair with the <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a> — it handles everything while these apps stack cash. More passive plays coming.</p>
+  </div>
 </div>
 
 <!-- ═══ TUTORIAL: GUI Bot (LOCKED) ═══ -->
