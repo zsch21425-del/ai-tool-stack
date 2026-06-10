@@ -171,13 +171,94 @@ footer { position:relative; z-index:1; text-align:center; padding:40px 20px 60px
 footer a { color:var(--accent2); text-decoration:none; }
 .hidden { display:none !important; }
 
+/* ═══════════════════════════════════════════
+   MOBILE — Bigger everything. Fat fingers.
+   ═══════════════════════════════════════════ */
 @media (max-width:680px) {
-  .hero h1 { font-size:30px; }
+  /* Hero */
+  .hero { padding:48px 20px 32px; }
+  .hero h1 { font-size:28px; }
+  .hero .subtitle { font-size:15px; }
+  .hero .badge { font-size:11px; padding:8px 18px; }
+  .hero .channel-link { font-size:14px; }
+
+  /* Social proof */
+  .social-proof { gap:18px; }
+  .social-proof .stat .num { font-size:24px; }
+  .social-proof .stat .label { font-size:11px; }
+
+  /* Dashboard cards — single column, bigger taps */
   .dashboard { grid-template-columns:1fr; padding:0 16px 60px; }
-  .tutorial-view h2 { font-size:24px; }
-  .cta-btn { width:100%; justify-content:center; }
-  .social-proof { gap:20px; }
-  .social-proof .stat .num { font-size:22px; }
+  .build-card .card-img { height:200px; }
+  .build-card .card-body { padding:28px 24px; }
+  .build-card .card-body .price { font-size:12px; }
+  .build-card .card-body h3 { font-size:22px; }
+  .build-card .card-body p { font-size:15px; line-height:1.6; }
+  .tool-tag { font-size:12px; padding:6px 12px; }
+
+  /* Locked card */
+  .build-card.locked .lock-badge { font-size:11px; padding:7px 16px; top:16px; right:16px; }
+  .build-card.locked .subs-countdown { font-size:14px; }
+
+  /* Tutorial view */
+  .tutorial-view h2 { font-size:28px; }
+  .tutorial-view .tut-subtitle { font-size:14px; }
+  .back-link { font-size:16px; padding:10px 0; display:inline-flex; }
+  .hero-img { border-radius:12px; }
+
+  /* Overview box */
+  .overview-box { padding:28px 20px; }
+  .overview-box p { font-size:15px; line-height:1.7; }
+
+  /* CTA buttons — BIG */
+  .cta-btn {
+    width:100%; justify-content:center;
+    padding:18px 24px;  /* 18px vertical = 44px+ touch target */
+    font-size:16px;
+    border-radius:14px;
+  }
+  .cta-btn .emoji { font-size:22px; }
+
+  /* Steps — more breathing room */
+  .step { gap:16px; padding:20px 0; }
+  .step .step-num { min-width:36px; height:36px; font-size:16px; }
+  .step .step-content h4 { font-size:17px; }
+  .step .step-content p { font-size:15px; line-height:1.65; }
+
+  /* Pro tip */
+  .pro-tip { padding:20px 22px; }
+  .pro-tip strong { font-size:15px; }
+  .pro-tip p { font-size:15px; }
+
+  /* Cost breakdown table — readable */
+  .cost-breakdown { font-size:15px; }
+  .cost-breakdown th { padding:12px 14px; font-size:12px; }
+  .cost-breakdown td { padding:16px 14px; }
+  .cost-breakdown .total-row td { font-size:18px; padding-top:20px; }
+
+  /* After Install section */
+  .after-install { padding:32px 22px; }
+  .after-install h3 { font-size:18px; }
+  .after-install p { font-size:15px; line-height:1.7; }
+  .after-install code { font-size:14px; padding:3px 10px; }
+
+  /* Newsletter CTA */
+  .newsletter { padding:40px 24px; margin:0 16px 60px; }
+  .newsletter h3 { font-size:24px; }
+  .newsletter p { font-size:15px; }
+  .newsletter .sub-cta { padding:18px 36px; font-size:17px; }
+
+  /* Locked hero */
+  .locked-hero h2 { font-size:28px; }
+  .locked-hero .lock-icon { font-size:56px; }
+  .locked-hero .unlock-msg { font-size:16px; }
+  .locked-hero .milestone { font-size:20px; padding:18px 32px; }
+  .sub-cta { padding:18px 32px; font-size:17px; }
+  .early-bird { font-size:14px; }
+
+  /* Disclosure / footer */
+  .disclosure { font-size:12px; padding:0 24px 40px; }
+  footer { font-size:14px; padding:40px 20px 60px; }
 }
 </style>
 
