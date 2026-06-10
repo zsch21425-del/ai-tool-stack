@@ -457,10 +457,16 @@ function showDashboard() {
   window.scrollTo({ top: 0, behavior: 'instant' });
   window.location.hash = '';
 }
-window.addEventListener('DOMContentLoaded', function() {
+function checkHash() {
   var hash = window.location.hash.replace('#','');
   if (hash && document.getElementById('tutorial-' + hash)) showTutorial(hash);
-});
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', checkHash);
+} else {
+  checkHash();
+}
+window.addEventListener('hashchange', checkHash);
 </script>
 </body>
 </html>

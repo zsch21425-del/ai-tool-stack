@@ -1,0 +1,1 @@
+{"version":2,"name":"ai-build-dashboard","builds":[{"src":"index.html","use":"@vercel/static"}]}
