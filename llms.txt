@@ -1,0 +1,23 @@
+# AI Tool Stack
+> Free step-by-step guides to build AI tools that run your business. $3 AI assistant, AI video clones, image generators, writing engines. Zero coding required.
+
+## Core Pages
+- Home: https://zsch21425-del.github.io/ai-tool-stack/ — Full dashboard with all 7 free AI tool stacks
+- Tutorials: https://zsch21425-del.github.io/ai-tool-stack/#assistant — Individual tool guides with step-by-step instructions
+
+## Key Entity Information
+- Brand: AI Tool Stack
+- Founder: Zach S
+- YouTube: https://www.youtube.com/@ZachS-o3e4j
+- GitHub: https://github.com/zsch21425-del/ai-tool-stack
+- Founded: 2026
+- Category: AI Tools, Education, Technology
+
+## Content Sections
+- /#assistant — $3 AI Assistant (Hermes Agent + DeepSeek)
+- /#clone — AI Clone Studio (HeyGen + ElevenLabs)
+- /#images — AI Image Studio (Leonardo AI + Photopea + Canva)
+- /#video — AI Video Engine (CapCut + Descript)
+- /#writing — AI Writing Engine (Claude + Jasper)
+- /#passive — Passive Income Stack (Honeygain + EarnApp)
+- /#gui-bot — GUI Automation Bot (Python + Gemini Vision)
