@@ -575,6 +575,20 @@ header.hidden { display: none; }
     </div>
   </div>
 
+  <!-- Card 17: Wispr Voice Dictation -->
+  <div class="build-card" data-card="wispr" onclick="showTutorial('wispr')">
+    <img class="card-img" src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&h=320&fit=crop&auto=format" alt="Wispr Voice Dictation" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=320&fit=crop&auto=format'">
+    <div class="card-body">
+      <div class="price">Free / From $12/month</div>
+      <h3>🎙️ Wispr — Voice Dictation That Works Everywhere</h3>
+      <p>Talk instead of type — into Telegram, email, docs, anywhere. Faster than typing, more accurate than built-in dictation. I use this to text Hermes hands-free.</p>
+      <div class="tools">
+        <span class="tool-tag">Wispr</span>
+        <span class="tool-tag">Telegram</span>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ═══════════ TUTORIAL VIEWS ═══════════ -->
@@ -1655,6 +1669,75 @@ header.hidden { display: none; }
   </table>
 </div>
 
+<!-- TUTORIAL 17: Wispr Voice Dictation -->
+<div class="tutorial-view" id="tutorial-wispr">
+  <a class="back-btn" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=1400&h=600&fit=crop&auto=format" alt="Wispr Voice Dictation" onerror="this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1400&h=600&fit=crop&auto=format'">
+  <h2>🎙️ Wispr — Voice Dictation That Works Everywhere</h2>
+  <p class="subtitle">Free tier / $12/month Pro · Talk 3x faster than typing · Works in ANY app</p>
+
+  <div class="overview">
+    <p>Wispr lets you talk instead of type — in Telegram, email, Google Docs, Slack, anywhere you can put a cursor. It's faster, more accurate, and works across every app on your computer (Mac or Windows). I use it to dictate messages to my AI assistant on Telegram — hands-free, 3x faster than typing on my phone. The free tier gives you 1,000 dictations/month.</p>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>🔗 Get the Tools</h3>
+    <div class="affiliate-buttons">
+      <a href="https://wispr.ai" target="_blank" rel="sponsored" class="affiliate-btn primary">🎙️ Wispr — Free Tier</a>
+      <a href="https://telegram.org" target="_blank" class="affiliate-btn secondary">📱 Telegram — Free</a>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h3>📋 Step-by-Step Setup</h3>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Download Wispr</h4>
+        <p>Go to <a href="https://wispr.ai" target="_blank" style="color:var(--accent)">wispr.ai</a> and download the desktop app. Available for Mac (Apple Silicon + Intel) and Windows. Install takes 30 seconds. Create a free account — no credit card required for the free tier.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Set Your Activation Key</h4>
+        <p>Open Wispr preferences. Set a shortcut you'll remember — I use <strong>Ctrl+Shift+Space</strong> (Windows) or <strong>Cmd+Shift+Space</strong> (Mac). This key combo opens the dictation mic anywhere on your system.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Start Dictating</h4>
+        <p>Click into any text field — Telegram message box, email compose, Google Doc, anywhere. Hit your activation key. Start talking. Wispr transcribes in real time and inserts the text where your cursor is. Punctuation works naturally — just say "comma," "period," "new line."</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Use It With Your AI Assistant</h4>
+        <p>Open Telegram → click the message box → hit your Wispr shortcut → dictate your message to Hermes. Hands-free AI commands. This is how I send long prompts without typing a single word. Combined with Telegram voice notes for Hermes' responses, you can have full AI conversations without touching your keyboard.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>💡 Pro Tip:</strong>
+    <p>Speak in complete sentences with natural pauses. Wispr is context-aware — it gets more accurate the more you use it. For coding or technical terms, just say them clearly and Wispr adapts. The free tier gives 1,000 dictations/month (about 33/day). If you're dictating all day, Pro is $12/month for unlimited. Pair this with the $3 AI Assistant stack and you can run your entire AI workflow by voice.</p>
+  </div>
+
+  <table class="cost-table">
+    <tr><th>Tool</th><th>Plan</th><th>Cost</th></tr>
+    <tr><td>Wispr Free</td><td>1,000 dictations/month</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr><td>Wispr Pro</td><td>Unlimited dictation</td><td>$12/mo</td></tr>
+    <tr><td>Telegram</td><td>Free</td><td style="color:var(--accent2)">Free</td></tr>
+    <tr class="total"><td colspan="2">Total Monthly</td><td>$0–12</td></tr>
+  </table>
+</div>
+
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer>
   <p>More builds added as I discover them. Subscribe: <a href="https://youtube.com/@ZachS-o3e4j" target="_blank">@ZachS-o3e4j</a></p>
@@ -1692,7 +1775,7 @@ window.addEventListener('hashchange', function() {
   var MILESTONES = {
     assistant: 0, clone: 0, images: 0, video: 0, writing: 0, passive: 0, social: 0, email: 0,
     budget: 100, smarthome: 100, research: 100,
-    stocks: 250, automotive: 250, dashbuilder: 250,
+    stocks: 250, automotive: 250, dashbuilder: 250, wispr: 0,
     auditor: 500, geo: 500,
     gui: 5000
   };
