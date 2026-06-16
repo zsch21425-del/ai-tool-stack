@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zsch21425-del.github.io/sitemap.xml
