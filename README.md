@@ -20,7 +20,7 @@ The complete zero-dollar AI production stack that replaces $492/month in paid to
 - [Oakgen](https://oakgen.com?ref=N1edHj) — AI video generation
 - [BasedLabs](https://basedlabs.ai/?via=zsch21425) — AI image/video tools
 - [Fliki](https://fliki.ai) — AI text-to-video
-- [Pollo AI](https://pollo.ai) — AI video generator
+- [Pollo AI](https://pollo.ai?ref=ztnlyjk) — AI video generator
 
 ## YouTube
 
