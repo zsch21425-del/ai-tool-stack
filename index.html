@@ -1324,7 +1324,7 @@ footer a { color: var(--purple-400); text-decoration: none; }
       <div class="price">Free — $2–5/mo API</div>
       <div class="star-rating">★★★★★</div>
       <h3>📈 Stock Market Advisor</h3>
-      <p>AI-generated daily stock briefs emailed to you every morning. Tracks 7 AI/semiconductor tickers. Brian Goodwin decision framework included. The exact system I use.</p>
+      <p>AI-generated daily stock briefs emailed to you every morning. Tracks 7 AI/semiconductor tickers. Zach Schreiner decision framework included. The exact system I use.</p>
       <div class="tools"><span class="tool-tag">Hermes Agent</span><span class="tool-tag">Yahoo Finance</span><span class="tool-tag">Gmail</span></div>
     </div>
   </div>
@@ -1930,7 +1930,7 @@ footer a { color: var(--purple-400); text-decoration: none; }
   <img class="hero-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1500&h=500&fit=crop&auto=format" alt="Stock Advisor" onerror="this.style.background='linear-gradient(135deg,#0a1a10,#1a100a)'">
   <h2>📈 Stock Market Advisor</h2>
   <p class="tut-subtitle">Free · $2–5/month API · Daily AI briefs to your inbox · 7-ticker portfolio</p>
-  <div class="overview-box"><p>This is the exact system I use every weekday. An AI agent wakes up at 8 AM, fetches live stock prices, searches for today's top news, runs the Brian Goodwin decision framework, and emails a complete 300-line stock brief to me and my investing partner. It takes 20 minutes to set up and costs ~$3/month in AI API fees. You'll never stare at a stock screener again.</p></div>
+  <div class="overview-box"><p>This is the exact system I use every weekday. An AI agent wakes up at 8 AM, fetches live stock prices, searches for today's top news, runs the Zach Schreiner decision framework, and emails a complete 300-line stock brief to me and my investing partner. It takes 20 minutes to set up and costs ~$3/month in AI API fees. You'll never stare at a stock screener again.</p></div>
 
   <div class="cta-section">
     <h3>🔗 Get the tools</h3>
@@ -1947,11 +1947,11 @@ footer a { color: var(--purple-400); text-decoration: none; }
     <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Set up DeepSeek API ($2–5/month)</h4><p>Sign up at <a href="https://platform.deepseek.com" target="_blank" rel="noopener">platform.deepseek.com</a>. Create an API key. Add it to Hermes: <code>hermes config set providers.deepseek.api_key YOUR_KEY</code>. The stock brief uses DeepSeek V4 Pro — ~$0.28 per million tokens. Each brief costs about $0.02–0.05.</p></div></div>
     <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Install Himalaya email CLI (free)</h4><p>Run: <code>curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | PREFIX=~/.local sh</code>. Then configure Gmail: create an <a href="https://myaccount.google.com/apppasswords" target="_blank" rel="noopener">app password</a> at Google, and set up ~/.config/himalaya/config.toml with your Gmail + app password.</p></div></div>
     <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Get the stocks_client.py script</h4><p>This is the data engine — fetches live prices from Yahoo Finance with zero dependencies. Download it from the Hermes Agent repo: <code>hermes-agent/optional-skills/finance/stocks/scripts/stocks_client.py</code>. Save it anywhere on your system. Test it: <code>python3 stocks_client.py quote BOTZ</code> — you should see live price data.</p></div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Create the cron job</h4><p>Use Hermes to schedule it: <code>hermes cron create --schedule "0 8 * * 1-5" --prompt "Generate the Daily Stock Brief..."</code>. Set it to run weekdays at 8 AM ET. The AI will: fetch 7 ticker prices → search for news → apply the Brian Goodwin framework → format a 300-line email → send to both recipients. Takes ~90 seconds per run.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Create the cron job</h4><p>Use Hermes to schedule it: <code>hermes cron create --schedule "0 8 * * 1-5" --prompt "Generate the Daily Stock Brief..."</code>. Set it to run weekdays at 8 AM ET. The AI will: fetch 7 ticker prices → search for news → apply the Zach Schreiner framework → format a 300-line email → send to both recipients. Takes ~90 seconds per run.</p></div></div>
     <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Pick your tickers</h4><p>My portfolio: BOTZ, CHAT (AI ETFs), MU, WDC, STX, SNDK (memory/storage), INTC (semiconductor). You can use any tickers — just change them in the cron prompt. The system auto-fetches prices, PE ratios, 52-week ranges, and market cap for every ticker.</p></div></div>
   </div>
 
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>The Brian Goodwin Framework is what separates this from a stock screener. Those 5 questions force you to think about risk before you trade. The AI answers them every morning based on the day's data. When MU dropped 6.18% on June 17, the framework asked: "If you stay fully in — how will you feel if it drops another 20%?" That question saved real money.</p></div>
+  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>The Zach Schreiner Framework is what separates this from a stock screener. Those 5 questions force you to think about risk before you trade. The AI answers them every morning based on the day's data. When MU dropped 6.18% on June 17, the framework asked: "If you stay fully in — how will you feel if it drops another 20%?" That question saved real money.</p></div>
 
   <table class="cost-breakdown">
     <tr><th>Component</th><th>Plan</th><th>Monthly</th></tr>
@@ -1972,7 +1972,7 @@ footer a { color: var(--purple-400); text-decoration: none; }
     <strong>Stock prices stale?</strong> The Yahoo Finance API is rate-limited. Add a 2-second sleep between ticker fetches: <code>sleep 2</code> between each quote call.<br>
     <strong>Want different tickers?</strong> Edit the cron job prompt — change the TICKERS line. Works with any US stock or ETF.<br>
     <strong>Need a second recipient?</strong> The system sends to both recipients automatically — just change the emails in the cron prompt.</p>
-    <h3>📋 The Brian Goodwin Framework</h3>
+    <h3>📋 The Zach Schreiner Framework</h3>
     <p>Five questions the AI answers every morning based on live data:</p>
     <p>1. <strong>"How much is enough?"</strong> — Are you up enough to take profits?<br>
     2. <strong>"How can you protect gains?"</strong> — Stop-losses, hedges, position sizing.<br>
