@@ -6,46 +6,53 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>AI Tool Stack — Build Your Own AI Workshop (2026)</title>
-<meta name="description" content="Free guides to build AI tools that run your business. $3 AI assistant, AI video clones, image generators, writing engines. Zero coding required. Updated 2026.">
-<meta name="keywords" content="AI tools, AI assistant, AI video generator, HeyGen, Leonardo AI, build AI agent, AI for business, no-code AI">
-<meta property="og:title" content="AI Tool Stack — Build Your Own AI Workshop">
-<meta property="og:description" content="Free step-by-step guides to build AI tools that run your business. $3/month assistant, AI clones, image studio, writing engine.">
+<title>Hermes Agent AI Tool Stack — $0 Replaces $492/month (2026)</title>
+<meta name="description" content="Hermes Agent hackathon project: free AI tools dashboard that replaces $492/month in SaaS. Fliki, BasedLabs, Pollo AI, Oakgen — step-by-step tutorials. 2026.">
+<meta name="keywords" content="hermes agent, hermes agent hackathon, nvidia stripe nous, AI tools, AI video generator, AI assistant, AI image generator, Fliki AI, BasedLabs, Pollo AI, Oakgen, no-code AI, 2026">
+<meta property="og:title" content="Hermes Agent AI Tool Stack — $0 Replaces $492/month">
+<meta property="og:description" content="Hermes Agent hackathon project: free AI tools dashboard. 4 affiliate tutorials with step-by-step guides. Built for NVIDIA × Stripe × Nous 2026.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zsch21425-del.github.io/ai-tool-stack/">
 <meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&auto=format">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI Tool Stack — Build Your Own AI Workshop">
-<meta name="twitter:description" content="Free guides to build AI tools that run your business. $3/month assistant, AI clones, and more.">
+<meta name="twitter:title" content="Hermes Agent AI Tool Stack — $0 Replaces $492/month">
+<meta name="twitter:description" content="Hermes Agent hackathon: free AI tools dashboard. 4 step-by-step affiliate tutorials. 2026.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://zsch21425-del.github.io/ai-tool-stack/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "AI Tool Stack",
+  "name": "Hermes Agent AI Tool Stack",
   "url": "https://zsch21425-del.github.io/ai-tool-stack/",
-  "description": "Free guides to build AI tools that run your business.",
+  "description": "Hermes Agent hackathon dashboard — $0 replaces $492/month in AI SaaS. Step-by-step tutorials for Fliki, BasedLabs, Pollo AI, and Oakgen.",
   "author": {"@type": "Person", "name": "Zach S"},
-  "about": {"@type": "Thing", "name": "AI Tools & Automation"}
+  "about": {"@type": "Thing", "name": "AI Tools & Automation — Hermes Agent Hackathon 2026"}
 }
 </script>
 <style>
 :root {
-  --bg: #050510;
-  --surface: rgba(255,255,255,0.03);
-  --border: rgba(255,255,255,0.06);
+  --bg: #0A0A0F;
+  --surface: rgba(255,255,255,0.04);
+  --surface-hover: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.07);
+  --border-glow: rgba(168,85,247,0.3);
   --text: #c8c8e0;
-  --text-muted: #9b9bb8;
+  --text-muted: #8888a8;
   --heading: #f0f0f8;
-  --accent1: #6366f1;
-  --accent2: #06b6d4;
-  --accent3: #a855f7;
+  --purple: #a855f7;
+  --gold: #f59e0b;
+  --accent1: #8b5cf6;
+  --accent2: #a855f7;
+  --accent3: #d946ef;
   --green: #10b981;
   --amber: #f59e0b;
-  --radius: 16px;
-  --glow: 0 0 12px rgba(99,102,241,0.15), 0 0 2px rgba(6,182,212,0.1);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --glow-purple: 0 0 30px rgba(168,85,247,0.2), 0 0 60px rgba(168,85,247,0.08);
+  --glow-gold: 0 0 20px rgba(245,158,11,0.2);
 }
+
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -55,303 +62,801 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
+
+/* Ambient background glow */
 body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(99,102,241,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(6,182,212,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(168,85,247,0.03) 0%, transparent 50%);
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 10%, rgba(168,85,247,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 70% 40%, rgba(245,158,11,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 40% at 50% 90%, rgba(139,92,246,0.05) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
 
-.hero { position:relative; z-index:1; text-align:center; padding:72px 20px 48px; max-width:720px; margin:0 auto; }
-.hero .badge { display:inline-block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; color:var(--accent1); border:1px solid rgba(99,102,241,0.25); padding:6px 16px; border-radius:100px; margin-bottom:20px; }
-.hero h1 { font-size:48px; color:var(--heading); margin-bottom:12px; letter-spacing:-1px; line-height:1.15; }
-.hero h1 span { background:linear-gradient(135deg, var(--accent1), var(--accent2), var(--accent3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.hero .subtitle { font-size:17px; color:var(--text-muted); margin-bottom:10px; }
-.hero .channel-link { font-size:13px; color:var(--text-muted); }
-.hero .channel-link a { color:var(--accent2); text-decoration:none; font-weight:600; }
-.hero .channel-link a:hover { text-decoration:underline; }
-
-.social-proof { position:relative; z-index:1; display:flex; justify-content:center; gap:40px; padding:0 20px 20px; flex-wrap:wrap; }
-.social-proof .stat { text-align:center; }
-.social-proof .stat .num { font-size:28px; font-weight:800; background:linear-gradient(135deg, var(--accent1), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-variant-numeric:tabular-nums; }
-.social-proof .stat .label { font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px; margin-top:6px; }
-
-.dashboard { position:relative; z-index:1; max-width:1024px; margin:0 auto; padding:0 24px 80px; display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
-.build-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:all 0.25s ease; backdrop-filter:blur(10px); }
-.build-card:hover { transform:translateY(-4px); border-color:rgba(99,102,241,0.35); box-shadow:0 12px 40px rgba(99,102,241,0.1), 0 0 0 1px rgba(99,102,241,0.1); }
-.build-card .card-img { width:100%; height:170px; object-fit:cover; background:linear-gradient(135deg, #0f0f23 0%, #1a1a35 100%); }
-.build-card .card-body { padding:22px; }
-.build-card .card-body .price { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; background:linear-gradient(135deg, var(--accent1), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:8px; }
-.build-card .card-body h3 { font-size:20px; color:var(--heading); margin-bottom:10px; text-shadow:var(--glow); }
-.build-card .card-body p { font-size:14px; color:var(--text-muted); line-height:1.55; }
-.build-card .card-body .tools { margin-top:14px; display:flex; flex-wrap:wrap; gap:6px; }
-.tool-tag { font-size:11px; background:rgba(99,102,241,0.08); color:#b0b0e0; padding:4px 10px; border-radius:20px; border:1px solid rgba(99,102,241,0.12); }
-
-/* Locked card */
-.build-card.locked { opacity:0.7; position:relative; }
-.build-card.locked:hover { opacity:0.9; border-color:rgba(245,158,11,0.4); box-shadow:0 12px 40px rgba(245,158,11,0.08); }
-.build-card.locked .lock-badge { position:absolute; top:12px; right:12px; background:linear-gradient(135deg, #f59e0b, #d97706); color:#000; font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; padding:5px 12px; border-radius:100px; z-index:2; }
-.build-card.locked .card-img { filter:brightness(0.5) blur(2px); }
-.build-card.locked .subs-countdown { font-size:14px; color:#f59e0b; margin-top:8px; font-weight:600; }
-
-/* Tutorial views */
-.tutorial-view { position:relative; z-index:1; display:none; max-width:760px; margin:0 auto; padding:0 24px 100px; }
-.tutorial-view.active { display:block; }
-.back-link { display:inline-flex; align-items:center; gap:6px; color:var(--text-muted); font-size:14px; margin-bottom:28px; cursor:pointer; text-decoration:none; transition:color 0.15s; }
-.back-link:hover { color:var(--accent2); }
-.tutorial-view .hero-img { width:100%; max-height:350px; object-fit:cover; border-radius:var(--radius); margin-bottom:28px; border:1px solid var(--border); }
-.tutorial-view h2 { font-size:34px; color:var(--heading); margin-bottom:6px; letter-spacing:-0.5px; }
-.tut-subtitle { font-size:15px; background:linear-gradient(135deg, var(--accent2), var(--accent3)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:20px; font-weight:600; }
-
-.overview-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px; margin-bottom:32px; backdrop-filter:blur(10px); }
-.overview-box p { color:var(--text); font-size:15px; line-height:1.7; }
-
-.cta-section { margin-bottom:36px; }
-.cta-section h3 { font-size:13px; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-muted); margin-bottom:14px; }
-.cta-buttons { display:flex; flex-wrap:wrap; gap:12px; }
-.cta-btn { display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:12px; font-weight:700; font-size:15px; text-decoration:none; transition:all 0.2s ease; }
-.cta-btn.primary { background:linear-gradient(135deg, var(--accent1), #7c3aed); color:#fff; box-shadow:0 4px 20px rgba(99,102,241,0.3); }
-.cta-btn.primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(99,102,241,0.45); }
-.cta-btn.secondary { background:rgba(255,255,255,0.04); color:#d4d4e8; border:1px solid rgba(255,255,255,0.1); }
-.cta-btn.secondary:hover { background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); transform:translateY(-2px); }
-.cta-btn .emoji { font-size:20px; }
-
-.steps-section { margin-bottom:36px; }
-.steps-section h3 { font-size:18px; color:var(--heading); margin-bottom:18px; text-shadow:var(--glow); }
-.step { display:flex; gap:18px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--border); }
-.step:last-child { border-bottom:none; }
-.step .step-num { background:linear-gradient(135deg, var(--accent1), var(--accent3)); color:#fff; font-weight:800; font-size:14px; min-width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.step .step-content h4 { font-size:16px; color:var(--heading); margin-bottom:4px; }
-.step .step-content p { font-size:14px; color:var(--text-muted); line-height:1.6; }
-.step .step-content a { color:var(--accent2); text-decoration:none; }
-.step .step-content a:hover { text-decoration:underline; }
-
-.pro-tip { background:linear-gradient(135deg, rgba(245,158,11,0.06) 0%, rgba(245,158,11,0.02) 100%); border-left:3px solid var(--amber); padding:18px 22px; border-radius:0 var(--radius) var(--radius) 0; margin-bottom:28px; }
-.pro-tip strong { color:var(--amber); font-size:14px; }
-.pro-tip p { font-size:14px; color:var(--text); margin-top:6px; line-height:1.6; }
-
-.after-install { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; margin-top:12px; backdrop-filter:blur(10px); }
-.after-install h3 { font-size:16px; color:var(--heading); margin-bottom:10px; margin-top:20px; }
-.after-install h3:first-child { margin-top:0; }
-.after-install p { font-size:14px; color:#b0b0c8; line-height:1.7; margin-bottom:14px; }
-.after-install strong { color:#e8e8f4; }
-.after-install code { background:rgba(99,102,241,0.12); color:#a5b4fc; padding:2px 8px; border-radius:4px; font-size:13px; }
-.after-install a { color:var(--accent2); text-decoration:none; }
-.after-install a:hover { text-decoration:underline; }
-
-.cost-breakdown { width:100%; border-collapse:collapse; margin-bottom:36px; font-size:14px; }
-.cost-breakdown th { text-align:left; color:var(--text-muted); font-weight:600; padding:10px 18px; border-bottom:1px solid var(--border); font-size:11px; text-transform:uppercase; letter-spacing:0.8px; }
-.cost-breakdown td { padding:13px 18px; border-bottom:1px solid rgba(255,255,255,0.04); color:var(--text); }
-.cost-breakdown .total-row td { border-bottom:none; font-weight:700; font-size:16px; padding-top:18px; }
-.cost-breakdown .total-row td:last-child { background:linear-gradient(135deg, var(--accent1), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-
-/* Newsletter section */
-.newsletter { position:relative; z-index:1; max-width:600px; margin:0 auto 60px; padding:32px 24px; text-align:center; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); backdrop-filter:blur(10px); }
-.newsletter h3 { font-size:22px; color:var(--heading); margin-bottom:8px; text-shadow:var(--glow); }
-.newsletter p { font-size:14px; color:var(--text-muted); margin-bottom:20px; }
-.newsletter .sub-cta { display:inline-flex; align-items:center; gap:10px; padding:14px 32px; background:#ff0000; color:#fff; font-weight:700; font-size:16px; text-decoration:none; border-radius:12px; transition:all 0.2s; }
-.newsletter .sub-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,0,0,0.3); }
-
-/* Locked tutorial */
-.locked-hero { text-align:center; padding:40px 24px; }
-.locked-hero .lock-icon { font-size:64px; margin-bottom:16px; }
-.locked-hero h2 { font-size:30px; margin-bottom:10px; }
-.locked-hero .unlock-msg { font-size:16px; color:var(--text); line-height:1.7; max-width:500px; margin:0 auto 24px; }
-.locked-hero .milestone { display:inline-block; background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.25); padding:14px 28px; border-radius:12px; font-size:22px; font-weight:800; color:#f59e0b; margin-bottom:20px; }
-.sub-cta { display:inline-flex; align-items:center; gap:10px; padding:16px 36px; background:#ff0000; color:#fff; font-weight:800; font-size:17px; text-decoration:none; border-radius:14px; transition:all 0.2s; }
-.sub-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,0,0,0.3); }
-.early-bird { margin-top:20px; font-size:13px; color:#10b981; font-weight:600; }
-
-/* Affiliate disclosure */
-.disclosure { position:relative; z-index:1; max-width:600px; margin:0 auto 0; padding:0 24px 40px; text-align:center; font-size:12px; color:#777; }
-.disclosure a { color:var(--accent2); }
-
-footer { position:relative; z-index:1; text-align:center; padding:40px 20px 60px; color:#888; font-size:14px; border-top:1px solid var(--border); }
-footer a { color:var(--accent2); text-decoration:none; }
-.hidden { display:none !important; }
-
-/* ═══════════════════════════════════════════
-   WHY THIS IS DIFFERENT — Comparison Banner
-   ═══════════════════════════════════════════ */
-.different { position:relative; z-index:1; max-width:880px; margin:0 auto 40px; padding:0 24px; }
-.different-header { text-align:center; margin-bottom:28px; }
-.different-header h2 { font-size:28px; color:var(--heading); margin-bottom:8px; text-shadow:var(--glow); }
-.different-header p { font-size:15px; color:var(--text-muted); }
-.compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
-.compare-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px 24px; backdrop-filter:blur(10px); }
-.compare-card.bad { border-color:rgba(239,68,68,0.15); }
-.compare-card.good { border-color:rgba(16,185,129,0.2); background:linear-gradient(135deg, rgba(16,185,129,0.03) 0%, var(--surface) 100%); }
-.compare-card .label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:12px; }
-.compare-card.bad .label { color:#ef4444; }
-.compare-card.good .label { color:#10b981; }
-.compare-card h3 { font-size:22px; color:var(--heading); margin-bottom:10px; }
-.compare-card p { font-size:14px; color:var(--text-muted); line-height:1.65; margin-bottom:6px; }
-.compare-card .check { color:#10b981; margin-right:6px; font-weight:700; }
-.compare-card .cross { color:#ef4444; margin-right:6px; font-weight:700; }
-
-.guide-includes { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:8px; }
-.guide-includes .item { background:rgba(99,102,241,0.06); border:1px solid rgba(99,102,241,0.12); border-radius:10px; padding:10px 18px; font-size:13px; color:var(--text); display:flex; align-items:center; justify-content:center; gap:8px; width:210px; flex-shrink:0; box-sizing:border-box; }
-.guide-includes .item .icon { font-size:16px; }
-
-/* ═══════════════════════════════════════════
-   COMING SOON + REQUEST SECTION
-   ═══════════════════════════════════════════ */
-.coming-soon { position:relative; z-index:1; max-width:880px; margin:0 auto 30px; padding:0 24px; text-align:center; }
-.coming-soon h2 { font-size:24px; color:var(--heading); margin-bottom:8px; text-shadow:var(--glow); }
-.coming-soon .sub { font-size:14px; color:var(--text-muted); margin-bottom:24px; }
-.coming-stacks { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:32px; }
-.coming-pill { background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.2); border-radius:100px; padding:10px 22px; font-size:14px; color:#f59e0b; display:flex; align-items:center; justify-content:center; gap:8px; width:240px; flex-shrink:0; box-sizing:border-box; }
-.coming-pill .soon { font-size:10px; background:#f59e0b; color:#000; padding:2px 8px; border-radius:100px; font-weight:700; text-transform:uppercase; }
-
-.request-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px 28px; max-width:560px; margin:0 auto; backdrop-filter:blur(10px); }
-.request-box h3 { font-size:20px; color:var(--heading); margin-bottom:6px; }
-.request-box .sub { font-size:14px; color:var(--text-muted); margin-bottom:18px; }
-.request-box .req-cta { display:inline-flex; align-items:center; gap:10px; padding:14px 30px; background:linear-gradient(135deg, var(--accent1), #7c3aed); color:#fff; font-weight:700; font-size:15px; text-decoration:none; border-radius:12px; transition:all 0.2s; box-shadow:0 4px 20px rgba(99,102,241,0.3); }
-.request-box .req-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(99,102,241,0.45); }
-
-@media (max-width:680px) {
-  .compare-grid { grid-template-columns:1fr; }
-  .different-header h2 { font-size:22px; }
-  .different-header p { font-size:14px; }
-  .compare-card h3 { font-size:18px; }
-  .compare-card p { font-size:14px; }
-  .guide-includes .item { font-size:12px; padding:8px 14px; }
-  .coming-soon h2 { font-size:20px; }
-  .request-box { padding:24px 20px; }
+/* ═══════════════ HACKATHON BANNER ═══════════════ */
+.hackathon-banner {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(245,158,11,0.06));
+  border-bottom: 1px solid rgba(168,85,247,0.15);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: #c0a0f0;
+  letter-spacing: 0.5px;
+}
+.hackathon-banner .sponsors {
+  background: linear-gradient(135deg, var(--purple), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  font-weight: 800;
 }
 
-/* ═══════════════════════════════════════════
-   MOBILE — Bigger everything. Fat fingers.
-   ═══════════════════════════════════════════ */
-@media (max-width:680px) {
-  /* Hero */
-  .hero { padding:48px 20px 32px; }
-  .hero h1 { font-size:28px; }
-  .hero .subtitle { font-size:15px; }
-  .hero .badge { font-size:11px; padding:8px 18px; }
-  .hero .channel-link { font-size:14px; }
+/* ═══════════════ HERO ═══════════════ */
+.hero {
+  position: relative; z-index: 1;
+  text-align: center;
+  padding: 80px 20px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
 
-  /* Social proof */
-  .social-proof { gap:18px; }
-  .social-proof .stat .num { font-size:24px; }
-  .social-proof .stat .label { font-size:11px; }
+.hero .hackathon-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.8px;
+  background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(245,158,11,0.1));
+  border: 1px solid rgba(168,85,247,0.3);
+  padding: 8px 20px; border-radius: 100px;
+  margin-bottom: 28px;
+  color: #d4b8ff;
+  box-shadow: 0 0 20px rgba(168,85,247,0.1);
+}
+.hero .hackathon-badge .dot {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(245,158,11,0.6);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
 
-  /* Dashboard cards — single column, bigger taps */
-  .dashboard { grid-template-columns:1fr; padding:0 16px 60px; }
-  .build-card .card-img { height:200px; }
-  .build-card .card-body { padding:28px 24px; }
-  .build-card .card-body .price { font-size:12px; }
-  .build-card .card-body h3 { font-size:22px; }
-  .build-card .card-body p { font-size:15px; line-height:1.6; }
-  .tool-tag { font-size:12px; padding:6px 12px; }
+.hero h1 {
+  font-size: 56px;
+  color: var(--heading);
+  margin-bottom: 16px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  text-shadow: var(--glow-purple);
+}
+.hero h1 .gradient-text {
+  background: linear-gradient(135deg, var(--purple) 0%, #c084fc 30%, var(--gold) 80%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero .savings {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #10b981, #34d399);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero .subtitle {
+  font-size: 17px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  max-width: 600px;
+  margin-left: auto; margin-right: auto;
+}
+.hero .channel-link {
+  font-size: 13px; color: var(--text-muted);
+}
+.hero .channel-link a {
+  color: var(--purple); text-decoration: none; font-weight: 600;
+}
+.hero .channel-link a:hover { text-decoration: underline; }
 
-  /* Locked card */
-  .build-card.locked .lock-badge { font-size:11px; padding:7px 16px; top:16px; right:16px; }
-  .build-card.locked .subs-countdown { font-size:14px; }
+/* ═══════════════ TRUST STRIP ═══════════════ */
+.trust-strip {
+  position: relative; z-index: 1;
+  display: flex; justify-content: center; align-items: center; gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 20px 10px;
+}
+.trust-strip .curator-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 13px;
+  color: #d0d0e8;
+  font-weight: 600;
+}
+.trust-strip .curator-badge .avatar {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--accent3));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+}
+.trust-strip .stars {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.trust-strip .stars .rating-num {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-left: 4px;
+}
 
-  /* Tutorial view */
-  .tutorial-view h2 { font-size:28px; }
-  .tutorial-view .tut-subtitle { font-size:14px; }
-  .back-link { font-size:16px; padding:10px 0; display:inline-flex; }
-  .hero-img { border-radius:12px; }
+/* ═══════════════ SOCIAL PROOF ═══════════════ */
+.social-proof {
+  position: relative; z-index: 1;
+  display: flex; justify-content: center; gap: 48px;
+  padding: 0 20px 28px;
+  flex-wrap: wrap;
+}
+.social-proof .stat { text-align: center; }
+.social-proof .stat .num {
+  font-size: 32px; font-weight: 800;
+  background: linear-gradient(135deg, var(--purple), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  font-variant-numeric: tabular-nums;
+}
+.social-proof .stat .label {
+  font-size: 12px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.8px; margin-top: 6px;
+}
 
-  /* Overview box */
-  .overview-box { padding:28px 20px; }
-  .overview-box p { font-size:15px; line-height:1.7; }
+/* ═══════════════ DASHBOARD (bento grid) ═══════════════ */
+.dashboard {
+  position: relative; z-index: 1;
+  max-width: 1100px; margin: 0 auto;
+  padding: 0 24px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
 
-  /* CTA buttons — BIG */
-  .cta-btn {
-    width:100%; justify-content:center;
-    padding:18px 24px;  /* 18px vertical = 44px+ touch target */
-    font-size:16px;
-    border-radius:14px;
-  }
-  .cta-btn .emoji { font-size:22px; }
+.build-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+}
+.build-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(circle at 50% 0%, rgba(168,85,247,0.08), transparent 60%);
+  pointer-events: none;
+}
+.build-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-glow);
+  box-shadow: 0 16px 48px rgba(168,85,247,0.15), 0 0 0 1px rgba(168,85,247,0.12);
+}
+.build-card:hover::after { opacity: 1; }
 
-  /* Steps — more breathing room */
-  .step { gap:16px; padding:20px 0; }
-  .step .step-num { min-width:36px; height:36px; font-size:16px; }
-  .step .step-content h4 { font-size:17px; }
-  .step .step-content p { font-size:15px; line-height:1.65; }
+.build-card .card-img {
+  width: 100%; height: 180px; object-fit: cover;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1035 50%, #0a0f1a 100%);
+}
+.build-card .card-body { padding: 24px 22px; }
 
-  /* Pro tip */
-  .pro-tip { padding:20px 22px; }
-  .pro-tip strong { font-size:15px; }
-  .pro-tip p { font-size:15px; }
+.build-card .card-body .price {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+  background: linear-gradient(135deg, var(--purple), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 10px;
+}
+.build-card .card-body .star-rating {
+  color: var(--gold); font-size: 12px; margin-bottom: 6px;
+}
+.build-card .card-body h3 {
+  font-size: 20px; color: var(--heading); margin-bottom: 10px;
+}
+.build-card .card-body p {
+  font-size: 14px; color: var(--text-muted); line-height: 1.55;
+}
+.build-card .card-body .tools {
+  margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px;
+}
+.tool-tag {
+  font-size: 11px;
+  background: rgba(168,85,247,0.08);
+  color: #c0a0f0;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(168,85,247,0.12);
+}
 
-  /* Cost breakdown table — readable */
-  .cost-breakdown { font-size:15px; }
-  .cost-breakdown th { padding:12px 14px; font-size:12px; }
-  .cost-breakdown td { padding:16px 14px; }
-  .cost-breakdown .total-row td { font-size:18px; padding-top:20px; }
+/* Locked card */
+.build-card.locked { opacity: 0.75; position: relative; }
+.build-card.locked:hover { opacity: 0.9; border-color: rgba(245,158,11,0.5); box-shadow: 0 16px 48px rgba(245,158,11,0.1); }
+.build-card.locked .lock-badge {
+  position: absolute; top: 14px; right: 14px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000; font-size: 10px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  padding: 6px 14px; border-radius: 100px; z-index: 2;
+}
+.build-card.locked .card-img { filter: brightness(0.5) blur(2px); }
+.build-card.locked .subs-countdown {
+  font-size: 14px; color: var(--amber); margin-top: 8px; font-weight: 600;
+}
 
-  /* After Install section */
-  .after-install { padding:32px 22px; }
-  .after-install h3 { font-size:18px; }
-  .after-install p { font-size:15px; line-height:1.7; }
-  .after-install code { font-size:14px; padding:3px 10px; }
+/* ═══════════════ BENTO AFFILIATE GRID ═══════════════ */
+.bento-section {
+  position: relative; z-index: 1;
+  max-width: 1100px; margin: 0 auto 50px;
+  padding: 0 24px;
+}
+.bento-section .section-header {
+  text-align: center; margin-bottom: 32px;
+}
+.bento-section .section-header h2 {
+  font-size: 30px; color: var(--heading);
+  text-shadow: var(--glow-purple);
+  margin-bottom: 8px;
+}
+.bento-section .section-header p {
+  font-size: 15px; color: var(--text-muted);
+  max-width: 600px; margin: 0 auto;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
 
-  /* Newsletter CTA */
-  .newsletter { padding:40px 24px; margin:0 16px 60px; }
-  .newsletter h3 { font-size:24px; }
-  .newsletter p { font-size:15px; }
-  .newsletter .sub-cta { padding:18px 36px; font-size:17px; }
+.bento-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  opacity: 0.06;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.bento-card:nth-child(1)::before { background: var(--purple); }
+.bento-card:nth-child(2)::before { background: #ec4899; }
+.bento-card:nth-child(3)::before { background: var(--purple); }
+.bento-card:nth-child(4)::before { background: #f97316; }
 
-  /* Locked hero */
-  .locked-hero h2 { font-size:28px; }
-  .locked-hero .lock-icon { font-size:56px; }
-  .locked-hero .unlock-msg { font-size:16px; }
-  .locked-hero .milestone { font-size:20px; padding:18px 32px; }
-  .sub-cta { padding:18px 32px; font-size:17px; }
-  .early-bird { font-size:14px; }
+.bento-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-glow);
+  box-shadow: 0 16px 48px rgba(168,85,247,0.12), 0 0 0 1px rgba(168,85,247,0.08);
+}
+.bento-card:hover::before { opacity: 0.12; }
 
-  /* Disclosure / footer */
-  .disclosure { font-size:12px; padding:0 24px 40px; }
-  footer { font-size:14px; padding:40px 20px 60px; }
+.bento-card .commission-badge {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(245,158,11,0.1));
+  color: #d4b8ff;
+  padding: 5px 14px; border-radius: 100px;
+  margin-bottom: 16px;
+}
+.bento-card .star-rating {
+  color: var(--gold); font-size: 13px; margin-bottom: 10px;
+}
+.bento-card h3 {
+  font-size: 22px; color: var(--heading); margin-bottom: 10px;
+}
+.bento-card p {
+  font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;
+}
+.bento-card .bento-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 700; font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(168,85,247,0.25);
+}
+.bento-card .bento-cta.gradient-purple {
+  background: linear-gradient(135deg, var(--purple), var(--accent3));
+  color: #fff;
+}
+.bento-card .bento-cta.gradient-pink {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: #fff;
+}
+.bento-card .bento-cta.gradient-violet {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: #fff;
+}
+.bento-card .bento-cta.gradient-orange {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #fff;
+}
+.bento-card .bento-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(168,85,247,0.4);
+}
+
+/* ═══════════════ CTA BUTTONS (purple→gold) ═══════════════ */
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 28px; border-radius: 12px;
+  font-weight: 700; font-size: 15px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cta-btn.primary {
+  background: linear-gradient(135deg, var(--purple), #7c3aed);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(168,85,247,0.35), 0 0 0 1px rgba(168,85,247,0.1);
+}
+.cta-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(168,85,247,0.5), 0 0 0 1px rgba(168,85,247,0.2);
+}
+.cta-btn.gold {
+  background: linear-gradient(135deg, var(--gold), #d97706);
+  color: #000;
+  font-weight: 800;
+  box-shadow: 0 4px 24px rgba(245,158,11,0.3), 0 0 0 1px rgba(245,158,11,0.1);
+}
+.cta-btn.gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(245,158,11,0.5), 0 0 0 1px rgba(245,158,11,0.2);
+}
+.cta-btn.secondary {
+  background: rgba(255,255,255,0.05);
+  color: #d4d4e8;
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+}
+.cta-btn.secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.25);
+  transform: translateY(-3px);
+}
+.cta-btn .emoji { font-size: 20px; }
+
+/* ═══════════════ TUTORIAL VIEWS ═══════════════ */
+.tutorial-view {
+  position: relative; z-index: 1;
+  display: none; max-width: 800px; margin: 0 auto;
+  padding: 0 24px 100px;
+}
+.tutorial-view.active { display: block; }
+.back-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--text-muted); font-size: 14px;
+  margin-bottom: 28px; cursor: pointer; text-decoration: none;
+  transition: color 0.15s;
+}
+.back-link:hover { color: var(--purple); }
+.tutorial-view .hero-img {
+  width: 100%; max-height: 350px; object-fit: cover;
+  border-radius: var(--radius); margin-bottom: 28px;
+  border: 1px solid var(--border);
+}
+.tutorial-view h2 {
+  font-size: 36px; color: var(--heading); margin-bottom: 6px;
+  letter-spacing: -0.5px; text-shadow: var(--glow-purple);
+}
+.tut-subtitle {
+  font-size: 16px;
+  background: linear-gradient(135deg, var(--purple), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 24px; font-weight: 700;
+}
+
+.overview-box {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 36px;
+  backdrop-filter: blur(16px);
+}
+.overview-box p { color: var(--text); font-size: 15px; line-height: 1.7; }
+
+.cta-section { margin-bottom: 40px; }
+.cta-section h3 {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--text-muted); margin-bottom: 16px;
+}
+.cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.steps-section { margin-bottom: 40px; }
+.steps-section h3 {
+  font-size: 18px; color: var(--heading); margin-bottom: 20px;
+  text-shadow: var(--glow-purple);
+}
+.step {
+  display: flex; gap: 18px; align-items: flex-start;
+  padding: 20px 0; border-bottom: 1px solid var(--border);
+}
+.step:last-child { border-bottom: none; }
+.step .step-num {
+  background: linear-gradient(135deg, var(--purple), var(--accent3));
+  color: #fff; font-weight: 800; font-size: 15px;
+  min-width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(168,85,247,0.3);
+}
+.step .step-content h4 { font-size: 16px; color: var(--heading); margin-bottom: 4px; }
+.step .step-content p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.step .step-content a { color: var(--purple); text-decoration: none; }
+.step .step-content a:hover { text-decoration: underline; }
+
+.pro-tip {
+  background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(245,158,11,0.03) 100%);
+  border-left: 3px solid var(--amber);
+  padding: 20px 24px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 32px;
+  backdrop-filter: blur(8px);
+}
+.pro-tip strong { color: var(--amber); font-size: 14px; }
+.pro-tip p { font-size: 14px; color: var(--text); margin-top: 6px; line-height: 1.6; }
+
+.after-install {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  margin-top: 12px;
+  backdrop-filter: blur(16px);
+}
+.after-install h3 {
+  font-size: 17px; color: var(--heading); margin-bottom: 10px; margin-top: 24px;
+}
+.after-install h3:first-child { margin-top: 0; }
+.after-install p { font-size: 14px; color: #b0b0c8; line-height: 1.7; margin-bottom: 14px; }
+.after-install strong { color: #e8e8f4; }
+.after-install code {
+  background: rgba(168,85,247,0.12); color: #c4b5fd;
+  padding: 2px 8px; border-radius: 4px; font-size: 13px;
+}
+.after-install a { color: var(--purple); text-decoration: none; }
+.after-install a:hover { text-decoration: underline; }
+
+/* Upsell bridge */
+.upsell-bridge {
+  background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(245,158,11,0.05));
+  border: 1px solid rgba(168,85,247,0.2);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+.upsell-bridge strong { color: var(--gold); }
+.upsell-bridge a { color: var(--purple); font-weight: 600; }
+
+/* Cost table */
+.cost-breakdown {
+  width: 100%; border-collapse: collapse; margin-bottom: 40px; font-size: 14px;
+}
+.cost-breakdown th {
+  text-align: left; color: var(--text-muted); font-weight: 600;
+  padding: 11px 18px; border-bottom: 1px solid var(--border);
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px;
+}
+.cost-breakdown td { padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text); }
+.cost-breakdown .total-row td {
+  border-bottom: none; font-weight: 700; font-size: 16px; padding-top: 20px;
+}
+.cost-breakdown .total-row td:last-child {
+  background: linear-gradient(135deg, var(--purple), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+/* ═══════════════ WHY DIFFERENT ═══════════════ */
+.different { position: relative; z-index: 1; max-width: 900px; margin: 0 auto 48px; padding: 0 24px; }
+.different-header { text-align: center; margin-bottom: 32px; }
+.different-header h2 {
+  font-size: 30px; color: var(--heading); margin-bottom: 8px;
+  text-shadow: var(--glow-purple);
+}
+.different-header p { font-size: 15px; color: var(--text-muted); }
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 28px; }
+.compare-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 30px 26px;
+  backdrop-filter: blur(16px);
+}
+.compare-card.bad { border-color: rgba(239,68,68,0.15); }
+.compare-card.good {
+  border-color: rgba(16,185,129,0.2);
+  background: linear-gradient(135deg, rgba(16,185,129,0.03) 0%, var(--surface) 100%);
+}
+.compare-card .label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.2px; margin-bottom: 14px;
+}
+.compare-card.bad .label { color: #ef4444; }
+.compare-card.good .label { color: #10b981; }
+.compare-card h3 { font-size: 22px; color: var(--heading); margin-bottom: 10px; }
+.compare-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 6px; }
+.compare-card .check { color: #10b981; margin-right: 6px; font-weight: 700; }
+.compare-card .cross { color: #ef4444; margin-right: 6px; font-weight: 700; }
+
+.guide-includes { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.guide-includes .item {
+  background: rgba(168,85,247,0.06); border: 1px solid rgba(168,85,247,0.12);
+  border-radius: 10px; padding: 10px 18px; font-size: 13px;
+  color: var(--text); display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 210px; flex-shrink: 0; box-sizing: border-box;
+}
+.guide-includes .item .icon { font-size: 16px; }
+
+/* ═══════════════ COMING SOON ═══════════════ */
+.coming-soon {
+  position: relative; z-index: 1; max-width: 900px;
+  margin: 0 auto 30px; padding: 0 24px; text-align: center;
+}
+.coming-soon h2 {
+  font-size: 24px; color: var(--heading); margin-bottom: 8px;
+  text-shadow: var(--glow-purple);
+}
+.coming-soon .sub { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.coming-stacks { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 32px; }
+.coming-pill {
+  background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 100px; padding: 10px 22px; font-size: 14px;
+  color: var(--amber); display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 240px; flex-shrink: 0; box-sizing: border-box;
+}
+.coming-pill .soon {
+  font-size: 10px; background: var(--amber); color: #000;
+  padding: 2px 8px; border-radius: 100px; font-weight: 700; text-transform: uppercase;
+}
+
+.request-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 34px 28px;
+  max-width: 580px; margin: 0 auto;
+  backdrop-filter: blur(16px);
+}
+.request-box h3 { font-size: 20px; color: var(--heading); margin-bottom: 6px; }
+.request-box .sub { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
+.request-box .req-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, var(--purple), #7c3aed);
+  color: #fff; font-weight: 700; font-size: 15px;
+  text-decoration: none; border-radius: 12px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(168,85,247,0.35);
+}
+.request-box .req-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(168,85,247,0.5);
+}
+
+/* Newsletter */
+.newsletter {
+  position: relative; z-index: 1; max-width: 620px;
+  margin: 0 auto 60px; padding: 36px 28px; text-align: center;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(16px);
+}
+.newsletter h3 {
+  font-size: 24px; color: var(--heading); margin-bottom: 8px;
+  text-shadow: var(--glow-purple);
+}
+.newsletter p { font-size: 14px; color: var(--text-muted); margin-bottom: 22px; }
+.newsletter .sub-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, var(--purple), var(--gold));
+  color: #000; font-weight: 800; font-size: 16px;
+  text-decoration: none; border-radius: 14px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 24px rgba(168,85,247,0.3);
+}
+.newsletter .sub-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 36px rgba(168,85,247,0.5);
+}
+
+/* Disclosure */
+.disclosure {
+  position: relative; z-index: 1; max-width: 620px;
+  margin: 0 auto; padding: 0 24px 40px;
+  text-align: center; font-size: 12px; color: #666;
+}
+.disclosure a { color: var(--purple); text-decoration: underline; }
+
+/* Locked tutorial */
+.locked-hero { text-align: center; padding: 48px 24px; }
+.locked-hero .lock-icon { font-size: 64px; margin-bottom: 16px; }
+.locked-hero h2 { font-size: 32px; margin-bottom: 10px; }
+.locked-hero .unlock-msg {
+  font-size: 16px; color: var(--text); line-height: 1.7;
+  max-width: 520px; margin: 0 auto 24px;
+}
+.locked-hero .milestone {
+  display: inline-block;
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.25);
+  padding: 14px 28px; border-radius: 14px;
+  font-size: 22px; font-weight: 800; color: var(--amber);
+  margin-bottom: 20px;
+}
+.sub-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, var(--purple), var(--gold));
+  color: #000; font-weight: 800; font-size: 17px;
+  text-decoration: none; border-radius: 14px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(168,85,247,0.3);
+}
+.sub-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 36px rgba(168,85,247,0.5);
+}
+.early-bird { margin-top: 20px; font-size: 13px; color: #10b981; font-weight: 600; }
+
+footer {
+  position: relative; z-index: 1; text-align: center;
+  padding: 48px 20px 60px; color: #666; font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--purple); text-decoration: none; }
+.hidden { display: none !important; }
+
+/* ═══════════════ RESPONSIVE ═══════════════ */
+@media (max-width: 768px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .compare-card h3 { font-size: 18px; }
+  .compare-card p { font-size: 14px; }
+  .guide-includes .item { font-size: 12px; padding: 8px 14px; }
+  .coming-soon h2 { font-size: 20px; }
+  .request-box { padding: 24px 20px; }
+  .bento-section .section-header h2 { font-size: 24px; }
+}
+
+@media (max-width: 680px) {
+  .hackathon-banner { font-size: 11px; padding: 8px 16px; }
+  .hero { padding: 56px 20px 40px; }
+  .hero h1 { font-size: 30px; }
+  .hero .savings { font-size: 17px; }
+  .hero .subtitle { font-size: 15px; }
+  .hero .hackathon-badge { font-size: 11px; padding: 8px 18px; }
+  .hero .channel-link { font-size: 14px; }
+  .trust-strip { gap: 12px; }
+  .trust-strip .curator-badge { font-size: 12px; padding: 6px 14px; }
+  .social-proof { gap: 20px; }
+  .social-proof .stat .num { font-size: 24px; }
+  .social-proof .stat .label { font-size: 11px; }
+  .dashboard { grid-template-columns: 1fr; padding: 0 16px 60px; }
+  .build-card .card-img { height: 200px; }
+  .build-card .card-body { padding: 28px 24px; }
+  .build-card .card-body h3 { font-size: 22px; }
+  .build-card .card-body p { font-size: 15px; line-height: 1.6; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .bento-card { padding: 28px 22px; }
+  .tool-tag { font-size: 12px; padding: 6px 12px; }
+  .tutorial-view h2 { font-size: 28px; }
+  .tutorial-view .tut-subtitle { font-size: 14px; }
+  .back-link { font-size: 16px; padding: 10px 0; display: inline-flex; }
+  .overview-box { padding: 28px 20px; }
+  .overview-box p { font-size: 15px; line-height: 1.7; }
+  .cta-btn { width: 100%; justify-content: center; padding: 18px 24px; font-size: 16px; border-radius: 14px; }
+  .cta-btn .emoji { font-size: 22px; }
+  .step { gap: 16px; padding: 20px 0; }
+  .step .step-num { min-width: 36px; height: 36px; font-size: 16px; }
+  .step .step-content h4 { font-size: 17px; }
+  .step .step-content p { font-size: 15px; line-height: 1.65; }
+  .pro-tip { padding: 20px 22px; }
+  .pro-tip strong { font-size: 15px; }
+  .pro-tip p { font-size: 15px; }
+  .cost-breakdown { font-size: 15px; }
+  .cost-breakdown th { padding: 12px 14px; font-size: 12px; }
+  .cost-breakdown td { padding: 16px 14px; }
+  .cost-breakdown .total-row td { font-size: 18px; padding-top: 20px; }
+  .after-install { padding: 32px 22px; }
+  .after-install h3 { font-size: 18px; }
+  .after-install p { font-size: 15px; line-height: 1.7; }
+  .after-install code { font-size: 14px; padding: 3px 10px; }
+  .newsletter { padding: 40px 24px; margin: 0 16px 60px; }
+  .newsletter h3 { font-size: 24px; }
+  .newsletter p { font-size: 15px; }
+  .newsletter .sub-cta { padding: 18px 36px; font-size: 17px; }
+  .locked-hero h2 { font-size: 28px; }
+  .locked-hero .lock-icon { font-size: 56px; }
+  .locked-hero .unlock-msg { font-size: 16px; }
+  .locked-hero .milestone { font-size: 20px; padding: 18px 32px; }
+  .sub-cta { padding: 18px 32px; font-size: 17px; }
+  .early-bird { font-size: 14px; }
+  .disclosure { font-size: 12px; padding: 0 24px 40px; }
+  footer { font-size: 14px; padding: 40px 20px 60px; }
 }
 </style>
 
-<!-- Google Search Console verification — replace content with your verification code -->
 <meta name="google-site-verification" content="REPLACE_WITH_SEARCH_CONSOLE_VERIFICATION_CODE" />
-
-<!-- Google Analytics (placeholder — replace with your GA4 ID) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
 </head>
 <body>
 
-<!-- HERO -->
+<!-- ═══ HACKATHON BANNER ═══ -->
+<div class="hackathon-banner">
+  🏆 <span class="sponsors">NVIDIA × Stripe × Nous</span> Hackathon 2026 — Built with <strong>Hermes Agent</strong>
+</div>
+
+<!-- ═══ HERO ═══ -->
 <div class="hero" id="hero">
-  <div class="badge">📦 Ready-to-Deploy AI Stacks</div>
-  <h1>Build Your <span>AI Workshop</span></h1>
-  <p class="subtitle">Pick a toolkit. Follow the guide. Get it running today. No coding required.</p>
+  <div class="hackathon-badge">
+    <span class="dot"></span> NVIDIA × Stripe × Nous Hackathon 2026
+  </div>
+  <h1><span class="gradient-text">Hermes Agent</span> AI Tool Stack</h1>
+  <p class="savings">💸 $0 Replaces $492/month in AI SaaS</p>
+  <p class="subtitle">Pick a toolkit. Follow the guide. Get it running today. These are the exact stacks I built for the Hermes Agent hackathon — zero coding required.</p>
   <p class="channel-link">📺 Watch the builds on YouTube: <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener">@ZachS-o3e4j</a></p>
 </div>
 
-<!-- SOCIAL PROOF -->
+<!-- ═══ TRUST STRIP ═══ -->
+<div class="trust-strip">
+  <div class="curator-badge">
+    <div class="avatar">ZS</div> Curated by Zach S
+  </div>
+  <div class="stars">★★★★★ <span class="rating-num">4.9</span></div>
+</div>
+
+<!-- ═══ SOCIAL PROOF ═══ -->
 <div class="social-proof">
-  <div class="stat"><div class="num">7</div><div class="label">AI Tool Guides</div></div>
+  <div class="stat"><div class="num">$492</div><div class="label">SaaS Replaced</div></div>
   <div class="stat"><div class="num">$3</div><div class="label">Cheapest Stack</div></div>
-  <div class="stat"><div class="num">10</div><div class="label">Build Videos</div></div>
+  <div class="stat"><div class="num">8</div><div class="label">AI Tool Guides</div></div>
   <div class="stat"><div class="num">0</div><div class="label">Coding Needed</div></div>
 </div>
 
 <!-- ═══ WHY THIS IS DIFFERENT ═══ -->
 <div class="different">
   <div class="different-header">
-    <h2>Other sites give you 50,000 AI tools.</h2>
-    <p>We give you complete stacks — download links, step-by-step instructions, real costs, and troubleshooting. Build something tonight, not browse forever.</p>
+    <h2>50,000 tools vs. 8 stacks that actually work</h2>
+    <p>Other sites drown you in options. We give you complete stacks — download links, step-by-step instructions, real costs, and troubleshooting. Build something tonight, not browse forever.</p>
   </div>
   <div class="compare-grid">
     <div class="compare-card bad">
@@ -364,7 +869,7 @@ gtag('config', 'G-XXXXXXXXXX');
     </div>
     <div class="compare-card good">
       <div class="label">✅ This Dashboard</div>
-      <p><span class="check">✓</span> 7 curated stacks — each one I use myself</p>
+      <p><span class="check">✓</span> 8 curated stacks — each one I use myself</p>
       <p><span class="check">✓</span> Step-by-step build guides with real screenshots</p>
       <p><span class="check">✓</span> Exact monthly cost — no surprises, actual bills</p>
       <p><span class="check">✓</span> Video proof — watch me build it on YouTube</p>
@@ -381,7 +886,7 @@ gtag('config', 'G-XXXXXXXXXX');
   </div>
 </div>
 
-<!-- DASHBOARD -->
+<!-- ═══ DASHBOARD ═══ -->
 <div class="dashboard" id="dashboard">
 
   <!-- Card 1: AI Assistant -->
@@ -389,6 +894,7 @@ gtag('config', 'G-XXXXXXXXXX');
     <img class="card-img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=340&fit=crop&auto=format" alt="AI Assistant" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0f0f2e,#1a1050)'">
     <div class="card-body">
       <div class="price">$3/month</div>
+      <div class="star-rating">★★★★★</div>
       <h3>🤖 The $3 AI Assistant</h3>
       <p>Your own AI agent that runs your business from Telegram. Email, research, content, scheduling — all automated.</p>
       <div class="tools"><span class="tool-tag">Hermes Agent</span><span class="tool-tag">DeepSeek V4</span><span class="tool-tag">Telegram</span></div>
@@ -400,6 +906,7 @@ gtag('config', 'G-XXXXXXXXXX');
     <img class="card-img" src="https://images.unsplash.com/photo-1531746790095-e08c2c08a4b0?w=600&h=340&fit=crop&auto=format" alt="AI Clone" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a1030,#0f0f2e)'">
     <div class="card-body">
       <div class="price">From $5</div>
+      <div class="star-rating">★★★★★</div>
       <h3>🎬 AI Clone Studio</h3>
       <p>Record yourself once. Your AI avatar delivers scripts on video forever. No camera, no crew, no reshoots.</p>
       <div class="tools"><span class="tool-tag">HeyGen</span><span class="tool-tag">ElevenLabs</span><span class="tool-tag">ffmpeg</span></div>
@@ -411,6 +918,7 @@ gtag('config', 'G-XXXXXXXXXX');
     <img class="card-img" src="https://images.unsplash.com/photo-1547954575-855750c57bd3?w=600&h=340&fit=crop&auto=format" alt="Images" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#102a1a,#0f1a2e)'">
     <div class="card-body">
       <div class="price">Free</div>
+      <div class="star-rating">★★★★★</div>
       <h3>🖼️ AI Image Studio</h3>
       <p>Generate, edit, and enhance images with AI. Background removal, upscaling, creation — all free, all browser-based.</p>
       <div class="tools"><span class="tool-tag">Leonardo AI</span><span class="tool-tag">Photopea</span><span class="tool-tag">Canva</span></div>
@@ -422,6 +930,7 @@ gtag('config', 'G-XXXXXXXXXX');
     <img class="card-img" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=340&fit=crop&auto=format" alt="Video" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a0f2e,#2e0f1a)'">
     <div class="card-body">
       <div class="price">Free tier</div>
+      <div class="star-rating">★★★★★</div>
       <h3>🎥 AI Video Engine</h3>
       <p>Raw footage in, finished video out. Auto captions, smart cuts, color grading. Hours of editing in minutes.</p>
       <div class="tools"><span class="tool-tag">CapCut</span><span class="tool-tag">Descript</span><span class="tool-tag">HyperFrames</span></div>
@@ -433,6 +942,7 @@ gtag('config', 'G-XXXXXXXXXX');
     <img class="card-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=340&fit=crop&auto=format" alt="Writing" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a1030,#100f2e)'">
     <div class="card-body">
       <div class="price">Free / $39/mo</div>
+      <div class="star-rating">★★★★☆</div>
       <h3>✍️ AI Writing Engine</h3>
       <p>Upload your writing samples. The AI learns your voice and writes emails, scripts, tweets that sound like you.</p>
       <div class="tools"><span class="tool-tag">Claude</span><span class="tool-tag">Jasper</span><span class="tool-tag">ChatGPT</span></div>
@@ -444,6 +954,7 @@ gtag('config', 'G-XXXXXXXXXX');
     <img class="card-img" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=340&fit=crop&auto=format" alt="Passive" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2e1a0f,#1a2e0f)'">
     <div class="card-body">
       <div class="price">Free — Earns $30–80/mo</div>
+      <div class="star-rating">★★★★☆</div>
       <h3>💰 Passive Income Stack</h3>
       <p>Apps that pay you for your unused bandwidth. Install once, cash out monthly. Truly set-and-forget.</p>
       <div class="tools"><span class="tool-tag">Honeygain</span><span class="tool-tag">EarnApp</span><span class="tool-tag">Pawns.app</span></div>
@@ -468,98 +979,18 @@ gtag('config', 'G-XXXXXXXXXX');
     <img class="card-img" src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=340&fit=crop&auto=format" alt="Oakgen" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0a1a0f,#0a0f1a)'">
     <div class="card-body">
       <div class="price">$9/mo — Earn 30%</div>
+      <div class="star-rating">★★★★★</div>
       <h3>🚀 Oakgen AI Workspace</h3>
       <p>All your AI tools in one place. Image, video, audio, chat — Sora 2, FLUX Pro, ElevenLabs, Claude Sonnet, and 20+ models. One subscription, one workflow.</p>
       <div class="tools"><span class="tool-tag">Sora 2</span><span class="tool-tag">FLUX Pro</span><span class="tool-tag">Claude</span><span class="tool-tag">ElevenLabs</span></div>
-      <a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="noopener" class="card-cta" style="display:inline-block;margin-top:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;padding:8px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Try Oakgen Free →</a>
     </div>
   </div>
 
 </div>
 
-<!-- ═══ TUTORIAL: Oakgen AI Workspace ═══ -->
-<div class="tutorial-view" id="tutorial-oakgen">
-  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
-  <img class="hero-img" src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1500&h=500&fit=crop&auto=format" alt="Oakgen" onerror="this.style.background='linear-gradient(135deg,#0a0f1a,#0a1a0f)'">
-  <h2>🚀 Oakgen AI Workspace</h2>
-  <p class="tut-subtitle">$9/month · 20+ AI models · One dashboard · Step-by-step setup</p>
-  <div class="overview-box"><p>Stop paying for 20 separate AI subscriptions. Oakgen combines Sora 2, FLUX Pro, Claude Sonnet, ElevenLabs, DeepSeek, Gemini Flash, Kimi K2, FFmpeg, and 15+ more into a single $9/month workspace. Image generation, video creation, audio production, chat — all in one dashboard.</p></div>
-
-  <div class="cta-section">
-    <h3>🔗 Start Here (Affiliate Link)</h3>
-    <div class="cta-buttons">
-      <a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🚀</span> Try Oakgen — $9/month →</a>
-    </div>
-  </div>
-
-  <div class="steps-section">
-    <h3>📋 Step-by-Step Tutorial</h3>
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Sign up for Oakgen</h4><p>Click <a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="noopener">oakgen.ai?ref=N1edHj</a> and create your account. $9/month flat — no hidden fees. You get access to every AI model immediately.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Explore the dashboard</h4><p>The workspace has tabs for Image, Video, Audio, Chat, and Agent. Each tab gives you access to the best AI models in that category. Switch between them with one click — no separate logins, no API keys.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Generate your first AI image</h4><p>Click the "Image" tab. Choose FLUX Pro or Sora 2. Type a prompt and hit generate. Results in seconds. Download in 4K. No watermark.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Create AI videos</h4><p>Switch to "Video" tab. Choose from Sora 2, Veo 3.1, Kling V3 Pro, or Seedance 2.0. Generate talking avatars, UGC ads, cinematic clips — all from text prompts. No camera needed.</p></div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Clone your voice & generate audio</h4><p>Under "Audio" — use ElevenLabs v3 to clone any voice from a 30-second sample. Generate voiceovers in 40+ languages. Create custom music with Suno V5. All included.</p></div></div>
-    <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Use the AI Agent & Chat</h4><p>The "Agent" tab gives you Claude Sonnet 4.6 and DeepSeek — the best coding and reasoning models. Use them to write code, analyze data, draft content, or brainstorm ideas. Chat remembers context across sessions.</p></div></div>
-  </div>
-
-  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>The "Agent" mode chains models together — describe a full workflow (\"generate a product photo, remove the background, then create a UGC ad\") and Oakgen runs it end-to-end with one prompt. This is the feature that replaces 20 separate tools.</p></div>
-
-  <table class="cost-breakdown">
-    <tr><th>What You Get</th><th>If Bought Separately</th><th>With Oakgen</th></tr>
-    <tr><td>Sora 2 (OpenAI)</td><td>$20/mo</td><td style="color:var(--green)">Included</td></tr>
-    <tr><td>Claude Sonnet</td><td>$20/mo</td><td style="color:var(--green)">Included</td></tr>
-    <tr><td>ElevenLabs</td><td>$5/mo</td><td style="color:var(--green)">Included</td></tr>
-    <tr><td>FLUX Pro</td><td>$8/mo</td><td style="color:var(--green)">Included</td></tr>
-    <tr><td>Kling / Veo / Seedance</td><td>$15-30/mo each</td><td style="color:var(--green)">Included</td></tr>
-    <tr><td>DeepSeek, Kimi, Gemini + 10 more</td><td>$50+/mo</td><td style="color:var(--green)">Included</td></tr>
-    <tr class="total-row"><td colspan="2">Total Value Separately</td><td>$150+/month</td></tr>
-    <tr class="total-row"><td colspan="2">Oakgen — Everything Above</td><td>$9/month</td></tr>
-  </table>
-
-  <div class="after-install">
-    <h3>🎯 You Now Have</h3>
-    <p>A complete AI production studio. Generate images, videos, voiceovers, music, and chat with the best AI models — all from one dashboard, for less than a single Netflix subscription. No API keys, no separate bills, no switching between 20 tabs.</p>
-    <h3>⚠️ Quick Fixes</h3>
-    <p><strong>Want the best image quality?</strong> Use FLUX Pro for photorealistic, GPT Image for creative, Nano Banana for character consistency.<br>
-    <strong>Video generation slow?</strong> Sora 2 takes ~30-60s per generation. Kling and Veo are faster for quick tests.<br>
-    <strong>Voice clone sounds robotic?</strong> Upload 60+ seconds of clear audio (no background noise). More sample = more natural voice.</p>
-    <h3>🔗 Your Affiliate Setup</h3>
-    <p>Use this link to sign up: <code><a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="noopener">oakgen.ai?ref=N1edHj</a></code>. Share it anywhere — social media, YouTube descriptions, blog posts. You earn 30% recurring commission for 12 months on every signup.</p>
-    <h3>📌 Bookmark This</h3>
-    <p>Come back for new tutorials. I add step-by-step guides as I discover better workflows. Also check: <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a> and <a href="#" onclick="showTutorial('video');return false">AI Video Engine</a>.</p>
-  </div>
-</div>
-
-<!-- ═══ COMING SOON + REQUEST ═══ -->
-<div class="coming-soon">
-  <h2>🔧 More Stacks Coming</h2>
-  <p class="sub">I build and test new AI tools every week. Here's what's next — and you can request one.</p>
-  <div class="coming-stacks">
-    <div class="coming-pill"><span class="soon">SOON</span> 🎵 AI Music Studio</div>
-    <div class="coming-pill"><span class="soon">SOON</span> 🤖 No-Code App Builder</div>
-    <div class="coming-pill"><span class="soon">SOON</span> 📊 AI Data Dashboard</div>
-    <div class="coming-pill"><span class="soon">SOON</span> 🛒 AI Etsy Store</div>
-    <div class="coming-pill">💬 Your Request?</div>
-  </div>
-  <div class="request-box">
-    <h3>💡 Need a stack we don't have?</h3>
-    <p class="sub">Tell me what you're trying to build. If I can build a guide for it, I will — and you'll be the first to know when it drops.</p>
-    <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener" class="req-cta">💬 Request a Stack on YouTube →</a>
-    <p style="font-size:12px;color:var(--text-muted);margin-top:14px;">Comment on any video with your idea. I read every one.</p>
-  </div>
-</div>
-
-<!-- NEWSLETTER CTA -->
-<div class="newsletter">
-  <h3>📬 New tools. No spam.</h3>
-  <p>I build and test new AI tools every week. Get the next one before anyone else.</p>
-  <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener" class="sub-cta">▶️ Subscribe on YouTube</a>
-</div>
-
-<!-- AFFILIATE DISCLOSURE -->
-<div class="disclosure">
-  <p>Some links on this page are affiliate links. If you click and make a purchase, I may earn a commission at no extra cost to you. I only recommend tools I use myself. See my <a href="#">full disclosure</a>.</p>
-</div>
+<!-- ═══════════════════════════════════════════ -->
+<!-- TUTORIALS                                 -->
+<!-- ═══════════════════════════════════════════ -->
 
 <!-- ═══ TUTORIAL: AI Assistant ═══ -->
 <div class="tutorial-view" id="tutorial-assistant">
@@ -598,6 +1029,9 @@ gtag('config', 'G-XXXXXXXXXX');
     <p><strong>Bot not responding?</strong> Run <code>hermes gateway restart</code> in terminal.<br>
     <strong>Slow replies?</strong> Switch to DeepSeek V4 Pro in your config — the free Chat model is much slower.<br>
     <strong>Want it to read emails?</strong> Connect Gmail in <code>hermes setup</code> → Integrations.</p>
+    <div class="upsell-bridge">
+      <strong>⚡ Ready for more?</strong> Pair this with <a href="#" onclick="showTutorial('oakgen');return false">Oakgen AI Workspace</a> for 20+ models in one $9 dashboard, or <a href="#" onclick="showTutorial('fliki');return false">Fliki</a> to auto-generate video content from your assistant's scripts.
+    </div>
     <h3>📌 Bookmark This</h3>
     <p>Come back when you want to add <a href="#" onclick="showTutorial('clone');return false">AI video clones</a> or <a href="#" onclick="showTutorial('writing');return false">writing automation</a> to your assistant. This page updates as I test new tools.</p>
   </div>
@@ -638,6 +1072,9 @@ gtag('config', 'G-XXXXXXXXXX');
     <p><strong>Clone looks stiff?</strong> Re-record with more hand gestures and head movement. Static poses create robotic clones.<br>
     <strong>Audio out of sync?</strong> Export at 1080p, not 4K. Lower resolution syncs more reliably.<br>
     <strong>Voice sounds off?</strong> Add ElevenLabs voice cloning — it's more natural than HeyGen's built-in TTS.</p>
+    <div class="upsell-bridge">
+      <strong>⚡ Upgrade your video workflow:</strong> Use <a href="#" onclick="showTutorial('fliki');return false">Fliki AI</a> for instant AI voiceovers + video generation, or <a href="#" onclick="showTutorial('pollo');return false">Pollo AI</a> for cinematic AI videos with all major models.
+    </div>
     <h3>📌 Bookmark This</h3>
     <p>Pair your clone with the <a href="#" onclick="showTutorial('video');return false">AI Video Engine</a> for automated editing. Check back — I add new tools as I test them.</p>
   </div>
@@ -680,6 +1117,9 @@ gtag('config', 'G-XXXXXXXXXX');
     <p><strong>Images look weird?</strong> Add "photorealistic, 8K, detailed" to your prompt. Leonardo's default style is artistic.<br>
     <strong>Need transparent background?</strong> Generate in Leonardo, then open in Photopea → Select → Remove BG.<br>
     <strong>Canva template stuck?</strong> Right-click any element → "Detach from template" to freely edit.</p>
+    <div class="upsell-bridge">
+      <strong>⚡ Need more firepower?</strong> Upgrade to <a href="#" onclick="showTutorial('basedlabs');return false">BasedLabs</a> for pro AI image & video tools with 40% lifetime commission — or use <a href="#" onclick="showTutorial('oakgen');return false">Oakgen</a> for FLUX Pro + Sora 2 in one $9 dashboard.
+    </div>
     <h3>📌 Bookmark This</h3>
     <p>Combine with the <a href="#" onclick="showTutorial('video');return false">AI Video Engine</a> for thumbnails that actually get clicks. I update tools as I find better ones.</p>
   </div>
@@ -721,6 +1161,9 @@ gtag('config', 'G-XXXXXXXXXX');
     <p><strong>Captions wrong?</strong> Click the caption text to edit manually. CapCut's AI captions are ~95% accurate.<br>
     <strong>Export looks blurry?</strong> Check export settings — use 1080p, 30fps, high bitrate. Don't use "fast export."<br>
     <strong>Audio levels inconsistent?</strong> Select all clips → Audio → Normalize Loudness. One click fixes everything.</p>
+    <div class="upsell-bridge">
+      <strong>⚡ Want AI-generated video content?</strong> Try <a href="#" onclick="showTutorial('fliki');return false">Fliki AI</a> for instant text-to-video with AI voiceovers or <a href="#" onclick="showTutorial('pollo');return false">Pollo AI</a> for cinematic AI Shorts with Sora 2, Kling, and Veo models.
+    </div>
     <h3>📌 Bookmark This</h3>
     <p>Pair with the <a href="#" onclick="showTutorial('clone');return false">AI Clone Studio</a> to generate content without filming. New tools added as I discover them.</p>
   </div>
@@ -763,6 +1206,9 @@ gtag('config', 'G-XXXXXXXXXX');
     <p><strong>Sounds too generic?</strong> Feed it 5+ samples of your best writing. The more variety, the better the clone.<br>
     <strong>Claude hit its limit?</strong> Free tier resets every 8 hours. Pro ($20) gives 5x more messages.<br>
     <strong>Jasper vs Claude?</strong> Claude for natural voice. Jasper for marketing copy that converts.</p>
+    <div class="upsell-bridge">
+      <strong>⚡ Monetize your writing:</strong> Use <a href="#" onclick="showTutorial('fliki');return false">Fliki AI</a> to turn your scripts into videos with AI voiceovers, or <a href="#" onclick="showTutorial('oakgen');return false">Oakgen</a> for Claude Sonnet + content tools in one dashboard.
+    </div>
     <h3>📌 Bookmark This</h3>
     <p>Connect this to your <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a> and it writes from Telegram automatically. I update tools as I test new ones.</p>
   </div>
@@ -832,49 +1278,301 @@ gtag('config', 'G-XXXXXXXXXX');
   </div>
 </div>
 
-<!-- ═══ RECOMMENDED TOOLS — AFFILIATE STACK ═══ -->
-<div class="different" style="margin-top:40px;">
-  <div class="different-header">
-    <h2>Tools I Actually Use</h2>
-    <p>These are the paid upgrades I recommend after you've built the free stack. Some links are affiliate links — I only recommend tools I pay for or test myself.</p>
+<!-- ═══ TUTORIAL: Oakgen AI Workspace ═══ -->
+<div class="tutorial-view" id="tutorial-oakgen">
+  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1500&h=500&fit=crop&auto=format" alt="Oakgen" onerror="this.style.background='linear-gradient(135deg,#0a0f1a,#0a1a0f)'">
+  <h2>🚀 Oakgen AI Workspace</h2>
+  <p class="tut-subtitle">$9/month · 20+ AI models · One dashboard · Step-by-step setup</p>
+  <div class="overview-box"><p>Stop paying for 20 separate AI subscriptions. Oakgen combines Sora 2, FLUX Pro, Claude Sonnet, ElevenLabs, DeepSeek, Gemini Flash, Kimi K2, FFmpeg, and 15+ more into a single $9/month workspace. Image generation, video creation, audio production, chat — all in one dashboard.</p></div>
+
+  <div class="cta-section">
+    <h3>🔗 Start Here (Affiliate Link)</h3>
+    <div class="cta-buttons">
+      <a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🚀</span> Try Oakgen — $9/month →</a>
+    </div>
   </div>
-  <div class="dashboard" style="padding-bottom:20px;">
-    <div class="build-card">
-      <div class="card-body">
-        <div class="price">$9/mo · 25% recurring</div>
-        <h3>🚀 Oakgen AI Workspace</h3>
-        <p>All-in-one AI studio: Sora 2, FLUX Pro, Claude, ElevenLabs, DeepSeek, Kimi, and 20+ models in one dashboard.</p>
-        <a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="sponsored noopener" class="card-cta" style="display:inline-block;margin-top:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Try Oakgen Free →</a>
-      </div>
-    </div>
-    <div class="build-card">
-      <div class="card-body">
-        <div class="price">30% LIFETIME · Bonuses up to $1K</div>
-        <h3>🎥 Fliki AI Video</h3>
-        <p>AI video + voiceover in one tool. 100M+ videos created. Create Shorts, TikToks, and Reels in minutes with 2,000+ AI voices.</p>
-        <a href="https://fliki.ai/?via=zach-schreiner" target="_blank" rel="sponsored noopener" class="card-cta" style="display:inline-block;margin-top:12px;background:linear-gradient(135deg,#ec4899,#8b5cf6);color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Try Fliki Free →</a>
-      </div>
-    </div>
-    <div class="build-card">
-      <div class="card-body">
-        <div class="price">40% lifetime</div>
-        <h3>🎬 BasedLabs</h3>
-        <p>AI image and video tools for creators. Good upgrade from free image/video generators.</p>
-        <a href="https://www.basedlabs.ai/?via=zsch21425" target="_blank" rel="sponsored noopener" class="card-cta" style="display:inline-block;margin-top:12px;background:linear-gradient(135deg,var(--accent3),#7c3aed);color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Try BasedLabs →</a>
-      </div>
-    </div>
-    <div class="build-card">
-      <div class="card-body">
-        <div class="price">30% RECURRING · 2-TIER</div>
-        <h3>🎬 Pollo AI</h3>
-        <p>AI video generator with all major models. Create cinematic Shorts, TikToks, and ads. 30% commission on every purchase + 10% on sub-affiliates.</p>
-        <a href="https://pollo.ai?ref=ztnlyjk" target="_blank" rel="sponsored noopener" class="card-cta" style="display:inline-block;margin-top:12px;background:linear-gradient(135deg,#f97316,#ea580c);color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Try Pollo AI →</a>
-      </div>
-    </div>
+
+  <div class="steps-section">
+    <h3>📋 Step-by-Step Tutorial</h3>
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Sign up for Oakgen</h4><p>Click <a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="noopener">oakgen.ai?ref=N1edHj</a> and create your account. $9/month flat — no hidden fees. You get access to every AI model immediately.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Explore the dashboard</h4><p>The workspace has tabs for Image, Video, Audio, Chat, and Agent. Each tab gives you access to the best AI models in that category. Switch between them with one click — no separate logins, no API keys.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Generate your first AI image</h4><p>Click the "Image" tab. Choose FLUX Pro or Sora 2. Type a prompt and hit generate. Results in seconds. Download in 4K. No watermark.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Create AI videos</h4><p>Switch to "Video" tab. Choose from Sora 2, Veo 3.1, Kling V3 Pro, or Seedance 2.0. Generate talking avatars, UGC ads, cinematic clips — all from text prompts. No camera needed.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Clone your voice & generate audio</h4><p>Under "Audio" — use ElevenLabs v3 to clone any voice from a 30-second sample. Generate voiceovers in 40+ languages. Create custom music with Suno V5. All included.</p></div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Use the AI Agent & Chat</h4><p>The "Agent" tab gives you Claude Sonnet 4.6 and DeepSeek — the best coding and reasoning models. Use them to write code, analyze data, draft content, or brainstorm ideas. Chat remembers context across sessions.</p></div></div>
+  </div>
+
+  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>The "Agent" mode chains models together — describe a full workflow ("generate a product photo, remove the background, then create a UGC ad") and Oakgen runs it end-to-end with one prompt. This is the feature that replaces 20 separate tools.</p></div>
+
+  <table class="cost-breakdown">
+    <tr><th>What You Get</th><th>If Bought Separately</th><th>With Oakgen</th></tr>
+    <tr><td>Sora 2 (OpenAI)</td><td>$20/mo</td><td style="color:var(--green)">Included</td></tr>
+    <tr><td>Claude Sonnet</td><td>$20/mo</td><td style="color:var(--green)">Included</td></tr>
+    <tr><td>ElevenLabs</td><td>$5/mo</td><td style="color:var(--green)">Included</td></tr>
+    <tr><td>FLUX Pro</td><td>$8/mo</td><td style="color:var(--green)">Included</td></tr>
+    <tr><td>Kling / Veo / Seedance</td><td>$15-30/mo each</td><td style="color:var(--green)">Included</td></tr>
+    <tr><td>DeepSeek, Kimi, Gemini + 10 more</td><td>$50+/mo</td><td style="color:var(--green)">Included</td></tr>
+    <tr class="total-row"><td colspan="2">Total Value Separately</td><td>$150+/month</td></tr>
+    <tr class="total-row"><td colspan="2">Oakgen — Everything Above</td><td>$9/month</td></tr>
+  </table>
+
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>A complete AI production studio. Generate images, videos, voiceovers, music, and chat with the best AI models — all from one dashboard, for less than a single Netflix subscription. No API keys, no separate bills, no switching between 20 tabs.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Want the best image quality?</strong> Use FLUX Pro for photorealistic, GPT Image for creative, Nano Banana for character consistency.<br>
+    <strong>Video generation slow?</strong> Sora 2 takes ~30-60s per generation. Kling and Veo are faster for quick tests.<br>
+    <strong>Voice clone sounds robotic?</strong> Upload 60+ seconds of clear audio (no background noise). More sample = more natural voice.</p>
+    <h3>🔗 Your Affiliate Setup</h3>
+    <p>Use this link to sign up: <code><a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="noopener">oakgen.ai?ref=N1edHj</a></code>. Share it anywhere — social media, YouTube descriptions, blog posts. You earn 30% recurring commission for 12 months on every signup.</p>
+    <h3>📌 Bookmark This</h3>
+    <p>Come back for new tutorials. I add step-by-step guides as I discover better workflows. Also check: <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a> and <a href="#" onclick="showTutorial('fliki');return false">Fliki AI Video</a>.</p>
   </div>
 </div>
 
-<!-- ═══ DIGITAL PRODUCT ═══ -->
+<!-- ═══════════════════════════════════════════ -->
+<!-- NEW AFFILIATE TUTORIALS                    -->
+<!-- ═══════════════════════════════════════════ -->
+
+<!-- ═══ TUTORIAL: Fliki AI Video ═══ -->
+<div class="tutorial-view" id="tutorial-fliki">
+  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=1500&h=500&fit=crop&auto=format" alt="Fliki AI Video" onerror="this.style.background='linear-gradient(135deg,#1a0a2e,#2e0a1a)'">
+  <h2>🎥 Fliki AI Video</h2>
+  <p class="tut-subtitle">30% LIFETIME Commission · 100M+ videos created · 2,000+ AI voices</p>
+  <div class="overview-box"><p>Fliki turns text into video in minutes. Paste a blog post, script, or tweet — Fliki generates a complete video with AI voiceover, stock footage, captions, and music. 100 million+ videos created on the platform. Perfect for faceless YouTube channels, TikTok, and content repurposing.</p></div>
+
+  <div class="cta-section">
+    <h3>🔗 Start Here (Affiliate Link — 30% Lifetime)</h3>
+    <div class="cta-buttons">
+      <a href="https://fliki.ai/?via=zach-schreiner" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🎥</span> Try Fliki Free →</a>
+      <a href="https://fliki.ai/?via=zach-schreiner" target="_blank" rel="sponsored noopener" class="cta-btn gold"><span class="emoji">💰</span> Join Affiliate Program →</a>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <h3>📋 Step-by-Step Tutorial</h3>
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Sign up for Fliki (free)</h4><p>Go to <a href="https://fliki.ai/?via=zach-schreiner" target="_blank" rel="noopener">fliki.ai/?via=zach-schreiner</a>. Create a free account — 5 minutes of video generation included at no cost. No credit card required.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Choose your creation mode</h4><p>Fliki offers three ways to create: (a) <strong>Text-to-Video</strong> — paste a script, pick a voice, done. (b) <strong>Blog-to-Video</strong> — paste a URL, Fliki extracts the content. (c) <strong>Idea-to-Video</strong> — describe what you want, AI builds it. Start with Text-to-Video for fastest results.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Select AI voice & visuals</h4><p>Choose from 2,000+ AI voices in 75+ languages. Pick male/female, accent, tone. Fliki auto-matches stock footage to your script. You can swap any clip manually. Add background music from the built-in library.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Generate & customize</h4><p>Click "Generate." Fliki creates your video in 2–5 minutes. Edit captions, swap scenes, adjust timing, add your logo watermark. Export as MP4. Ready for YouTube, TikTok, Instagram.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Scale with batch creation</h4><p>Use Fliki's batch mode to create 10+ videos at once. Upload a spreadsheet of scripts/slugs → Fliki generates all of them. Perfect for faceless channels posting daily. One afternoon = a month of content.</p></div></div>
+  </div>
+
+  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>Use Fliki for content repurposing: take your long-form YouTube script → paste into Fliki → get a TikTok/Shorts version with vertical format, captions, and punchy cuts. One script = 3 platforms. This is the fastest way to grow cross-platform.</p></div>
+
+  <table class="cost-breakdown">
+    <tr><th>Plan</th><th>Features</th><th>Monthly</th></tr>
+    <tr><td>Free</td><td>5 min video/month, 300+ voices</td><td style="color:var(--green)">Free</td></tr>
+    <tr><td>Standard</td><td>180 min video/month, 1,000+ voices, no watermark</td><td>$28</td></tr>
+    <tr><td>Premium</td><td>600 min video/month, 2,000+ voices, voice cloning, API</td><td>$88</td></tr>
+    <tr class="total-row"><td colspan="2">Affiliate Commission</td><td>30% LIFETIME</td></tr>
+  </table>
+
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>An AI video factory. Paste text → get a complete video with voiceover, footage, captions, and music in under 5 minutes. No filming, no editing, no voice recording. Perfect for faceless YouTube channels, TikTok, and content repurposing at scale.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Voice sounds too robotic?</strong> Try the "Neural" voices (labeled with a star) — they're nearly indistinguishable from humans. ElevenLabs integration available on Premium.<br>
+    <strong>Stock footage doesn't match?</strong> Use the manual swap feature — search the built-in library (Pexels + Storyblocks) for exact matches to your script. Takes 30 seconds per clip.<br>
+    <strong>Export quality low?</strong> Standard exports at 720p. Premium exports at 1080p. For 4K, generate in Fliki then upscale externally.</p>
+    <h3>🔗 Your Affiliate Setup (30% LIFETIME)</h3>
+    <p>Fliki pays <strong>30% lifetime commission</strong> on every referral. Share your link anywhere — YouTube descriptions, blog posts, social media. Bonuses up to $1,000 available. Use your link: <code><a href="https://fliki.ai/?via=zach-schreiner" target="_blank" rel="noopener">fliki.ai/?via=zach-schreiner</a></code></p>
+    <div class="upsell-bridge">
+      <strong>⚡ Power stack:</strong> Combine Fliki with <a href="#" onclick="showTutorial('oakgen');return false">Oakgen ($9/mo)</a> for AI image generation to create custom thumbnails, or <a href="#" onclick="showTutorial('pollo');return false">Pollo AI</a> for cinematic AI video generation with Sora 2 and Kling models.
+    </div>
+    <h3>📌 Bookmark This</h3>
+    <p>Check back for advanced Fliki workflows. I add tutorials as I discover better automations. Next: How to auto-post Fliki videos to YouTube, TikTok, and Instagram using the <a href="#" onclick="showTutorial('assistant');return false">$3 AI Assistant</a>.</p>
+  </div>
+</div>
+
+<!-- ═══ TUTORIAL: BasedLabs ═══ -->
+<div class="tutorial-view" id="tutorial-basedlabs">
+  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1500&h=500&fit=crop&auto=format" alt="BasedLabs" onerror="this.style.background='linear-gradient(135deg,#0f102e,#1a1040)'">
+  <h2>🎬 BasedLabs — AI Image & Video Creator</h2>
+  <p class="tut-subtitle">40% Lifetime Commission · Pro AI image & video tools · Creator-focused</p>
+  <div class="overview-box"><p>BasedLabs is the creator's upgrade from free AI tools. Professional-grade AI image generation, video creation, face swapping, and image enhancement. Built for creators who need consistent, high-quality output — not one-off generations. Perfect for UGC creators, affiliate marketers, and faceless channels.</p></div>
+
+  <div class="cta-section">
+    <h3>🔗 Start Here (Affiliate Link — 40% Lifetime)</h3>
+    <div class="cta-buttons">
+      <a href="https://www.basedlabs.ai/?via=zsch21425" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🎨</span> Try BasedLabs →</a>
+      <a href="https://www.basedlabs.ai/?via=zsch21425" target="_blank" rel="sponsored noopener" class="cta-btn gold"><span class="emoji">💰</span> 40% Affiliate Program →</a>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <h3>📋 Step-by-Step Tutorial</h3>
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Create your BasedLabs account</h4><p>Visit <a href="https://www.basedlabs.ai/?via=zsch21425" target="_blank" rel="noopener">basedlabs.ai/?via=zsch21425</a> and sign up. You can start with the free tier to test the tools before committing. No credit card required for trial.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>AI Image Generation</h4><p>Use the image generator with custom prompts. BasedLabs offers fine-tuned models optimized for creator content — product photos, UGC-style images, thumbnails, and social graphics. Higher consistency than free tools, fewer weird artifacts.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>AI Video Creation</h4><p>Generate short AI videos from prompts or images. Animate still images, create motion graphics, and produce video ads. Export in 1080p. Great for TikTok/Shorts hooks and B-roll.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Face Swap & Enhancement</h4><p>Swap faces in photos and videos with high accuracy. Use this for UGC-style content, profile pictures, or creative projects. Also: AI image upscaling to 4K, background removal, and image enhancement.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Build your content pipeline</h4><p>Create images → generate video clips → enhance quality → export. One platform replaces Leonardo AI + CapCut + face swap tools. Build a week of content in one session.</p></div></div>
+  </div>
+
+  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>BasedLabs is best for UGC creators and affiliate marketers who need consistent, on-brand visuals. The face swap feature alone replaces 3 separate tools. Use their batch generation to create 20+ variations of an ad creative in 5 minutes — test them all, keep the winner.</p></div>
+
+  <table class="cost-breakdown">
+    <tr><th>Plan</th><th>Features</th><th>Monthly</th></tr>
+    <tr><td>Free Trial</td><td>Limited generations, all tools</td><td style="color:var(--green)">Free</td></tr>
+    <tr><td>Creator</td><td>Full access, priority generation, no watermark</td><td>Varies by plan</td></tr>
+    <tr><td>Pro</td><td>Bulk generation, 4K export, API access</td><td>Varies by plan</td></tr>
+    <tr class="total-row"><td colspan="2">Affiliate Commission</td><td>40% LIFETIME</td></tr>
+  </table>
+
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>A professional AI creative studio. Generate images, create videos, swap faces, and enhance content — all in one platform. Built for creators who need consistent, high-quality output at scale. No more juggling 5 different free tools.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Images look inconsistent?</strong> Use the same prompt template with "consistent style, same lighting, [brand] aesthetic" appended. BasedLabs' models respond well to style anchors.<br>
+    <strong>Face swap looks fake?</strong> Use high-res source images with front-facing, well-lit faces. Side profiles and dark photos reduce accuracy significantly.<br>
+    <strong>Generation slow?</strong> Pro plan includes priority queue. Free tier is shared — expect 30-60s wait during peak hours.</p>
+    <h3>🔗 Affiliate Setup (40% LIFETIME)</h3>
+    <p>BasedLabs pays <strong>40% lifetime commission</strong> — one of the highest in AI tools. Share your link in YouTube descriptions, tutorials, and social posts. Use your link: <code><a href="https://www.basedlabs.ai/?via=zsch21425" target="_blank" rel="noopener">basedlabs.ai/?via=zsch21425</a></code></p>
+    <div class="upsell-bridge">
+      <strong>⚡ Complete your toolkit:</strong> Pair BasedLabs with <a href="#" onclick="showTutorial('fliki');return false">Fliki AI</a> for AI voiceover videos, or <a href="#" onclick="showTutorial('oakgen');return false">Oakgen ($9/mo)</a> for FLUX Pro image generation + Sora 2 video in one dashboard.
+    </div>
+    <h3>📌 Bookmark This</h3>
+    <p>I'm testing new BasedLabs workflows for faceless channels and UGC ads. Subscribe to <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener">@ZachS-o3e4j</a> for walkthrough videos as they drop.</p>
+  </div>
+</div>
+
+<!-- ═══ TUTORIAL: Pollo AI ═══ -->
+<div class="tutorial-view" id="tutorial-pollo">
+  <a class="back-link" onclick="showDashboard()">← Back to all builds</a>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1500&h=500&fit=crop&auto=format" alt="Pollo AI" onerror="this.style.background='linear-gradient(135deg,#2e1a0a,#1a0a2e)'">
+  <h2>🎬 Pollo AI — Cinematic Video Generator</h2>
+  <p class="tut-subtitle">30% RECURRING + 2-TIER · All major AI video models · Cinematic output</p>
+  <div class="overview-box"><p>Pollo AI is the all-in-one AI video generator. Access Sora 2, Kling, Veo, Runway, and more — all from one platform. Generate cinematic Shorts, TikToks, UGC ads, and product videos. 30% recurring commission on every purchase + 10% on sub-affiliates (2-tier). This is the tool I recommend for serious video creators.</p></div>
+
+  <div class="cta-section">
+    <h3>🔗 Start Here (Affiliate Link — 30% Recurring, 2-Tier)</h3>
+    <div class="cta-buttons">
+      <a href="https://pollo.ai?ref=ztnlyjk" target="_blank" rel="sponsored noopener" class="cta-btn primary"><span class="emoji">🎬</span> Try Pollo AI →</a>
+      <a href="https://pollo.ai?ref=ztnlyjk" target="_blank" rel="sponsored noopener" class="cta-btn gold"><span class="emoji">💰</span> Join Affiliate Program →</a>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <h3>📋 Step-by-Step Tutorial</h3>
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Sign up for Pollo AI</h4><p>Go to <a href="https://pollo.ai?ref=ztnlyjk" target="_blank" rel="noopener">pollo.ai?ref=ztnlyjk</a> and create your account. Start with the free tier to test the platform. Explore the model library — Sora 2, Kling V3, Veo 3.1, Seedance 2.0, and more.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Choose your AI video model</h4><p>Pollo AI gives you access to all major AI video models in one place. <strong>Sora 2</strong> for cinematic quality, <strong>Kling V3</strong> for fast generation, <strong>Veo 3.1</strong> for realistic motion, <strong>Seedance</strong> for creative animations. Switch models with one click.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Generate your first AI video</h4><p>Type a prompt or upload an image. Select your model. Pollo generates 5–15 second clips. Use text-to-video for creative concepts, image-to-video for product demos and UGC-style ads. Results in 30–90 seconds.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Edit & enhance in-platform</h4><p>Pollo includes built-in editing: trim clips, add music, overlay text, apply filters. Export in 1080p or 4K (Pro). No need to jump to a separate editor for basic finishing.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Scale your video pipeline</h4><p>Use batch generation to create multiple variations simultaneously. Build a content calendar: generate Monday–Friday Shorts in one session. Pollo's queue system handles bulk jobs efficiently.</p></div></div>
+  </div>
+
+  <div class="pro-tip"><strong>💡 Pro Tip</strong><p>Pollo's real power is model comparison. Generate the same prompt across Sora 2, Kling, and Veo — compare results side by side. Different models excel at different styles: Sora 2 for cinematic, Kling for fast social content, Veo for realistic human motion. Use the right model for each project.</p></div>
+
+  <table class="cost-breakdown">
+    <tr><th>Plan</th><th>Features</th><th>Monthly</th></tr>
+    <tr><td>Free</td><td>Limited generations, watermark</td><td style="color:var(--green)">Free</td></tr>
+    <tr><td>Creator</td><td>Full model access, HD export, no watermark</td><td>$19</td></tr>
+    <tr><td>Pro</td><td>4K export, priority queue, bulk generation, all models</td><td>$49</td></tr>
+    <tr class="total-row"><td colspan="2">Affiliate Commission</td><td>30% RECURRING</td></tr>
+    <tr class="total-row"><td colspan="2">Sub-Affiliate Bonus (2-Tier)</td><td>10% on referrals</td></tr>
+  </table>
+
+  <div class="after-install">
+    <h3>🎯 You Now Have</h3>
+    <p>Access to every major AI video model in one platform. Generate cinematic Shorts, TikToks, UGC ads, and product videos without switching between 5 different tools. One subscription = all models. No API keys needed.</p>
+    <h3>⚠️ Quick Fixes</h3>
+    <p><strong>Video looks unnatural?</strong> Add camera movement terms to your prompt: "slow dolly," "pan right," "tracking shot." Static prompts produce static videos. Motion cues improve realism dramatically.<br>
+    <strong>Generation takes too long?</strong> Kling V3 is 2x faster than Sora 2. Use it for drafts and quick tests, then finalize with Sora 2 for best quality.<br>
+    <strong>Want consistent characters?</strong> Use image-to-video with consistent source images. Text-to-video produces varied characters each generation.</p>
+    <h3>🔗 Affiliate Setup (30% Recurring + 2-Tier)</h3>
+    <p>Pollo AI pays <strong>30% recurring commission</strong> on every signup, every month — plus <strong>10% on sub-affiliates</strong> you recruit. This is one of the best AI affiliate programs available. Share your link: <code><a href="https://pollo.ai?ref=ztnlyjk" target="_blank" rel="noopener">pollo.ai?ref=ztnlyjk</a></code></p>
+    <div class="upsell-bridge">
+      <strong>⚡ Build the ultimate video stack:</strong> Pollo for AI video generation + <a href="#" onclick="showTutorial('fliki');return false">Fliki AI</a> for AI voiceovers and text-to-video + <a href="#" onclick="showTutorial('oakgen');return false">Oakgen</a> for AI image thumbnails at $9/mo. Total: ~$30–60/mo for a complete video production studio.
+    </div>
+    <h3>📌 Bookmark This</h3>
+    <p>I'm creating weekly Pollo AI tutorials on YouTube. Subscribe to <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener">@ZachS-o3e4j</a> for model comparisons, prompt guides, and advanced workflows.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- AFFILIATE TOOLS BENTO SECTION             -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="bento-section">
+  <div class="section-header">
+    <h2>🛠️ Premium AI Tools (Affiliate Stack)</h2>
+    <p>These are the paid tools I recommend after you've built the free stacks. All 4 cards are clickable — tap to see full step-by-step tutorials. I use every one.</p>
+  </div>
+  <div class="bento-grid">
+
+    <!-- Oakgen -->
+    <div class="bento-card" onclick="showTutorial('oakgen')">
+      <div class="commission-badge">💰 30% RECURRING · 12 months</div>
+      <div class="star-rating">★★★★★ 4.9</div>
+      <h3>🚀 Oakgen AI Workspace</h3>
+      <p>All-in-one AI studio: Sora 2, FLUX Pro, Claude, ElevenLabs, DeepSeek, Kimi, and 20+ models. One dashboard, one $9 subscription. Replaces $150+/month in separate tools.</p>
+      <a href="https://oakgen.ai?ref=N1edHj" target="_blank" rel="sponsored noopener" class="bento-cta gradient-purple" onclick="event.stopPropagation()">Try Oakgen $9/mo →</a>
+    </div>
+
+    <!-- Fliki -->
+    <div class="bento-card" onclick="showTutorial('fliki')">
+      <div class="commission-badge">💰 30% LIFETIME · Bonuses up to $1K</div>
+      <div class="star-rating">★★★★★ 4.8</div>
+      <h3>🎥 Fliki AI Video</h3>
+      <p>Text-to-video with 2,000+ AI voices in 75+ languages. 100M+ videos created. Turn blog posts and scripts into complete videos in minutes. Perfect for faceless channels.</p>
+      <a href="https://fliki.ai/?via=zach-schreiner" target="_blank" rel="sponsored noopener" class="bento-cta gradient-pink" onclick="event.stopPropagation()">Try Fliki Free →</a>
+    </div>
+
+    <!-- BasedLabs -->
+    <div class="bento-card" onclick="showTutorial('basedlabs')">
+      <div class="commission-badge">💰 40% LIFETIME</div>
+      <div class="star-rating">★★★★☆ 4.7</div>
+      <h3>🎬 BasedLabs</h3>
+      <p>Pro AI image & video tools: generation, face swap, enhancement, upscaling. Built for UGC creators and affiliate marketers who need consistent, high-quality output.</p>
+      <a href="https://www.basedlabs.ai/?via=zsch21425" target="_blank" rel="sponsored noopener" class="bento-cta gradient-violet" onclick="event.stopPropagation()">Try BasedLabs →</a>
+    </div>
+
+    <!-- Pollo -->
+    <div class="bento-card" onclick="showTutorial('pollo')">
+      <div class="commission-badge">💰 30% RECURRING · 2-TIER</div>
+      <div class="star-rating">★★★★★ 4.8</div>
+      <h3>🎬 Pollo AI</h3>
+      <p>All major AI video models in one place: Sora 2, Kling, Veo, Seedance. Cinematic Shorts, TikToks, and ads. 30% recurring commission + 10% on sub-affiliates.</p>
+      <a href="https://pollo.ai?ref=ztnlyjk" target="_blank" rel="sponsored noopener" class="bento-cta gradient-orange" onclick="event.stopPropagation()">Try Pollo AI →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ COMING SOON + REQUEST ═══ -->
+<div class="coming-soon">
+  <h2>🔧 More Stacks Coming</h2>
+  <p class="sub">I build and test new AI tools every week. Here's what's next — and you can request one.</p>
+  <div class="coming-stacks">
+    <div class="coming-pill"><span class="soon">SOON</span> 🎵 AI Music Studio</div>
+    <div class="coming-pill"><span class="soon">SOON</span> 🤖 No-Code App Builder</div>
+    <div class="coming-pill"><span class="soon">SOON</span> 📊 AI Data Dashboard</div>
+    <div class="coming-pill"><span class="soon">SOON</span> 🛒 AI Etsy Store</div>
+    <div class="coming-pill">💬 Your Request?</div>
+  </div>
+  <div class="request-box">
+    <h3>💡 Need a stack we don't have?</h3>
+    <p class="sub">Tell me what you're trying to build. If I can build a guide for it, I will — and you'll be the first to know when it drops.</p>
+    <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener" class="req-cta">💬 Request a Stack on YouTube →</a>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:14px;">Comment on any video with your idea. I read every one.</p>
+  </div>
+</div>
+
+<!-- NEWSLETTER CTA -->
+<div class="newsletter">
+  <h3>📬 New tools. No spam.</h3>
+  <p>I build and test new AI tools every week. Get the next one before anyone else.</p>
+  <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener" class="sub-cta">▶️ Subscribe on YouTube</a>
+</div>
+
+<!-- AFFILIATE DISCLOSURE -->
+<div class="disclosure">
+  <p>Some links on this page are affiliate links. If you click and make a purchase, I may earn a commission at no extra cost to you. I only recommend tools I use myself. <a href="#" onclick="alert('Affiliate Disclosure: Some links on this page are affiliate links. I earn a commission if you sign up, at no extra cost to you. I only recommend tools I use or have tested. This is my full disclosure.');return false;">Full disclosure</a>.</p>
+</div>
+
+<!-- DIGITAL PRODUCT -->
 <div class="newsletter" style="margin-top:20px;">
   <h3>50 AI Prompts That Actually Work</h3>
   <p>Stop guessing. 50 battle-tested prompts for content, coding, research, and automation — the same ones I use in the builds on this page.</p>
@@ -884,7 +1582,7 @@ gtag('config', 'G-XXXXXXXXXX');
 <!-- FOOTER -->
 <footer>
   <p>New builds added weekly. Subscribe: <a href="https://youtube.com/@ZachS-o3e4j?sub_confirmation=1" target="_blank" rel="noopener">@ZachS-o3e4j</a></p>
-  <p style="margin-top:8px;font-size:12px;color:#444;">© 2026 AI Tool Stack · <a href="#" onclick="alert('Affiliate Disclosure: Some links on this page are affiliate links. I earn a commission if you sign up, at no extra cost to you. I only recommend tools I use or have tested.');return false;">Affiliate Disclosure</a></p>
+  <p style="margin-top:8px;font-size:12px;color:#444;">© 2026 Hermes Agent AI Tool Stack · Built for the NVIDIA × Stripe × Nous Hackathon · <a href="#" onclick="alert('Affiliate Disclosure: Some links on this page are affiliate links. I earn a commission if you sign up, at no extra cost to you. I only recommend tools I use or have tested.');return false;">Affiliate Disclosure</a></p>
 </footer>
 
 <script>
@@ -892,19 +1590,19 @@ function showTutorial(id) {
   document.getElementById('hero').classList.add('hidden');
   document.querySelector('.social-proof').classList.add('hidden');
   document.querySelector('.newsletter').classList.add('hidden');
+  document.querySelector('.trust-strip').classList.add('hidden');
   document.getElementById('dashboard').classList.add('hidden');
   document.querySelectorAll('.tutorial-view').forEach(el => el.classList.remove('active'));
   document.getElementById('tutorial-' + id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'instant' });
   window.location.hash = id;
-  // Track tutorial view
-  if (typeof gtag === 'function') gtag('event', 'tutorial_view', { tutorial: id });
 }
 function showDashboard() {
   document.querySelectorAll('.tutorial-view').forEach(el => el.classList.remove('active'));
   document.getElementById('hero').classList.remove('hidden');
   document.querySelector('.social-proof').classList.remove('hidden');
   document.querySelector('.newsletter').classList.remove('hidden');
+  document.querySelector('.trust-strip').classList.remove('hidden');
   document.getElementById('dashboard').classList.remove('hidden');
   window.scrollTo({ top: 0, behavior: 'instant' });
   window.location.hash = '';
